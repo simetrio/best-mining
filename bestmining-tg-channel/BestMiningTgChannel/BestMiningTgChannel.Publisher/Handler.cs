@@ -14,6 +14,7 @@ public class Handler : HandlerBase
     {
         ChartSender.Send();
         NewsSender.Send();
+        PricesSender.Send();
         return "Ok";
     }
 }
@@ -288,13 +289,85 @@ public static class NewsSender
 
 #endregion
 
+#region PricesSender
+
+public static class PricesSender
+{
+    public static void Send()
+    {
+        if (DateTime.UtcNow.Hour != Settings.PriceHour)
+        {
+            return;
+        }
+
+        var prices = LoadPrices();
+
+        var message = MessageTemplate.Format(BuildMessage(prices));
+        var img = GetImg();
+
+        Telegram.SendChannelMessage(message, img);
+        Telegram.SendMessage("Отправил цены");
+    }
+
+    private static string GetImg()
+    {
+        const int imgsCount = 3;
+        return $"https://the-best-mining.ru/img/tg-channel/tg-channel-chart-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
+    }
+
+    private static string BuildMessage(Price[] prices)
+    {
+        var sb = new StringBuilder();
+
+        var pricesByBrand = prices.GroupBy(x => x.Brand);
+
+        foreach (var brandPrices in pricesByBrand)
+        {
+            sb.AppendLine($"💰 Цены на асики {brandPrices.Key} 💵");
+            sb.AppendLine();
+
+            foreach (var price in brandPrices)
+            {
+                sb.AppendLine($"🟢 {price.Model} {price.HashRate} - {price.Value.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))} - {price.Delivery}");
+            }
+         
+            sb.AppendLine();
+        }
+
+        sb.AppendLine("📲 Для заказа пишите нашему менеджеру @BestMiningManager");
+
+        return sb.ToString();
+    }
+
+    private static Price[] LoadPrices()
+    {
+        var json = new HttpClient()
+            .GetStringAsync("https://the-best-mining.ru/data/prices.json")
+            .GetAwaiter()
+            .GetResult();
+
+        return JsonSerializer.Deserialize<Price[]>(json)!;
+    }
+
+    public class Price
+    {
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public string HashRate { get; set; }
+        public int Value { get; set; }
+        public string Delivery { get; set; }
+    }
+}
+
+#endregion
+
 #region Common
 
 public static class MessageTemplate
 {
     public static string Format(string message)
     {
-        return @$"{Escape(message)}
+        return @$"{Escape(message).Trim()}
 
 👉 [K1Pool](https://k1pool.com/invite/dd03779e65) \| [ByBit](https://www.bybit.com/invite?ref=ENN1VM8) \| [Прайс](https://t.me/BestMiningRu/8) \| [Заказ](https://t.me/BestMiningManager)";
     }
@@ -374,9 +447,10 @@ public static class Settings
     public static string TgChannelId => Get("TgChannelId");
     public static string TgChatId => Get("TgChatId");
     public static string TgUserName => Get("TgUserName");
-    public static int ChartHour => GetInt("ChartHour");
     public static string YaIamToken => Get("YaIamToken");
     public static string YaFolderId => Get("YaFolderId");
+    public static int ChartHour => GetInt("ChartHour");
+    public static int PriceHour => GetInt("PriceHour");
 
     private static string Get(string name) => Environment.GetEnvironmentVariable(name)!;
     private static int GetInt(string name) => int.Parse(Get(name)!);

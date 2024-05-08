@@ -12,9 +12,10 @@ public class HandlerTests
         Environment.SetEnvironmentVariable("TgChannelId", File.ReadAllText("/home/roman/TgChannelId.txt").Trim());
         Environment.SetEnvironmentVariable("TgChatId", File.ReadAllText("/home/roman/TgChatId.txt").Trim());
         Environment.SetEnvironmentVariable("TgUserName", File.ReadAllText("/home/roman/TgUserName.txt").Trim());
-        Environment.SetEnvironmentVariable("ChartHour", DateTime.UtcNow.Hour.ToString());
         Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
         Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+        Environment.SetEnvironmentVariable("ChartHour", DateTime.UtcNow.Hour.ToString());
+        Environment.SetEnvironmentVariable("PriceHour", DateTime.UtcNow.Hour.ToString());
 
         new Handler().FunctionHandler("{\"Action\": \"Send\"}");
     }
