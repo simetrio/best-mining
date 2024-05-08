@@ -312,7 +312,7 @@ public static class PricesSender
     private static string GetImg()
     {
         const int imgsCount = 3;
-        return $"https://the-best-mining.ru/img/tg-channel/tg-channel-chart-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
+        return $"https://the-best-mining.ru/img/tg-channel/tg-channel-price-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
     }
 
     private static string BuildMessage(Price[] prices)
