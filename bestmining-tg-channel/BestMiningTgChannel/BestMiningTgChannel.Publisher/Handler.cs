@@ -42,7 +42,7 @@ public static class ChartSender
     private static string GetImg()
     {
         const int imgsCount = 3;
-        return $"https://jasminer-bm.ru/img/tg-channel/tg-channel-chart-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
+        return $"https://the-best-mining.ru/img/tg-channel/tg-channel-chart-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
     }
 
     private static string BuildMessage(Chart[] charts, Mining[] minings)
@@ -211,7 +211,7 @@ public static class NewsSender
     private static string GetImg()
     {
         const int imgsCount = 5;
-        return $"https://jasminer-bm.ru/img/tg-channel/tg-channel-news-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
+        return $"https://the-best-mining.ru/img/tg-channel/tg-channel-news-{DateTime.Now.Ticks % imgsCount + 1}.jpg";
     }
 
     private static string Rerait(string mesasge)
