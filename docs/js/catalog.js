@@ -2,6 +2,7 @@ function showCatalog() {
     showCatalogPopularWide();
     showCatalogWide();
     showCatalogBrands();
+    showCatalogProduct();
 }
 
 // *** Show ***
@@ -46,6 +47,18 @@ function showCatalogBrands() {
     element.innerHTML = renderBrands(brands);
 }
 
+function showCatalogProduct() {
+    const element = document.getElementById('catalog-product');
+    if (!element) {
+        return;
+    }
+
+    const productId = element.getAttribute('data-product-id');
+    const product = window.dataBase.products.find(x => x.Id === productId);
+
+    element.innerHTML = renderProduct(product);
+}
+
 // *** Render ***
 
 function renderProductWide(product) {
@@ -53,6 +66,16 @@ function renderProductWide(product) {
 
     return fillProductTemplate(productWideTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
+        ;
+}
+
+function renderProduct(product) {
+    const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
+    const imgsHtml = fillImgsTemplate(productImgTemplate, product);
+
+    return fillProductTemplate(productTemplate, product)
+        .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
+        .replace(new RegExp('{imgs}', 'g'), imgsHtml)
         ;
 }
 
@@ -84,6 +107,20 @@ function fillCharacteristicsTemplate(template, product) {
     });
 
     return characteristicsHtml;
+}
+
+function fillImgsTemplate(template, product) {
+    let imgsHtml = '';
+
+    product.Imgs.forEach((img, index) => {
+        imgsHtml += template
+            .replace(new RegExp('{img}', 'g'), img)
+            .replace(new RegExp('{name}', 'g'), product.Name)
+            .replace(new RegExp('{active}', 'g'), index === 0 ? ' active' : '')
+            ;
+    });
+
+    return imgsHtml;
 }
 
 function fillProductTemplate(template, product) {
@@ -130,9 +167,59 @@ const productWideTemplate = `
 </div>
 `;
 
+const productTemplate = `
+<div class="card m-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <div id="product-imgs" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
+                <div class="carousel-inner">
+                    {imgs}
+                </div>
+                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls"
+                    data-mdb-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls"
+                    data-mdb-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h1 class="card-title">{name}</h1>
+                <p class="card-text">
+                <dl class="row mt-4">
+                    {characteristics}
+                </dl>
+                </p>
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <div class="h3">{priceRuble} ₽ ({price} $)</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="https://t.me/BestMiningManager" class="btn btn-primary px-5" data-mdb-ripple-init
+                            target="_blank">Заказать</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
 const productCharacteristicTemplate = `
 <dt class="col-sm-3">{name}</dt>
 <dd class="col-sm-9">{value}</dd>
+`;
+
+const productImgTemplate = `
+<div class="carousel-item{active}" data-mdb-interval="3000">
+    <img src="/img/{img}" class="d-block w-100" alt="{name}" />
+</div>
 `;
 
 const brandTemplate = `
