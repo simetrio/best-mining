@@ -1,6 +1,6 @@
 [
     {
-        "Id": "jasminer-x16-q-1950-mh-s",
+        "Id": "jasminer-x16-q-1950",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
@@ -9,7 +9,7 @@
         "Popular": true
     },
     {
-        "Id": "jasminer-x16-q-1950-mh-s",
+        "Id": "jasminer-x16-q-1950",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
@@ -18,7 +18,7 @@
         "Popular": true
     },
     {
-        "Id": "jasminer-x16-q-1950-mh-s",
+        "Id": "jasminer-x16-q-1950",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
@@ -27,7 +27,7 @@
         "Popular": true
     },
     {
-        "Id": "jasminer-x16-q-1950-mh-s",
+        "Id": "jasminer-x16-q-1950",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
@@ -36,7 +36,7 @@
         "Popular": true
     },
     {
-        "Id": "jasminer-x16-q-2050-mh-s",
+        "Id": "jasminer-x16-q-pro-2050",
         "Brand": "Jasminer",
         "Model": "X16Q PRO",
         "HashRate": "2050 MH/s",
@@ -45,7 +45,7 @@
         "Popular": true
     },
     {
-        "Id": "jasminer-x16-p-5800-mh-s",
+        "Id": "jasminer-x16-p-5800",
         "Brand": "Jasminer",
         "Model": "X16P",
         "HashRate": "5800 MH/s",
