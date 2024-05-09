@@ -1,6 +1,9 @@
 function showCatalog() {
     showCatalogPopularWide();
+    showCatalogBrands();
 }
+
+// *** Show ***
 
 function showCatalogPopularWide() {
     const element = document.getElementById('catalog-popular-wide');
@@ -18,6 +21,18 @@ function showCatalogPopularWide() {
     element.innerHTML = html;
 }
 
+function showCatalogBrands() {
+    const element = document.getElementById('catalog-brands');
+    if (!element) {
+        return;
+    }
+
+    const brands = new Set(window.dataBase.products.map(x => x.Brand));
+    element.innerHTML = renderBrands(brands);
+}
+
+// *** Render ***
+
 function renderProductWide(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
 
@@ -25,6 +40,23 @@ function renderProductWide(product) {
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         ;
 }
+
+function renderBrands(brands) {
+    let brandsHtml = '';
+
+    brands.forEach(brand => {
+        brandsHtml += brandTemplate
+            .replace(new RegExp('{id}', 'g'), brand.toLowerCase())
+            .replace(new RegExp('{name}', 'g'), brand)
+            ;
+    });
+
+    return brandsTemplate
+        .replace(new RegExp('{brands}', 'g'), brandsHtml)
+        ;
+}
+
+// *** Fill ***
 
 function fillCharacteristicsTemplate(template, product) {
     let characteristicsHtml = '';
@@ -86,4 +118,22 @@ const productWideTemplate = `
 const productCharacteristicTemplate = `
 <dt class="col-sm-3">{name}</dt>
 <dd class="col-sm-9">{value}</dd>
+`;
+
+const brandTemplate = `
+<div class="col">
+    <div class="card">
+        <div class="card-body text-center">
+            <h5 class="card-title mt-2">
+                <a href="/catalog/brands/{id}/">{name}</a>
+            </h5>
+        </div>
+    </div>
+</div>
+`;
+
+const brandsTemplate = `
+<div class="row my-3 mx-2 gx-3">
+    {brands}
+</div>
 `;
