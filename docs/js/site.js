@@ -17,18 +17,22 @@ function closeTgModal() {
     localStorage.setItem(getTgModalName(), 'true');
 }
 
-async function loadData() {
+async function loadData(onSuccess) {
     const prices = await (await fetch("/data/prices.json")).json();
     const products = await (await fetch("/data/products.json")).json();
 
+    prices.forEach(x => x.ValueRuble = toRuble(x.Value));
     prices.sort(x => x.Value);
 
     products.forEach(product => {
-        product.Price = toRuble(prices.filter(x => x.Id === product.Id)[0].Value);
+        product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
+        product.Prices = prices.filter(x => x.Id === product.Id);
     });
 
-    Storage.Products = products;
-    console.log(products);
+    window.dataBase = { products };
+    console.log(window.dataBase);
+
+    onSuccess();
 }
 
 function toRuble(price) {
@@ -36,10 +40,9 @@ function toRuble(price) {
     return price * dollar;
 }
 
-const Storage = {}
-
 function main() {
     openTgModal();
-    loadData();
-    showCatalog();
+    loadData(() => {
+        showCatalog();
+    });
 }
