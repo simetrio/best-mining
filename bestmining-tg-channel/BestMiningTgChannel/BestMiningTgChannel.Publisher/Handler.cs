@@ -220,7 +220,7 @@ public static class NewsSender
         var json = _jsonTemplate.Replace("{message}", FormatMessage(mesasge));
 
         using var httpClient = new HttpClient();
-        httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Settings.YaIamToken}");
+        httpClient.DefaultRequestHeaders.Add("Authorization", $"Api-Key {Settings.YaIamToken}");
         httpClient.DefaultRequestHeaders.Add("x-folder-id", Settings.YaFolderId);
 
         using var data = new StringContent(json, Encoding.UTF8, "application/json");
