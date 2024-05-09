@@ -10,9 +10,11 @@ public class PublisherTests
     {
         var sourceRootDirectory = "/home/roman/projects/best-mining/best-mining/pages";
         var destinationRootDirectory = "/home/roman/projects/best-mining/best-mining/docs";
+        var webServerRootDirectory = "/var/www/best-mining";
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
 
         PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
+        CopyToWebServer(destinationRootDirectory, "", webServerRootDirectory);
     }
 
     private void PublishInner(
@@ -56,6 +58,43 @@ public class PublisherTests
                 Path.Combine(subDirectory, directory),
                 destinationRootDirectory,
                 master
+            );
+        }
+    }
+
+    private void CopyToWebServer(
+        string sourceRootDirectory,
+        string subDirectory,
+        string destinationRootDirectory
+    )
+    {
+        var sourceDirectory = Path.Combine(sourceRootDirectory, subDirectory);
+        var destinationDirectory = Path.Combine(destinationRootDirectory, subDirectory);
+
+        if (!Directory.Exists(destinationDirectory))
+        {
+            Directory.CreateDirectory(destinationDirectory);
+        }
+
+        var files = Directory
+            .GetFiles(sourceDirectory)
+            .Select(x => new FileInfo(x).Name);
+
+        var directories = Directory
+            .GetDirectories(sourceDirectory)
+            .Select(x => new DirectoryInfo(x).Name);
+
+        foreach (var file in files)
+        {
+            File.Copy(Path.Combine(sourceDirectory, file), Path.Combine(destinationDirectory, file), true);
+        }
+
+        foreach (var directory in directories)
+        {
+            CopyToWebServer(
+                sourceRootDirectory,
+                Path.Combine(subDirectory, directory),
+                destinationRootDirectory
             );
         }
     }
