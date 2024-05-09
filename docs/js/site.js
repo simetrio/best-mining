@@ -18,15 +18,11 @@ function closeTgModal() {
 }
 
 async function loadData(onSuccess) {
-    const prices = await (await fetch("/data/prices.json")).json();
     const products = await (await fetch("/data/products.json")).json();
-
-    prices.forEach(x => x.ValueRuble = toRuble(x.Value));
-    prices.sort(x => x.Value);
 
     products.forEach(product => {
         product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
-        product.Prices = prices.filter(x => x.Id === product.Id);
+        product.Prices.forEach(price => price.ValueRuble = toRuble(price.Value));
     });
 
     window.dataBase = { products };

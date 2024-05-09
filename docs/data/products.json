@@ -5,6 +5,12 @@
         "Model": "X16Q PRO",
         "HashRate": "2050 MH/s",
         "Popular": true,
+        "Prices": [
+            {
+                "Value": 4200,
+                "Delivery": "Поставка МАЙ"
+            }
+        ],
         "Characteristics": [
             {
                 "Name": "Производительность",
@@ -40,6 +46,24 @@
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
         "Popular": true,
+        "Prices": [
+            {
+                "Value": 3000,
+                "Delivery": "Поставка ИЮЛЬ"
+            },
+            {
+                "Value": 3250,
+                "Delivery": "Поставка ИЮНЬ - ИЮЛЬ"
+            },
+            {
+                "Value": 3370,
+                "Delivery": "Поставка МАЙ - ИЮНЬ"
+            },
+            {
+                "Value": 3730,
+                "Delivery": "Поставка МАЙ"
+            }
+        ],
         "Characteristics": [
             {
                 "Name": "Производительность",
@@ -75,6 +99,12 @@
         "Model": "X16P",
         "HashRate": "5800 MH/s",
         "Popular": true,
+        "Prices": [
+            {
+                "Value": 10800,
+                "Delivery": "Поставка 10-15 дней"
+            }
+        ],
         "Characteristics": [
             {
                 "Name": "Производительность",
