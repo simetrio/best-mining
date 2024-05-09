@@ -168,6 +168,13 @@ const productWideTemplate = `
 `;
 
 const productTemplate = `
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb mx-3">
+    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/catalog/">Каталог</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{name}</li>
+  </ol>
+</nav>
 <div class="card m-3">
     <div class="row g-0">
         <div class="col-md-4">
