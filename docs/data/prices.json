@@ -1,44 +1,56 @@
 [
     {
+        "Id": "jasminer-x16-q-1950-mh-s",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
         "Value": 3000,
-        "Delivery": "Поставка ИЮЛЬ"
+        "Delivery": "Поставка ИЮЛЬ",
+        "Popular": true
     },
     {
+        "Id": "jasminer-x16-q-1950-mh-s",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
         "Value": 3250,
-        "Delivery": "Поставка ИЮНЬ - ИЮЛЬ"
+        "Delivery": "Поставка ИЮНЬ - ИЮЛЬ",
+        "Popular": true
     },
     {
+        "Id": "jasminer-x16-q-1950-mh-s",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
         "Value": 3370,
-        "Delivery": "Поставка МАЙ - ИЮНЬ"
+        "Delivery": "Поставка МАЙ - ИЮНЬ",
+        "Popular": true
     },
     {
+        "Id": "jasminer-x16-q-1950-mh-s",
         "Brand": "Jasminer",
         "Model": "X16Q",
         "HashRate": "1950 MH/s",
         "Value": 3730,
-        "Delivery": "Поставка МАЙ"
+        "Delivery": "Поставка МАЙ",
+        "Popular": true
     },
     {
+        "Id": "jasminer-x16-q-2050-mh-s",
         "Brand": "Jasminer",
         "Model": "X16Q PRO",
         "HashRate": "2050 MH/s",
         "Value": 4200,
-        "Delivery": "Поставка МАЙ"
+        "Delivery": "Поставка МАЙ",
+        "Popular": true
     },
     {
+        "Id": "jasminer-x16-p-5800-mh-s",
         "Brand": "Jasminer",
         "Model": "X16P",
         "HashRate": "5800 MH/s",
         "Value": 10800,
-        "Delivery": "Поставка 10-15 дней"
+        "Delivery": "Поставка 10-15 дней",
+        "Popular": true
     }
 ]
