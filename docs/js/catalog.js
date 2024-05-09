@@ -1,6 +1,7 @@
 function showCatalog() {
     showCatalogPopularWide();
     showCatalogWide();
+    showCatalogBrandWide();
     showCatalogBrands();
     showCatalogProduct();
 }
@@ -31,6 +32,23 @@ function showCatalogWide() {
 
     let html = '';
     window.dataBase.products.forEach(product => {
+        html += renderProductWide(product);
+    });
+
+    element.innerHTML = html;
+}
+
+function showCatalogBrandWide() {
+    const element = document.getElementById('catalog-brand-wide');
+    if (!element) {
+        return;
+    }
+
+    const brand = element.getAttribute('data-brand');
+    const products = window.dataBase.products.filter(x => x.Brand === brand);
+
+    let html = '';
+    products.forEach(product => {
         html += renderProductWide(product);
     });
 
@@ -130,6 +148,8 @@ function fillProductTemplate(template, product) {
         .replace(new RegExp('{name}', 'g'), product.Name)
         .replace(new RegExp('{priceRuble}', 'g'), new Intl.NumberFormat("ru").format(product.Prices[0].ValueRuble))
         .replace(new RegExp('{price}', 'g'), new Intl.NumberFormat("ru").format(product.Prices[0].Value))
+        .replace(new RegExp('{brandId}', 'g'), product.Brand.toLowerCase())
+        .replace(new RegExp('{brand}', 'g'), product.Brand)
         ;
 }
 
@@ -172,6 +192,7 @@ const productTemplate = `
   <ol class="breadcrumb mx-3">
     <li class="breadcrumb-item"><a href="/">Главная</a></li>
     <li class="breadcrumb-item"><a href="/catalog/">Каталог</a></li>
+    <li class="breadcrumb-item"><a href="/catalog/brands/{brandId}/">{brand}</a></li>
     <li class="breadcrumb-item active" aria-current="page">{name}</li>
   </ol>
 </nav>
