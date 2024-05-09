@@ -1,5 +1,6 @@
 function showCatalog() {
     showCatalogPopularWide();
+    showCatalogWide();
     showCatalogBrands();
 }
 
@@ -15,6 +16,20 @@ function showCatalogPopularWide() {
 
     let html = '';
     products.forEach(product => {
+        html += renderProductWide(product);
+    });
+
+    element.innerHTML = html;
+}
+
+function showCatalogWide() {
+    const element = document.getElementById('catalog-wide');
+    if (!element) {
+        return;
+    }
+
+    let html = '';
+    window.dataBase.products.forEach(product => {
         html += renderProductWide(product);
     });
 
