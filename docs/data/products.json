@@ -646,5 +646,81 @@
         "Imgs": [
             "WhatsminerM50S.png"
         ]
+    },
+    {
+        "Id": "iceriver-kas-kS3m-6",
+        "Brand": "Iceriver",
+        "Model": "KAS KS3M",
+        "HashRate": "6 TH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 6855,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "6 TH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3200 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "kHeavyHash"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "KASPA"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "IceriverKASKS3M.jpg"
+        ]
+    },
+    {
+        "Id": "iceriver-kas-ks0-pro-200",
+        "Brand": "Iceriver",
+        "Model": "KAS KS0 Pro",
+        "HashRate": "200 GH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 575,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "200 GH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "100 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "kHeavyHash"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "KASPA"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "0 Дб"
+            }
+        ],
+        "Imgs": [
+            "IceriverKASKS0Pro.jpg"
+        ]
     }
 ]
