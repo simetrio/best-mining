@@ -34,10 +34,7 @@
             }
         ],
         "Imgs": [
-            "JasminerX16Q2050.png",
-            "JasminerX16Q2050-2.png",
-            "JasminerX16Q2050-3.png",
-            "JasminerX16Q2050-4.png"
+            "JasminerX16Q2050.png"
         ]
     },
     {
@@ -83,10 +80,7 @@
             }
         ],
         "Imgs": [
-            "JasminerX16Q1950.png",
-            "JasminerX16Q1950-2.png",
-            "JasminerX16Q1950-3.png",
-            "JasminerX16Q1950-4.png"
+            "JasminerX16Q1950.png"
         ]
     },
     {
@@ -116,7 +110,7 @@
             },
             {
                 "Name": "Монеты",
-                "Value": "ETC/ETHW,"
+                "Value": "ETC/ETHW"
             },
             {
                 "Name": "Уровень шума",
@@ -124,10 +118,7 @@
             }
         ],
         "Imgs": [
-            "JasminerX16P5800.png",
-            "JasminerX16P5800-2.png",
-            "JasminerX16P5800-3.png",
-            "JasminerX16P5800-4.jpeg"
+            "JasminerX16P5800.png"
         ]
     },
     {
@@ -165,9 +156,7 @@
             }
         ],
         "Imgs": [
-            "AntminerS21Pro.jpg",
-            "AntminerS21Pro-2.jpg",
-            "AntminerS21Pro-3.jpg"
+            "AntminerS21Pro.jpg"
         ]
     },
     {
@@ -178,12 +167,12 @@
         "Popular": true,
         "Prices": [
             {
-                "Value": 4150,
-                "Delivery": "Поставка 20-30 дней"
-            },
-            {
                 "Value": 4100,
                 "Delivery": "Склад Москва"
+            },
+            {
+                "Value": 4150,
+                "Delivery": "Поставка 20-30 дней"
             }
         ],
         "Characteristics": [
@@ -209,9 +198,7 @@
             }
         ],
         "Imgs": [
-            "AntminerS21.jpg",
-            "AntminerS21-2.jpg",
-            "AntminerS21-3.jpg"
+            "AntminerS21.jpg"
         ]
     },
     {
@@ -253,9 +240,7 @@
             }
         ],
         "Imgs": [
-            "AntminerS21.jpg",
-            "AntminerS21-2.jpg",
-            "AntminerS21-3.jpg"
+            "AntminerS21.jpg"
         ]
     },
     {
@@ -297,9 +282,7 @@
             }
         ],
         "Imgs": [
-            "AntminerS21.jpg",
-            "AntminerS21-2.jpg",
-            "AntminerS21-3.jpg"
+            "AntminerS21.jpg"
         ]
     },
     {
@@ -341,9 +324,49 @@
             }
         ],
         "Imgs": [
-            "AntminerT21.jpg",
-            "AntminerT21-2.jpg",
-            "AntminerT21-3.jpg"
+            "AntminerT21.jpg"
+        ]
+    },
+    {
+        "Id": "antminer-s19k-pro-120",
+        "Brand": "Antminer",
+        "Model": "S19k Pro",
+        "HashRate": "120 TH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 1640,
+                "Delivery": "Склад Москва"
+            },
+            {
+                "Value": 1760,
+                "Delivery": "Поставка 20-30 дней"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "120 TH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "2760 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "SHA-256"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "BTC/BCH"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerS19kPro.jpg"
         ]
     }
 ]
