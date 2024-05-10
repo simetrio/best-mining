@@ -90,10 +90,12 @@ function renderProductWide(product) {
 function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const imgsHtml = fillImgsTemplate(productImgTemplate, product);
+    const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         .replace(new RegExp('{imgs}', 'g'), imgsHtml)
+        .replace(new RegExp('{prices}', 'g'), pricesHtml)
         ;
 }
 
@@ -139,6 +141,23 @@ function fillImgsTemplate(template, product) {
     });
 
     return imgsHtml;
+}
+
+function fillPricesTemplate(template, templateItem, product) {
+    let pricesHtml = '';
+
+    product.Prices.forEach(price => {
+        pricesHtml += templateItem
+            .replace(new RegExp('{name}', 'g'), product.Name)
+            .replace(new RegExp('{priceRuble}', 'g'), new Intl.NumberFormat("ru").format(price.ValueRuble))
+            .replace(new RegExp('{price}', 'g'), new Intl.NumberFormat("ru").format(price.Value))
+            .replace(new RegExp('{delivery}', 'g'), price.Delivery)
+            ;
+    });
+
+    return template
+        .replace(new RegExp('{prices}', 'g'), pricesHtml)
+        ;
 }
 
 function fillProductTemplate(template, product) {
@@ -237,6 +256,33 @@ const productTemplate = `
         </div>
     </div>
 </div>
+{prices}
+`;
+
+const productPricesTemplate = `
+<div class="card m-3">
+    <div class="card-body">
+        <h3 class="card-title mb-3">Прайс</h3>
+        <table class="table table-sm">
+            <tr>
+                <th scope="col">Модель</th>
+                <th scope="col">Цена, ₽</th>
+                <th scope="col">Цена, USDT</th>
+                <th scope="col">Наличие</th>
+            </tr>
+            {prices}
+        </table>
+    </div>
+</div>
+`;
+
+const productPriceTemplate = `
+<tr>
+    <td>{name}</td>
+    <td>{priceRuble} ₽</td>
+    <td>{price} $</td>
+    <td>{delivery}</td>
+</tr>
 `;
 
 const productCharacteristicTemplate = `
