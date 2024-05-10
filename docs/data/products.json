@@ -368,5 +368,207 @@
         "Imgs": [
             "AntminerS19kPro.jpg"
         ]
+    },
+    {
+        "Id": "antminer-e9-pro-3780",
+        "Brand": "Antminer",
+        "Model": "E9 Pro",
+        "HashRate": "3780 MH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 4230,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "3780 MH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "2200 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "ETCHASH/ETHASH"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "ETC/ETHW"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerE9Pro.jpg"
+        ]
+    },
+    {
+        "Id": "antminer-e9-pro-3680",
+        "Brand": "Antminer",
+        "Model": "E9 Pro",
+        "HashRate": "3680 MH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 4030,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "3680 MH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "2200 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "ETCHASH/ETHASH"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "ETC/ETHW"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerE9Pro.jpg"
+        ]
+    },
+    {
+        "Id": "antminer-l7-9500",
+        "Brand": "Antminer",
+        "Model": "L7",
+        "HashRate": "9500 MH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 6400,
+                "Delivery": "Склад Москва"
+            },
+            {
+                "Value": 6570,
+                "Delivery": "Поставка 75-85 дней"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "9500 MH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3300 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "Scrypt"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "LTC/DOGE"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerL7.jpg"
+        ]
+    },
+    {
+        "Id": "antminer-l7-9300",
+        "Brand": "Antminer",
+        "Model": "L7",
+        "HashRate": "9300 MH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 6300,
+                "Delivery": "Склад Москва"
+            },
+            {
+                "Value": 6370,
+                "Delivery": "Поставка 75-85 дней"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "9300 MH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3300 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "Scrypt"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "LTC/DOGE"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerL7.jpg"
+        ]
+    },
+    {
+        "Id": "antminer-l7-9050",
+        "Brand": "Antminer",
+        "Model": "L7",
+        "HashRate": "9050 MH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 6160,
+                "Delivery": "Поставка 75-85 дней"
+            },
+            {
+                "Value": 6200,
+                "Delivery": "Склад Москва"
+            }            
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "9050 MH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3300 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "Scrypt"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "LTC/DOGE"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "AntminerL7.jpg"
+        ]
     }
 ]
