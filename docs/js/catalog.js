@@ -89,12 +89,10 @@ function renderProductWide(product) {
 
 function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
-    const imgsHtml = fillImgsTemplate(productImgTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
-        .replace(new RegExp('{imgs}', 'g'), imgsHtml)
         .replace(new RegExp('{prices}', 'g'), pricesHtml)
         ;
 }
@@ -127,20 +125,6 @@ function fillCharacteristicsTemplate(template, product) {
     });
 
     return characteristicsHtml;
-}
-
-function fillImgsTemplate(template, product) {
-    let imgsHtml = '';
-
-    product.Imgs.forEach((img, index) => {
-        imgsHtml += template
-            .replace(new RegExp('{img}', 'g'), img)
-            .replace(new RegExp('{name}', 'g'), product.Name)
-            .replace(new RegExp('{active}', 'g'), index === 0 ? ' active' : '')
-            ;
-    });
-
-    return imgsHtml;
 }
 
 function fillPricesTemplate(template, templateItem, product) {
@@ -218,21 +202,7 @@ const productTemplate = `
 <div class="card m-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <div id="product-imgs" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
-                <div class="carousel-inner">
-                    {imgs}
-                </div>
-                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls"
-                    data-mdb-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls"
-                    data-mdb-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            <img src="/img/{img}" alt="{name}" class="img-fluid rounded-start" />
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -251,7 +221,6 @@ const productTemplate = `
                             target="_blank">Заказать</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -288,12 +257,6 @@ const productPriceTemplate = `
 const productCharacteristicTemplate = `
 <dt class="col-sm-3">{name}</dt>
 <dd class="col-sm-9">{value}</dd>
-`;
-
-const productImgTemplate = `
-<div class="carousel-item{active}" data-mdb-interval="3000">
-    <img src="/img/{img}" class="d-block w-100" alt="{name}" />
-</div>
 `;
 
 const brandTemplate = `
