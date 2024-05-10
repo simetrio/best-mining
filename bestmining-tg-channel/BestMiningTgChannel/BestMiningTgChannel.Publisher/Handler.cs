@@ -12,10 +12,20 @@ public class Handler : HandlerBase
 {
     protected override string HandleRequest(string body, RequestData? requestData)
     {
-        ChartSender.Send();
-        NewsSender.Send();
-        PricesSender.Send();
-        return "Ok";
+        switch (requestData.Action)
+        {
+            case Action.Send:
+                ChartSender.Send();
+                NewsSender.Send();
+                PricesSender.Send();
+                return "Ok";
+
+            case Action.CalculateMining:
+                return MiningCalculator.Send(requestData.Command);
+
+            default:
+                return "Command not found";
+        }
     }
 }
 
@@ -330,7 +340,7 @@ public static class PricesSender
             {
                 sb.AppendLine($"🟢 {price.Model} {price.HashRate} - {price.Value.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))} - {price.Delivery}");
             }
-         
+
             sb.AppendLine();
         }
 
@@ -356,6 +366,22 @@ public static class PricesSender
         public string HashRate { get; set; }
         public int Value { get; set; }
         public string Delivery { get; set; }
+    }
+}
+
+#endregion
+
+#region MiningCalculator
+
+public static class MiningCalculator
+{
+    public static string Send(string url)
+    {
+        return new HttpClient()
+            .GetStringAsync($"https://whattomine.com/coins/1.json?{url}")
+            .GetAwaiter()
+            .GetResult()
+            ;
     }
 }
 
@@ -520,6 +546,7 @@ public abstract class HandlerBase
 public enum Action
 {
     Send,
+    CalculateMining,
 }
 
 public class Request
