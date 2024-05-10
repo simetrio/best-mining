@@ -570,5 +570,81 @@
         "Imgs": [
             "AntminerL7.jpg"
         ]
+    },
+    {
+        "Id": "whatsminer-m60-19-9W-166",
+        "Brand": "Whatsminer",
+        "Model": "M60 19,9W",
+        "HashRate": "166 TH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 3420,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "166 TH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3320 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "SHA-256"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "BTC/BCH"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "WhatsminerM60.png"
+        ]
+    },
+    {
+        "Id": "whatsminer-m50s-26W-132",
+        "Brand": "Whatsminer",
+        "Model": "M50S 26W",
+        "HashRate": "132 TH/s",
+        "Popular": false,
+        "Prices": [
+            {
+                "Value": 1950,
+                "Delivery": "Склад Москва"
+            }
+        ],
+        "Characteristics": [
+            {
+                "Name": "Производительность",
+                "Value": "132 TH/s"
+            },
+            {
+                "Name": "Потребление",
+                "Value": "3432 Вт"
+            },
+            {
+                "Name": "Алгоритм",
+                "Value": "SHA-256"
+            },
+            {
+                "Name": "Монеты",
+                "Value": "BTC/BCH"
+            },
+            {
+                "Name": "Уровень шума",
+                "Value": "80 Дб"
+            }
+        ],
+        "Imgs": [
+            "WhatsminerM50S.png"
+        ]
     }
 ]
