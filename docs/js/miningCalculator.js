@@ -1,6 +1,7 @@
 function showMiningCalculator() {
     showProductMiningCalculator();
     showCoinsMiningCalculator();
+    showCoinMiningCalculator();
 }
 
 // *** Show ***
@@ -25,7 +26,7 @@ function showCoinsMiningCalculator() {
 
     const coins = window.dataBase.coins;
 
-    element.innerHTML = fillCoinsMiningCalculatorTemplate(coinsMiningCalculatorTemplate, coinMiningCalculatorTemplate, coins);
+    element.innerHTML = fillCoinsMiningCalculatorTemplate(coinsMiningCalculatorTemplate, coinItemMiningCalculatorTemplate, coins);
 }
 
 function updateCoinsMiningCalculator() {
@@ -37,7 +38,19 @@ function updateCoinsMiningCalculator() {
         );
 
     document.getElementById('mining-calculator-coins-items').innerHTML =
-        fillCoinsItemsMiningCalculatorTemplate(coinMiningCalculatorTemplate, coins);
+        fillCoinsItemsMiningCalculatorTemplate(coinItemMiningCalculatorTemplate, coins);
+}
+
+function showCoinMiningCalculator() {
+    const element = document.getElementById('mining-calculator-coin');
+    if (!element) {
+        return;
+    }
+
+    const coinId = element.getAttribute('data-coin');
+    const coin = window.dataBase.coins.find(x => x.Tag === coinId);
+
+    element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin);
 }
 
 // *** Frames ***
@@ -54,6 +67,14 @@ function fillMiningCalculatorProductTemplate(template, product) {
         .replace(new RegExp('{hashrate}', 'g'), product.MiningCalculator.HashRate)
         .replace(new RegExp('{hashrate-value}', 'g'), product.MiningCalculator.HashRateValue)
         .replace(new RegExp('{power}', 'g'), product.MiningCalculator.Power)
+        ;
+}
+
+function fillMiningCalculatorCoinTemplate(template, coin) {
+    return template
+        .replace(new RegExp('{coin}', 'g'), coin.Tag)
+        .replace(new RegExp('{hashrate}', 'g'), coin.HashRate)
+        .replace(new RegExp('{title}', 'g'), coin.Title)
         ;
 }
 
@@ -127,18 +148,12 @@ function fillCoinsItemsMiningCalculatorTemplate(template, coins) {
 
 // *** Calculator ***
 
-const coins = {
-    "BTC": 1,
-    "ETC": 162,
-    "DOGE": 6,
-    "KAS": 352,
-}
-
 async function calculateMining() {
     const element = document.getElementById('mc-result');
     element.innerHTML = loader;
 
-    const coin = coins[document.getElementById('mc-coin').value];
+    const coinTag = document.getElementById('mc-coin').value;
+    const coin = window.dataBase.coins.find(x => x.Tag === coinTag).Id;
     const hashRate = document.getElementById('mc-hash-rate').value;
     const power = document.getElementById('mc-power').value;
     const cost = toDollar(parseFloat(document.getElementById('mc-cost').value));
@@ -174,7 +189,51 @@ const productMiningCalculatorTemplate = `
             </div>
             <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="mc-power" class="form-control" value={power} />
+                    <input type="text" id="mc-power" class="form-control" value="{power}" />
+                    <label class="form-label" for="mc-power">Потребление, Вт</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-cost" class="form-control" value="4.5" />
+                    <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-pool-comission" class="form-control" value="0" />
+                    <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button data-mdb-ripple-init type="button" class="btn btn-primary mb-4 px-5" onclick="calculateMining()">
+                Рассчитать
+            </button>
+        </div>
+
+        <div id="mc-result"></div>
+    </div>
+</div>
+`;
+
+
+const coinMiningCalculatorTemplate = `
+<h1 class="mx-3">Расчет доходности {title}</h1>
+<div class="card m-3">
+    <div class="card-body">
+        <input id="mc-coin" type="hidden" value="{coin}" />
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-hash-rate" class="form-control" value="1000" />
+                    <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-power" class="form-control" value="1000" />
                     <label class="form-label" for="mc-power">Потребление, Вт</label>
                 </div>
             </div>
@@ -265,7 +324,7 @@ const coinsMiningCalculatorTemplate = `
 </div>
 `;
 
-const coinMiningCalculatorTemplate = `
+const coinItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
     <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{title} ({coin})</a>
 </div>

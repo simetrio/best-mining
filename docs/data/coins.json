@@ -250,7 +250,8 @@
         "Id": 1,
         "Tag": "BTC",
         "Algorithm": "SHA-256",
-        "Popular": true
+        "Popular": true,
+        "HashRate": "TH/s"
       },
       "BitcoinPrivate": {
         "Id": 230,
@@ -536,7 +537,8 @@
         "Id": 6,
         "Tag": "DOGE",
         "Algorithm": "Scrypt",
-        "Popular": true
+        "Popular": true,
+        "HashRate": "GH/s"
       },
       "Dogether": {
         "Id": 393,
@@ -622,7 +624,8 @@
         "Id": 162,
         "Tag": "ETC",
         "Algorithm": "Etchash",
-        "Popular": true
+        "Popular": true,
+        "HashRate": "MH/s"
       },
       "Ethereum": {
         "Id": 151,
@@ -948,7 +951,8 @@
         "Id": 352,
         "Tag": "KAS",
         "Algorithm": "kHeavyHash",
-        "Popular": true
+        "Popular": true,
+        "HashRate": "TH/s"
       },
       "Kylacoin": {
         "Id": 379,
