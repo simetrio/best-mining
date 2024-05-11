@@ -18,7 +18,7 @@ function closeTgModal() {
 }
 
 async function loadData(onSuccess) {
-    const products = await (await fetch("/data/products.json")).json();
+    const products = await (await fetch('/data/products.json')).json();
 
     products.forEach(product => {
         product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
@@ -36,9 +36,20 @@ function toRuble(price) {
     return Math.round(price * dollar / 1000) * 1000;
 }
 
+function initMdb() {
+    var script = document.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('src', '/js/mdb.umd.min.js');
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
 function main() {
     openTgModal();
     loadData(() => {
         showCatalog();
+        showMiningCalculator();
+
+        // Всегда в конце
+        initMdb();
     });
 }
