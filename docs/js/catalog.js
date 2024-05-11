@@ -79,8 +79,8 @@ function showCatalogProduct() {
 
 // *** Frame ***
 
-function getCatalogProductSlim(product) {
-    return renderProductSlim(product)
+function getCatalogProductSlimTall(product) {
+    return renderProductSlimTall(product)
 }
 
 // *** Render ***
@@ -93,10 +93,10 @@ function renderProductWide(product) {
         ;
 }
 
-function renderProductSlim(product) {
+function renderProductSlimTall(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicSlimTemplate, product);
 
-    return fillProductTemplate(productSlimTemplate, product)
+    return fillProductTemplate(productSlimTallTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         ;
 }
@@ -245,7 +245,7 @@ const productTemplate = `
 {miningCalculator}
 `;
 
-const productSlimTemplate = `
+const productSlimTallTemplate = `
 <div class="card">
     <a href="/catalog/{id}">
         <img src="/img/{img}" class="card-img-top" alt="{name}" />
@@ -300,6 +300,7 @@ const productCharacteristicSlimTemplate = `
 <dt>{name}</dt>
 <dd>{value}</dd>
 `;
+
 const brandTemplate = `
 <div class="col">
     <div class="card">

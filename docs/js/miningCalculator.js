@@ -203,7 +203,7 @@ function fillAsicsItemsMiningCalculatorTemplate(template, asics) {
 
 function fillMiningCalculatorAsicTemplate(template, product) {
     const calculatorHtml = fillMiningCalculatorProductTemplate(template, product);
-    const productHtml = getCatalogProductSlim(product);
+    const productHtml = getCatalogProductSlimTall(product);
 
     return calculatorHtml
         .replace(new RegExp('{name}', 'g'), product.Name)
