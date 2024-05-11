@@ -1,31 +1,33 @@
 function showMiningCalculator() {
-    showSingleMiningCalculator();
+    showProductMiningCalculator();
 }
 
-function showSingleMiningCalculator() {
-    const element = document.getElementById('mining-calculator-single');
+function showProductMiningCalculator() {
+    const element = document.getElementById('mining-calculator-product');
     if (!element) {
         return;
     }
 
-    const data = {
-        coin: element.getAttribute('data-coin'),
-        hashRate: element.getAttribute('data-hashrate'),
-        hashRateValue: element.getAttribute('data-hashrate-value'),
-        power: element.getAttribute('data-power'),
-    }
+    const productId = element.getAttribute('data-product-id');
+    const product = window.dataBase.products.find(x => x.Id === productId);
 
-    element.innerHTML = fillMiningCalculatorSingleTemplate(singleMiningCalculatorTemplate, data);
+    element.innerHTML = fillMiningCalculatorProductTemplate(productMiningCalculatorTemplate, product);
+}
+
+// *** Frames ***
+
+function getSingleMiningCalculator(product) {
+    return fillMiningCalculatorProductTemplate(productMiningCalculatorTemplate, product);
 }
 
 // *** Fill ***
 
-function fillMiningCalculatorSingleTemplate(template, data) {
+function fillMiningCalculatorProductTemplate(template, product) {
     return template
-        .replace(new RegExp('{coin}', 'g'), data.coin)
-        .replace(new RegExp('{hashrate}', 'g'), data.hashRate)
-        .replace(new RegExp('{hashrate-value}', 'g'), data.hashRateValue)
-        .replace(new RegExp('{power}', 'g'), data.power)
+        .replace(new RegExp('{coin}', 'g'), product.MiningCalculator.Coin)
+        .replace(new RegExp('{hashrate}', 'g'), product.MiningCalculator.HashRate)
+        .replace(new RegExp('{hashrate-value}', 'g'), product.MiningCalculator.HashRateValue)
+        .replace(new RegExp('{power}', 'g'), product.MiningCalculator.Power)
         ;
 }
 
@@ -110,7 +112,7 @@ async function calculateMining() {
 
 // *** Templates ***
 
-const singleMiningCalculatorTemplate = `
+const productMiningCalculatorTemplate = `
 <div class="card m-3">
     <div class="card-body">
         <h3 class="card-title mb-4">Расчет доходности</h3>

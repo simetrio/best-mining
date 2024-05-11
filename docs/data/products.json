@@ -33,6 +33,12 @@
                 "Value": "40 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "ETC",
+            "HashRate": "MH/s",
+            "HashRateValue": "2050",
+            "Power": "520"
+        },
         "Imgs": [
             "JasminerX16Q2050.png"
         ]
@@ -79,6 +85,12 @@
                 "Value": "40 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "ETC",
+            "HashRate": "MH/s",
+            "HashRateValue": "1950",
+            "Power": "620"
+        },
         "Imgs": [
             "JasminerX16Q1950.png"
         ]
@@ -117,6 +129,12 @@
                 "Value": "70 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "ETC",
+            "HashRate": "MH/s",
+            "HashRateValue": "5800",
+            "Power": "1900"
+        },
         "Imgs": [
             "JasminerX16P5800.png"
         ]
@@ -155,6 +173,12 @@
                 "Value": "76 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "234",
+            "Power": "3500"
+        },
         "Imgs": [
             "AntminerS21Pro.jpg"
         ]
@@ -197,6 +221,12 @@
                 "Value": "76 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "200",
+            "Power": "3500"
+        },
         "Imgs": [
             "AntminerS21.jpg"
         ]
@@ -239,6 +269,12 @@
                 "Value": "76 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "195",
+            "Power": "3400"
+        },
         "Imgs": [
             "AntminerS21.jpg"
         ]
@@ -281,6 +317,12 @@
                 "Value": "76 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "188",
+            "Power": "3300"
+        },
         "Imgs": [
             "AntminerS21.jpg"
         ]
@@ -323,6 +365,12 @@
                 "Value": "76 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "190",
+            "Power": "3600"
+        },
         "Imgs": [
             "AntminerT21.jpg"
         ]
@@ -365,6 +413,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "120",
+            "Power": "2760"
+        },
         "Imgs": [
             "AntminerS19kPro.jpg"
         ]
@@ -403,6 +457,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "ETC",
+            "HashRate": "MH/s",
+            "HashRateValue": "3780",
+            "Power": "2200"
+        },
         "Imgs": [
             "AntminerE9Pro.jpg"
         ]
@@ -441,6 +501,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "ETC",
+            "HashRate": "MH/s",
+            "HashRateValue": "3680",
+            "Power": "2200"
+        },
         "Imgs": [
             "AntminerE9Pro.jpg"
         ]
@@ -483,6 +549,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "DOGE",
+            "HashRate": "MH/s",
+            "HashRateValue": "9500",
+            "Power": "3300"
+        },
         "Imgs": [
             "AntminerL7.jpg"
         ]
@@ -525,6 +597,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "DOGE",
+            "HashRate": "MH/s",
+            "HashRateValue": "9300",
+            "Power": "3300"
+        },
         "Imgs": [
             "AntminerL7.jpg"
         ]
@@ -567,6 +645,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "DOGE",
+            "HashRate": "MH/s",
+            "HashRateValue": "9050",
+            "Power": "3300"
+        },
         "Imgs": [
             "AntminerL7.jpg"
         ]
@@ -605,6 +689,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "166",
+            "Power": "3320"
+        },
         "Imgs": [
             "WhatsminerM60.png"
         ]
@@ -643,6 +733,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "BTC",
+            "HashRate": "TH/s",
+            "HashRateValue": "132",
+            "Power": "3432"
+        },
         "Imgs": [
             "WhatsminerM50S.png"
         ]
@@ -681,6 +777,12 @@
                 "Value": "80 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "KAS",
+            "HashRate": "TH/s",
+            "HashRateValue": "6",
+            "Power": "3200"
+        },
         "Imgs": [
             "IceriverKASKS3M.jpg"
         ]
@@ -719,6 +821,12 @@
                 "Value": "0 Дб"
             }
         ],
+        "MiningCalculator": {
+            "Coin": "KAS",
+            "HashRate": "TH/s",
+            "HashRateValue": "0.2",
+            "Power": "100"
+        },
         "Imgs": [
             "IceriverKASKS0Pro.jpg"
         ]

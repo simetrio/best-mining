@@ -90,10 +90,12 @@ function renderProductWide(product) {
 function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
+    const miningCalculatorHtml = getSingleMiningCalculator(product);console.log(miningCalculatorHtml)
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         .replace(new RegExp('{prices}', 'g'), pricesHtml)
+        .replace(new RegExp('{miningCalculator}', 'g'), miningCalculatorHtml)
         ;
 }
 
@@ -226,6 +228,7 @@ const productTemplate = `
     </div>
 </div>
 {prices}
+{miningCalculator}
 `;
 
 const productPricesTemplate = `
