@@ -2,6 +2,7 @@ function showMiningCalculator() {
     showProductMiningCalculator();
     showCoinsMiningCalculator();
     showCoinMiningCalculator();
+    showAsicsMiningCalculator();
 }
 
 // *** Show ***
@@ -39,6 +40,26 @@ function updateCoinsMiningCalculator() {
 
     document.getElementById('mining-calculator-coins-items').innerHTML =
         fillCoinsItemsMiningCalculatorTemplate(coinItemMiningCalculatorTemplate, coins);
+}
+
+function showAsicsMiningCalculator() {
+    const element = document.getElementById('mining-calculator-asics');
+    if (!element) {
+        return;
+    }
+
+    const asics = window.dataBase.products;
+
+    element.innerHTML = fillAsicsMiningCalculatorTemplate(asicsMiningCalculatorTemplate, asicItemMiningCalculatorTemplate, asics);
+}
+
+function updateAsicsMiningCalculator() {
+    const search = document.getElementById('mining-calculator-search').value;
+    const asics = window.dataBase.products
+        .filter(x => !search || x.Name.toLowerCase().indexOf(search) !== -1);
+
+    document.getElementById('mining-calculator-asics-items').innerHTML =
+        fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
 }
 
 function showCoinMiningCalculator() {
@@ -144,6 +165,27 @@ function fillCoinsItemsMiningCalculatorTemplate(template, coins) {
     });
 
     return coinsHtml;
+}
+
+function fillAsicsMiningCalculatorTemplate(template, templateItem, asics) {
+    let asicsHtml = fillAsicsItemsMiningCalculatorTemplate(templateItem, asics);
+
+    return template
+        .replace(new RegExp('{asics}', 'g'), asicsHtml)
+        ;
+}
+
+function fillAsicsItemsMiningCalculatorTemplate(template, asics) {
+    let asicsHtml = '';
+
+    asics.forEach(asic => {
+        asicsHtml += template
+            .replace(new RegExp('{id}', 'g'), asic.Id)
+            .replace(new RegExp('{name}', 'g'), asic.Name)
+            ;
+    });
+
+    return asicsHtml;
 }
 
 // *** Calculator ***
@@ -327,5 +369,25 @@ const coinsMiningCalculatorTemplate = `
 const coinItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
     <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{title} ({coin})</a>
+</div>
+`;
+
+const asicsMiningCalculatorTemplate = `
+<div class="card m-3">
+    <div class="m-4">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateAsicsMiningCalculator()" />
+            <label class="form-label" for="search">Поиск</label>
+        </div>
+        <div class="mt-4 row" id="mining-calculator-asics-items">
+            {asics}
+        </div>
+    </div>
+</div>
+`;
+
+const asicItemMiningCalculatorTemplate = `
+<div class="col-lg-3 p-1">
+    <a href="/calculators/mining/asics/{id}" class="btn btn-secondary btn-block">{name}</a>
 </div>
 `;
