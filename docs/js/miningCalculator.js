@@ -1,6 +1,9 @@
 function showMiningCalculator() {
     showProductMiningCalculator();
+    showCoinsMiningCalculator();
 }
+
+// *** Show ***
 
 function showProductMiningCalculator() {
     const element = document.getElementById('mining-calculator-product');
@@ -12,6 +15,25 @@ function showProductMiningCalculator() {
     const product = window.dataBase.products.find(x => x.Id === productId);
 
     element.innerHTML = fillMiningCalculatorProductTemplate(productMiningCalculatorTemplate, product);
+}
+
+function showCoinsMiningCalculator() {
+    const element = document.getElementById('mining-calculator-coins');
+    if (!element) {
+        return;
+    }
+
+    const coins = window.dataBase.coins;
+
+    element.innerHTML = fillCoinsMiningCalculatorTemplate(coinsMiningCalculatorTemplate, coinMiningCalculatorTemplate, coins);
+}
+
+function updateCoinsMiningCalculator() {
+    const search = document.getElementById('mining-calculator-search').value;
+    const coins = window.dataBase.coins.filter(x => !search || x.tag.toLowerCase().indexOf(search) != -1);
+
+    document.getElementById('mining-calculator-coins-items').innerHTML = 
+        fillCoinsItemsMiningCalculatorTemplate(coinMiningCalculatorTemplate, coins);
 }
 
 // *** Frames ***
@@ -75,6 +97,27 @@ function fillMiningCalculatorResultTemplate(template, data) {
         .replace(new RegExp('{month-profit}', 'g'), prepareDollar(profit * 30))
         .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit* 30))
         ;
+}
+
+function fillCoinsMiningCalculatorTemplate(template, templateItem, coins) {
+    let coinsHtml = fillCoinsItemsMiningCalculatorTemplate(templateItem, coins);
+
+    return template
+        .replace(new RegExp('{coins}', 'g'), coinsHtml)
+        ;
+}
+
+function fillCoinsItemsMiningCalculatorTemplate(template, coins) {
+    let coinsHtml = '';
+
+    coins.forEach(coin => {
+        coinsHtml += template
+            .replace(new RegExp('{id}', 'g'), coin.tag.toLowerCase())
+            .replace(new RegExp('{coin}', 'g'), coin.tag)
+            ;
+    });
+
+    return coinsHtml;
 }
 
 // *** Calculator ***
@@ -200,5 +243,25 @@ const loader = `
     <div class="spinner-border text-primary" role="status">
         <span class="visually-hidden">Загрузка...</span>
     </div>
+</div>
+`;
+
+const coinsMiningCalculatorTemplate = `
+<div class="card m-3">
+    <div class="m-4">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateCoinsMiningCalculator()" />
+            <label class="form-label" for="search">Поиск</label>
+        </div>
+        <div class="mt-4 row" id="mining-calculator-coins-items">
+            {coins}
+        </div>
+    </div>
+</div>
+`;
+
+const coinMiningCalculatorTemplate = `
+<div class="col-lg-1 p-1">
+    <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{coin}</a>
 </div>
 `;

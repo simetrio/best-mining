@@ -444,11 +444,7 @@
       "Decred": {
         "id": 152,
         "tag": "DCR",
-        "algorithm": "Blake (14r)",
-        
-        
-        
-        "e1": 1
+        "algorithm": "Blake (14r)"
       },
       "Dinastycoin": {
         "id": 227,
@@ -683,11 +679,7 @@
       "Expanse": {
         "id": 154,
         "tag": "EXP",
-        "algorithm": "FRKHash",
-        
-        
-        
-        "e1": 1
+        "algorithm": "FRKHash"
       },
       "Fantomcoin": {
         "id": 102,
@@ -1817,11 +1809,7 @@
       "Myriad-Argon2d": {
         "id": 67,
         "tag": "XMY",
-        "algorithm": "Argon2d",
-        
-        
-        
-        "e1": 1
+        "algorithm": "Argon2d"
       },
       "Myriad-Groestl": {
         "id": 49,
@@ -1921,11 +1909,7 @@
       "Zdeex": {
         "id": 400,
         "tag": "ZDEEX",
-        "algorithm": "Equihash",
-        
-        
-        
-        "e1": 1
+        "algorithm": "Equihash"
       },
       "Zcash": {
         "id": 166,
