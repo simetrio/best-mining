@@ -1,1945 +1,1949 @@
 {
     "coins": {
       "0xBitcoin": {
-        "id": 315,
-        "tag": "0xBTC",
-        "algorithm": "SHA3Solidity"
+        "Id": 315,
+        "Tag": "0xBTC",
+        "Algorithm": "SHA3Solidity"
       },
       "365Coin": {
-        "id": 74,
-        "tag": "365",
-        "algorithm": "Keccak"
+        "Id": 74,
+        "Tag": "365",
+        "Algorithm": "Keccak"
       },
       "Abelian": {
-        "id": 397,
-        "tag": "ABEL",
-        "algorithm": "Abelhash",
+        "Id": 397,
+        "Tag": "ABEL",
+        "Algorithm": "Abelhash",
         "e1": 1
       },
       "Aced": {
-        "id": 268,
-        "tag": "ACED",
-        "algorithm": "X16S"
+        "Id": 268,
+        "Tag": "ACED",
+        "Algorithm": "X16S"
       },
       "Actinium": {
-        "id": 290,
-        "tag": "ACM",
-        "algorithm": "Lyra2z"
+        "Id": 290,
+        "Tag": "ACM",
+        "Algorithm": "Lyra2z"
       },
       "Aiden": {
-        "id": 65,
-        "tag": "ADN",
-        "algorithm": "Scrypt-OG"
+        "Id": 65,
+        "Tag": "ADN",
+        "Algorithm": "Scrypt-OG"
       },
       "Adzcoin": {
-        "id": 157,
-        "tag": "ADZ",
-        "algorithm": "X11"
+        "Id": 157,
+        "Tag": "ADZ",
+        "Algorithm": "X11"
       },
       "Aeternity": {
-        "id": 297,
-        "tag": "AE",
-        "algorithm": "CuckooCycle"
+        "Id": 297,
+        "Tag": "AE",
+        "Algorithm": "CuckooCycle"
       },
       "Aeon": {
-        "id": 192,
-        "tag": "AEON",
-        "algorithm": "K12"
+        "Id": 192,
+        "Tag": "AEON",
+        "Algorithm": "K12"
       },
       "Argoneum": {
-        "id": 285,
-        "tag": "AGM",
-        "algorithm": "PHI2"
+        "Id": 285,
+        "Tag": "AGM",
+        "Algorithm": "PHI2"
       },
       "Aion": {
-        "id": 272,
-        "tag": "AION",
-        "algorithm": "Aion"
+        "Id": 272,
+        "Tag": "AION",
+        "Algorithm": "Aion"
       },
       "AIPowerGrid": {
-        "id": 392,
-        "tag": "AIPG",
-        "algorithm": "KawPow"
+        "Id": 392,
+        "Tag": "AIPG",
+        "Algorithm": "KawPow"
       },
       "Aittcoin": {
-        "id": 407,
-        "tag": "AITT",
-        "algorithm": "KawPow"
+        "Id": 407,
+        "Tag": "AITT",
+        "Algorithm": "KawPow"
       },
       "Alephium": {
-        "id": 349,
-        "tag": "ALPH",
-        "algorithm": "Blake3"
+        "Id": 349,
+        "Tag": "ALPH",
+        "Algorithm": "Blake3"
       },
       "Altcoinchain": {
-        "id": 384,
-        "tag": "ALT",
-        "algorithm": "Ethash"
+        "Id": 384,
+        "Tag": "ALT",
+        "Algorithm": "Ethash"
       },
       "Ambercoin": {
-        "id": 133,
-        "tag": "AMBER",
-        "algorithm": "X13"
+        "Id": 133,
+        "Tag": "AMBER",
+        "Algorithm": "X13"
       },
       "Amsterdamcoin": {
-        "id": 145,
-        "tag": "AMS",
-        "algorithm": "Quark"
+        "Id": 145,
+        "Tag": "AMS",
+        "Algorithm": "Quark"
       },
       "Anokas": {
-        "id": 412,
-        "tag": "ANOK",
-        "algorithm": "KawPow"
+        "Id": 412,
+        "Tag": "ANOK",
+        "Algorithm": "KawPow"
       },
       "Anon": {
-        "id": 276,
-        "tag": "ANON",
-        "algorithm": "EquihashZero"
+        "Id": 276,
+        "Tag": "ANON",
+        "Algorithm": "EquihashZero"
       },
       "ARG-Scrypt": {
-        "id": 158,
-        "tag": "ARG",
-        "algorithm": "Scrypt"
+        "Id": 158,
+        "Tag": "ARG",
+        "Algorithm": "Scrypt"
       },
       "ARG-SHA": {
-        "id": 170,
-        "tag": "ARG",
-        "algorithm": "SHA-256"
+        "Id": 170,
+        "Tag": "ARG",
+        "Algorithm": "SHA-256"
       },
       "Aricoin": {
-        "id": 110,
-        "tag": "ARI",
-        "algorithm": "Scrypt"
+        "Id": 110,
+        "Tag": "ARI",
+        "Algorithm": "Scrypt"
       },
       "Pirate": {
-        "id": 298,
-        "tag": "ARRR",
-        "algorithm": "Equihash"
+        "Id": 298,
+        "Tag": "ARRR",
+        "Algorithm": "Equihash"
       },
       "AUR-SHA": {
-        "id": 228,
-        "tag": "AUR",
-        "algorithm": "SHA-256"
+        "Id": 228,
+        "Tag": "AUR",
+        "Algorithm": "SHA-256"
       },
       "AUR-Scrypt": {
-        "id": 40,
-        "tag": "AUR",
-        "algorithm": "Scrypt"
+        "Id": 40,
+        "Tag": "AUR",
+        "Algorithm": "Scrypt"
       },
       "Avian": {
-        "id": 344,
-        "tag": "AVN",
-        "algorithm": "X16RT"
+        "Id": 344,
+        "Tag": "AVN",
+        "Algorithm": "X16RT"
       },
       "Aves": {
-        "id": 383,
-        "tag": "AVS",
-        "algorithm": "Ethash"
+        "Id": 383,
+        "Tag": "AVS",
+        "Algorithm": "Ethash"
       },
       "Axe": {
-        "id": 313,
-        "tag": "AXE",
-        "algorithm": "X11"
+        "Id": 313,
+        "Tag": "AXE",
+        "Algorithm": "X11"
       },
       "Azart": {
-        "id": 281,
-        "tag": "AZART",
-        "algorithm": "X17"
+        "Id": 281,
+        "Tag": "AZART",
+        "Algorithm": "X17"
       },
       "BitcoinDiamond": {
-        "id": 278,
-        "tag": "BCD",
-        "algorithm": "BCD"
+        "Id": 278,
+        "Tag": "BCD",
+        "Algorithm": "BCD"
       },
       "BitcoinCash": {
-        "id": 193,
-        "tag": "BCH",
-        "algorithm": "SHA-256"
+        "Id": 193,
+        "Tag": "BCH",
+        "Algorithm": "SHA-256"
       },
       "Bitcoin Interest": {
-        "id": 245,
-        "tag": "BCI",
-        "algorithm": "ProgPow"
+        "Id": 245,
+        "Tag": "BCI",
+        "Algorithm": "ProgPow"
       },
       "Bytecoin": {
-        "id": 103,
-        "tag": "BCN",
-        "algorithm": "CryptoNight"
+        "Id": 103,
+        "Tag": "BCN",
+        "Algorithm": "CryptoNight"
       },
       "Beam": {
-        "id": 294,
-        "tag": "BEAM",
-        "algorithm": "BeamHashIII"
+        "Id": 294,
+        "Tag": "BEAM",
+        "Algorithm": "BeamHashIII"
       },
       "Belacoin": {
-        "id": 182,
-        "tag": "BELA",
-        "algorithm": "Scrypt"
+        "Id": 182,
+        "Tag": "BELA",
+        "Algorithm": "Scrypt"
       },
       "Bugna": {
-        "id": 410,
-        "tag": "BGA",
-        "algorithm": "kHeavyHash"
+        "Id": 410,
+        "Tag": "BGA",
+        "Algorithm": "kHeavyHash"
       },
       "Bitgesell": {
-        "id": 343,
-        "tag": "BGL",
-        "algorithm": "Keccak"
+        "Id": 343,
+        "Tag": "BGL",
+        "Algorithm": "Keccak"
       },
       "Bipcoin": {
-        "id": 171,
-        "tag": "BIP",
-        "algorithm": "CryptoNight"
+        "Id": 171,
+        "Tag": "BIP",
+        "Algorithm": "CryptoNight"
       },
       "Bismuth": {
-        "id": 232,
-        "tag": "BIS",
-        "algorithm": "SHA-224"
+        "Id": 232,
+        "Tag": "BIS",
+        "Algorithm": "SHA-224"
       },
       "BitNet": {
-        "id": 387,
-        "tag": "BIT",
-        "algorithm": "Aurum"
+        "Id": 387,
+        "Tag": "BIT",
+        "Algorithm": "Aurum"
       },
       "BitCash": {
-        "id": 304,
-        "tag": "BITC",
-        "algorithm": "X25X"
+        "Id": 304,
+        "Tag": "BITC",
+        "Algorithm": "X25X"
       },
       "Bloc.money": {
-        "id": 312,
-        "tag": "BLOC",
-        "algorithm": "CryptoNightHaven"
+        "Id": 312,
+        "Tag": "BLOC",
+        "Algorithm": "CryptoNightHaven"
       },
       "Blocx": {
-        "id": 364,
-        "tag": "BLOCX",
-        "algorithm": "X11"
+        "Id": 364,
+        "Tag": "BLOCX",
+        "Algorithm": "X11"
       },
       "Dobbscoin": {
-        "id": 131,
-        "tag": "BOB",
-        "algorithm": "Scrypt"
+        "Id": 131,
+        "Tag": "BOB",
+        "Algorithm": "Scrypt"
       },
       "BitSend": {
-        "id": 201,
-        "tag": "BSD",
-        "algorithm": "Xevan"
+        "Id": 201,
+        "Tag": "BSD",
+        "Algorithm": "Xevan"
       },
       "BlockStamp": {
-        "id": 314,
-        "tag": "BST",
-        "algorithm": "BlockStamp"
+        "Id": 314,
+        "Tag": "BST",
+        "Algorithm": "BlockStamp"
       },
       "GlobalBoost-Y": {
-        "id": 138,
-        "tag": "BSTY",
-        "algorithm": "Yescrypt"
+        "Id": 138,
+        "Tag": "BSTY",
+        "Algorithm": "Yescrypt"
       },
       "BitcoinSV": {
-        "id": 289,
-        "tag": "BSV",
-        "algorithm": "SHA-256"
+        "Id": 289,
+        "Tag": "BSV",
+        "Algorithm": "SHA-256"
       },
       "Bata": {
-        "id": 144,
-        "tag": "BTA",
-        "algorithm": "Scrypt"
+        "Id": 144,
+        "Tag": "BTA",
+        "Algorithm": "Scrypt"
       },
       "Bitcoin": {
-        "id": 1,
-        "tag": "BTC",
-        "algorithm": "SHA-256"
+        "Id": 1,
+        "Tag": "BTC",
+        "Algorithm": "SHA-256",
+        "Popular": true
       },
       "BitcoinPrivate": {
-        "id": 230,
-        "tag": "BTCP",
-        "algorithm": "EquihashZero"
+        "Id": 230,
+        "Tag": "BTCP",
+        "Algorithm": "EquihashZero"
       },
       "BitcoinZ": {
-        "id": 207,
-        "tag": "BTCZ",
-        "algorithm": "Zhash"
+        "Id": 207,
+        "Tag": "BTCZ",
+        "Algorithm": "Zhash"
       },
       "BitcoinGold": {
-        "id": 214,
-        "tag": "BTG",
-        "algorithm": "Zhash"
+        "Id": 214,
+        "Tag": "BTG",
+        "Algorithm": "Zhash"
       },
       "Bytom": {
-        "id": 242,
-        "tag": "BTM",
-        "algorithm": "Tensority"
+        "Id": 242,
+        "Tag": "BTM",
+        "Algorithm": "Tensority"
       },
       "Bitmark": {
-        "id": 111,
-        "tag": "BTM",
-        "algorithm": "Scrypt"
+        "Id": 111,
+        "Tag": "BTM",
+        "Algorithm": "Scrypt"
       },
       "Bitnet BTN": {
-        "id": 378,
-        "tag": "BTN",
-        "algorithm": "Ethash"
+        "Id": 378,
+        "Tag": "BTN",
+        "Algorithm": "Ethash"
       },
       "Bitcore": {
-        "id": 202,
-        "tag": "BTX",
-        "algorithm": "Mega-BTX"
+        "Id": 202,
+        "Tag": "BTX",
+        "Algorithm": "Mega-BTX"
       },
       "Burnercoin": {
-        "id": 90,
-        "tag": "BURN",
-        "algorithm": "X13"
+        "Id": 90,
+        "Tag": "BURN",
+        "Algorithm": "X13"
       },
       "Bulwark": {
-        "id": 224,
-        "tag": "BWK",
-        "algorithm": "NIST5"
+        "Id": 224,
+        "Tag": "BWK",
+        "Algorithm": "NIST5"
       },
       "Cachecoin": {
-        "id": 97,
-        "tag": "CACH",
-        "algorithm": "Chacha (Nf18)"
+        "Id": 97,
+        "Tag": "CACH",
+        "Algorithm": "Chacha (Nf18)"
       },
       "Cannabiscoin": {
-        "id": 188,
-        "tag": "CANN",
-        "algorithm": "X11"
+        "Id": 188,
+        "Tag": "CANN",
+        "Algorithm": "X11"
       },
       "BottleCaps": {
-        "id": 120,
-        "tag": "CAP",
-        "algorithm": "Scrypt"
+        "Id": 120,
+        "Tag": "CAP",
+        "Algorithm": "Scrypt"
       },
       "Kaspa Classic": {
-        "id": 408,
-        "tag": "CAS",
-        "algorithm": "Pyrin"
+        "Id": 408,
+        "Tag": "CAS",
+        "Algorithm": "Pyrin"
       },
       "Litecash": {
-        "id": 326,
-        "tag": "CASH",
-        "algorithm": "Equihash (150,5)"
+        "Id": 326,
+        "Tag": "CASH",
+        "Algorithm": "Equihash (150,5)"
       },
       "Catcoin": {
-        "id": 198,
-        "tag": "CAT",
-        "algorithm": "Scrypt"
+        "Id": 198,
+        "Tag": "CAT",
+        "Algorithm": "Scrypt"
       },
       "Canxium": {
-        "id": 373,
-        "tag": "CAU",
-        "algorithm": "Ethash"
+        "Id": 373,
+        "Tag": "CAU",
+        "Algorithm": "Ethash"
       },
       "Bullion": {
-        "id": 126,
-        "tag": "CBX",
-        "algorithm": "Scrypt"
+        "Id": 126,
+        "Tag": "CBX",
+        "Algorithm": "Scrypt"
       },
       "Conceal": {
-        "id": 305,
-        "tag": "CCX",
-        "algorithm": "CryptoNightGPU"
+        "Id": 305,
+        "Tag": "CCX",
+        "Algorithm": "CryptoNightGPU"
       },
       "Conflux": {
-        "id": 337,
-        "tag": "CFX",
-        "algorithm": "Octopus"
+        "Id": 337,
+        "Tag": "CFX",
+        "Algorithm": "Octopus"
       },
       "X-Children": {
-        "id": 116,
-        "tag": "CHILD",
-        "algorithm": "X11"
+        "Id": 116,
+        "Tag": "CHILD",
+        "Algorithm": "X11"
       },
       "Nervos": {
-        "id": 321,
-        "tag": "CKB",
-        "algorithm": "Eaglesong"
+        "Id": 321,
+        "Tag": "CKB",
+        "Algorithm": "Eaglesong"
       },
       "Checkcoin": {
-        "id": 123,
-        "tag": "CKC",
-        "algorithm": "X11"
+        "Id": 123,
+        "Tag": "CKC",
+        "Algorithm": "X11"
       },
       "Callisto": {
-        "id": 283,
-        "tag": "CLO",
-        "algorithm": "Ethash"
+        "Id": 283,
+        "Tag": "CLO",
+        "Algorithm": "Ethash"
       },
       "Cloakcoin": {
-        "id": 88,
-        "tag": "CLOAK",
-        "algorithm": "X13"
+        "Id": 88,
+        "Tag": "CLOAK",
+        "Algorithm": "X13"
       },
       "Clore": {
-        "id": 362,
-        "tag": "CLORE",
-        "algorithm": "KawPow"
+        "Id": 362,
+        "Tag": "CLORE",
+        "Algorithm": "KawPow"
       },
       "Commercium": {
-        "id": 255,
-        "tag": "CMM",
-        "algorithm": "Equihash"
+        "Id": 255,
+        "Tag": "CMM",
+        "Algorithm": "Equihash"
       },
       "CRowdCLassic": {
-        "id": 226,
-        "tag": "CRCL",
-        "algorithm": "NeoScrypt"
+        "Id": 226,
+        "Tag": "CRCL",
+        "Algorithm": "NeoScrypt"
       },
       "Creativecoin": {
-        "id": 199,
-        "tag": "CREA",
-        "algorithm": "Keccak-C"
+        "Id": 199,
+        "Tag": "CREA",
+        "Algorithm": "Keccak-C"
       },
       "Creamcoin": {
-        "id": 206,
-        "tag": "CRM",
-        "algorithm": "Skein"
+        "Id": 206,
+        "Tag": "CRM",
+        "Algorithm": "Skein"
       },
       "CrocodileCash": {
-        "id": 208,
-        "tag": "CROC",
-        "algorithm": "SHA-256"
+        "Id": 208,
+        "Tag": "CROC",
+        "Algorithm": "SHA-256"
       },
       "Crown": {
-        "id": 165,
-        "tag": "CRW",
-        "algorithm": "SHA-256"
+        "Id": 165,
+        "Tag": "CRW",
+        "Algorithm": "SHA-256"
       },
       "Cryptcoin": {
-        "id": 86,
-        "tag": "CRYPT",
-        "algorithm": "X11"
+        "Id": 86,
+        "Tag": "CRYPT",
+        "Algorithm": "X11"
       },
       "Crypto": {
-        "id": 134,
-        "tag": "CTO",
-        "algorithm": "Lyra2RE"
+        "Id": 134,
+        "Tag": "CTO",
+        "Algorithm": "Lyra2RE"
       },
       "Cortex": {
-        "id": 329,
-        "tag": "CTXC",
-        "algorithm": "Cortex"
+        "Id": 329,
+        "Tag": "CTXC",
+        "Algorithm": "Cortex"
       },
       "Curecoin": {
-        "id": 76,
-        "tag": "CURE",
-        "algorithm": "F@H"
+        "Id": 76,
+        "Tag": "CURE",
+        "Algorithm": "F@H"
       },
       "Denarius": {
-        "id": 187,
-        "tag": "D",
-        "algorithm": "Tribus"
+        "Id": 187,
+        "Tag": "D",
+        "Algorithm": "Tribus"
       },
       "Dash": {
-        "id": 34,
-        "tag": "DASH",
-        "algorithm": "X11"
+        "Id": 34,
+        "Tag": "DASH",
+        "Algorithm": "X11"
       },
       "Dubaicoin": {
-        "id": 271,
-        "tag": "DBIX",
-        "algorithm": "Ethash"
+        "Id": 271,
+        "Tag": "DBIX",
+        "Algorithm": "Ethash"
       },
       "Decred": {
-        "id": 152,
-        "tag": "DCR",
-        "algorithm": "Blake (14r)"
+        "Id": 152,
+        "Tag": "DCR",
+        "Algorithm": "Blake (14r)"
       },
       "Dinastycoin": {
-        "id": 227,
-        "tag": "DCY",
-        "algorithm": "RandomX"
+        "Id": 227,
+        "Tag": "DCY",
+        "Algorithm": "RandomX"
       },
       "Deutsche eMark": {
-        "id": 180,
-        "tag": "DEM",
-        "algorithm": "SHA-256"
+        "Id": 180,
+        "Tag": "DEM",
+        "Algorithm": "SHA-256"
       },
       "Dero": {
-        "id": 291,
-        "tag": "DERO",
-        "algorithm": "AstroBWT"
+        "Id": 291,
+        "Tag": "DERO",
+        "Algorithm": "AstroBWT"
       },
       "DGB-Odocrypt": {
-        "id": 112,
-        "tag": "DGB",
-        "algorithm": "Odocrypt"
+        "Id": 112,
+        "Tag": "DGB",
+        "Algorithm": "Odocrypt"
       },
       "DGB-Scrypt": {
-        "id": 28,
-        "tag": "DGB",
-        "algorithm": "Scrypt"
+        "Id": 28,
+        "Tag": "DGB",
+        "Algorithm": "Scrypt"
       },
       "DGB-Skein": {
-        "id": 114,
-        "tag": "DGB",
-        "algorithm": "Skein"
+        "Id": 114,
+        "Tag": "DGB",
+        "Algorithm": "Skein"
       },
       "DGB-Qubit": {
-        "id": 115,
-        "tag": "DGB",
-        "algorithm": "Qubit"
+        "Id": 115,
+        "Tag": "DGB",
+        "Algorithm": "Qubit"
       },
       "DGB-SHA": {
-        "id": 113,
-        "tag": "DGB",
-        "algorithm": "SHA-256"
+        "Id": 113,
+        "Tag": "DGB",
+        "Algorithm": "SHA-256"
       },
       "DGC-X11": {
-        "id": 125,
-        "tag": "DGC",
-        "algorithm": "X11"
+        "Id": 125,
+        "Tag": "DGC",
+        "Algorithm": "X11"
       },
       "DGC-Scrypt": {
-        "id": 27,
-        "tag": "DGC",
-        "algorithm": "Scrypt"
+        "Id": 27,
+        "Tag": "DGC",
+        "Algorithm": "Scrypt"
       },
       "DGC-SHA": {
-        "id": 124,
-        "tag": "DGC",
-        "algorithm": "SHA-256"
+        "Id": 124,
+        "Tag": "DGC",
+        "Algorithm": "SHA-256"
       },
       "Diabase": {
-        "id": 372,
-        "tag": "DIAC",
-        "algorithm": "X11"
+        "Id": 372,
+        "Tag": "DIAC",
+        "Algorithm": "X11"
       },
       "Dinero": {
-        "id": 236,
-        "tag": "DIN",
-        "algorithm": "NeoScrypt"
+        "Id": 236,
+        "Tag": "DIN",
+        "Algorithm": "NeoScrypt"
       },
       "DinarTether": {
-        "id": 399,
-        "tag": "DINT",
-        "algorithm": "KawPow"
+        "Id": 399,
+        "Tag": "DINT",
+        "Algorithm": "KawPow"
       },
       "Diamond": {
-        "id": 43,
-        "tag": "DMD",
-        "algorithm": "Groestl"
+        "Id": 43,
+        "Tag": "DMD",
+        "Algorithm": "Groestl"
       },
       "Darknet": {
-        "id": 153,
-        "tag": "DNET",
-        "algorithm": "Quark"
+        "Id": 153,
+        "Tag": "DNET",
+        "Algorithm": "Quark"
       },
       "Dynexcoin": {
-        "id": 359,
-        "tag": "DNX",
-        "algorithm": "DynexSolve"
+        "Id": 359,
+        "Tag": "DNX",
+        "Algorithm": "DynexSolve"
       },
       "Dogecoin": {
-        "id": 6,
-        "tag": "DOGE",
-        "algorithm": "Scrypt"
+        "Id": 6,
+        "Tag": "DOGE",
+        "Algorithm": "Scrypt",
+        "Popular": true
       },
       "Dogether": {
-        "id": 393,
-        "tag": "DOGETHER",
-        "algorithm": "Ethash"
+        "Id": 393,
+        "Tag": "DOGETHER",
+        "Algorithm": "Ethash"
       },
       "DopeCoin": {
-        "id": 61,
-        "tag": "DOPE",
-        "algorithm": "Scrypt"
+        "Id": 61,
+        "Tag": "DOPE",
+        "Algorithm": "Scrypt"
       },
       "DigitalpriceClassic": {
-        "id": 183,
-        "tag": "DPC",
-        "algorithm": "X11"
+        "Id": 183,
+        "Tag": "DPC",
+        "Algorithm": "X11"
       },
       "Dashcoin": {
-        "id": 129,
-        "tag": "DSH",
-        "algorithm": "CryptoNight"
+        "Id": 129,
+        "Tag": "DSH",
+        "Algorithm": "CryptoNight"
       },
       "Parallel-Scrypt": {
-        "id": 140,
-        "tag": "DUO",
-        "algorithm": "Scrypt"
+        "Id": 140,
+        "Tag": "DUO",
+        "Algorithm": "Scrypt"
       },
       "Parallel-SHA": {
-        "id": 141,
-        "tag": "DUO",
-        "algorithm": "SHA-256"
+        "Id": 141,
+        "Tag": "DUO",
+        "Algorithm": "SHA-256"
       },
       "Earthcoin": {
-        "id": 19,
-        "tag": "EAC",
-        "algorithm": "Scrypt"
+        "Id": 19,
+        "Tag": "EAC",
+        "Algorithm": "Scrypt"
       },
       "Etica": {
-        "id": 388,
-        "tag": "ETI",
-        "algorithm": "SHA3Solidity"
+        "Id": 388,
+        "Tag": "ETI",
+        "Algorithm": "SHA3Solidity"
       },
       "EtherGem": {
-        "id": 307,
-        "tag": "EGEM",
-        "algorithm": "Ethash"
+        "Id": 307,
+        "Tag": "EGEM",
+        "Algorithm": "Ethash"
       },
       "Ellaism": {
-        "id": 221,
-        "tag": "ELLA",
-        "algorithm": "Ethash"
+        "Id": 221,
+        "Tag": "ELLA",
+        "Algorithm": "Ethash"
       },
       "Elliot": {
-        "id": 251,
-        "tag": "ELLI",
-        "algorithm": "Xevan"
+        "Id": 251,
+        "Tag": "ELLI",
+        "Algorithm": "Xevan"
       },
       "Einsteinium": {
-        "id": 15,
-        "tag": "EMC2",
-        "algorithm": "Scrypt"
+        "Id": 15,
+        "Tag": "EMC2",
+        "Algorithm": "Scrypt"
       },
       "Entropycoin": {
-        "id": 79,
-        "tag": "ENC",
-        "algorithm": "Scrypt-N"
+        "Id": 79,
+        "Tag": "ENC",
+        "Algorithm": "Scrypt-N"
       },
       "Experiencecoin": {
-        "id": 136,
-        "tag": "EPC",
-        "algorithm": "Scrypt"
+        "Id": 136,
+        "Tag": "EPC",
+        "Algorithm": "Scrypt"
       },
       "Ergo": {
-        "id": 340,
-        "tag": "ERG",
-        "algorithm": "Autolykos"
+        "Id": 340,
+        "Tag": "ERG",
+        "Algorithm": "Autolykos"
       },
       "EtherSocial": {
-        "id": 320,
-        "tag": "ESN",
-        "algorithm": "Ethash"
+        "Id": 320,
+        "Tag": "ESN",
+        "Algorithm": "Ethash"
       },
       "EthereumClassic": {
-        "id": 162,
-        "tag": "ETC",
-        "algorithm": "Etchash"
+        "Id": 162,
+        "Tag": "ETC",
+        "Algorithm": "Etchash",
+        "Popular": true
       },
       "Ethereum": {
-        "id": 151,
-        "tag": "ETH",
-        "algorithm": "Ethash"
+        "Id": 151,
+        "Tag": "ETH",
+        "Algorithm": "Ethash"
       },
       "EthereumFair": {
-        "id": 355,
-        "tag": "ETHF",
-        "algorithm": "Ethash"
+        "Id": 355,
+        "Tag": "ETHF",
+        "Algorithm": "Ethash"
       },
       "Etho": {
-        "id": 306,
-        "tag": "ETHO",
-        "algorithm": "Ethash"
+        "Id": 306,
+        "Tag": "ETHO",
+        "Algorithm": "Ethash"
       },
       "EthereumPoW": {
-        "id": 353,
-        "tag": "ETHW",
-        "algorithm": "Ethash"
+        "Id": 353,
+        "Tag": "ETHW",
+        "Algorithm": "Ethash"
       },
       "Electroneum": {
-        "id": 213,
-        "tag": "ETN",
-        "algorithm": "CryptoNight"
+        "Id": 213,
+        "Tag": "ETN",
+        "Algorithm": "CryptoNight"
       },
       "Electronero": {
-        "id": 284,
-        "tag": "ETNX",
-        "algorithm": "CryptoNightFast"
+        "Id": 284,
+        "Tag": "ETNX",
+        "Algorithm": "CryptoNightFast"
       },
       "Metaverse": {
-        "id": 209,
-        "tag": "ETP",
-        "algorithm": "Ethash"
+        "Id": 209,
+        "Tag": "ETP",
+        "Algorithm": "Ethash"
       },
       "Euno": {
-        "id": 310,
-        "tag": "EUNO",
-        "algorithm": "X11"
+        "Id": 310,
+        "Tag": "EUNO",
+        "Algorithm": "X11"
       },
       "Evrmore": {
-        "id": 413,
-        "tag": "EVR",
-        "algorithm": "EvrProgPow"
+        "Id": 413,
+        "Tag": "EVR",
+        "Algorithm": "EvrProgPow"
       },
       "Execoin": {
-        "id": 20,
-        "tag": "EXE",
-        "algorithm": "Scrypt-N"
+        "Id": 20,
+        "Tag": "EXE",
+        "Algorithm": "Scrypt-N"
       },
       "Exosis": {
-        "id": 316,
-        "tag": "EXO",
-        "algorithm": "X16R"
+        "Id": 316,
+        "Tag": "EXO",
+        "Algorithm": "X16R"
       },
       "Expanse": {
-        "id": 154,
-        "tag": "EXP",
-        "algorithm": "FRKHash"
+        "Id": 154,
+        "Tag": "EXP",
+        "Algorithm": "FRKHash"
       },
       "Fantomcoin": {
-        "id": 102,
-        "tag": "FCN",
-        "algorithm": "CryptoNight"
+        "Id": 102,
+        "Tag": "FCN",
+        "Algorithm": "CryptoNight"
       },
       "Firo": {
-        "id": 175,
-        "tag": "FIRO",
-        "algorithm": "FiroPow"
+        "Id": 175,
+        "Tag": "FIRO",
+        "Algorithm": "FiroPow"
       },
       "Folm": {
-        "id": 241,
-        "tag": "FLM",
-        "algorithm": "PHI1612"
+        "Id": 241,
+        "Tag": "FLM",
+        "Algorithm": "PHI1612"
       },
       "Florin": {
-        "id": 222,
-        "tag": "FLO",
-        "algorithm": "Scrypt"
+        "Id": 222,
+        "Tag": "FLO",
+        "Algorithm": "Scrypt"
       },
       "Fluttercoin": {
-        "id": 36,
-        "tag": "FLT",
-        "algorithm": "Scrypt"
+        "Id": 36,
+        "Tag": "FLT",
+        "Algorithm": "Scrypt"
       },
       "Flux": {
-        "id": 287,
-        "tag": "FLUX",
-        "algorithm": "PoUW"
+        "Id": 287,
+        "Tag": "FLUX",
+        "Algorithm": "PoUW"
       },
       "Frencoin": {
-        "id": 380,
-        "tag": "FREN",
-        "algorithm": "KawPow"
+        "Id": 380,
+        "Tag": "FREN",
+        "Algorithm": "KawPow"
       },
       "Freshcoin": {
-        "id": 118,
-        "tag": "FRSH",
-        "algorithm": "Fresh"
+        "Id": 118,
+        "Tag": "FRSH",
+        "Algorithm": "Fresh"
       },
       "Fsociety": {
-        "id": 368,
-        "tag": "FSC",
-        "algorithm": "GhostRider"
+        "Id": 368,
+        "Tag": "FSC",
+        "Algorithm": "GhostRider"
       },
       "Fastcoin": {
-        "id": 63,
-        "tag": "FST",
-        "algorithm": "Scrypt"
+        "Id": 63,
+        "Tag": "FST",
+        "Algorithm": "Scrypt"
       },
       "Feathercoin": {
-        "id": 8,
-        "tag": "FTC",
-        "algorithm": "NeoScrypt"
+        "Id": 8,
+        "Tag": "FTC",
+        "Algorithm": "NeoScrypt"
       },
       "GameCredits": {
-        "id": 147,
-        "tag": "GAME",
-        "algorithm": "Scrypt"
+        "Id": 147,
+        "Tag": "GAME",
+        "Algorithm": "Scrypt"
       },
       "Goldblocks": {
-        "id": 160,
-        "tag": "GB",
-        "algorithm": "X11"
+        "Id": 160,
+        "Tag": "GB",
+        "Algorithm": "X11"
       },
       "GoByte": {
-        "id": 225,
-        "tag": "GBX",
-        "algorithm": "NeoScrypt"
+        "Id": 225,
+        "Tag": "GBX",
+        "Algorithm": "NeoScrypt"
       },
       "GDenomination": {
-        "id": 50,
-        "tag": "GDN",
-        "algorithm": "X11"
+        "Id": 50,
+        "Tag": "GDN",
+        "Algorithm": "X11"
       },
       "Geocoin": {
-        "id": 135,
-        "tag": "GEO",
-        "algorithm": "Qubit"
+        "Id": 135,
+        "Tag": "GEO",
+        "Algorithm": "Qubit"
       },
       "Gexan": {
-        "id": 308,
-        "tag": "GEX",
-        "algorithm": "PHI2"
+        "Id": 308,
+        "Tag": "GEX",
+        "Algorithm": "PHI2"
       },
       "Gincoin": {
-        "id": 250,
-        "tag": "GIN",
-        "algorithm": "X16RT"
+        "Id": 250,
+        "Tag": "GIN",
+        "Algorithm": "X16RT"
       },
       "Globalcoin": {
-        "id": 81,
-        "tag": "GLC",
-        "algorithm": "Scrypt"
+        "Id": 81,
+        "Tag": "GLC",
+        "Algorithm": "Scrypt"
       },
       "Gemlink": {
-        "id": 288,
-        "tag": "GLINK",
-        "algorithm": "Zhash"
+        "Id": 288,
+        "Tag": "GLINK",
+        "Algorithm": "Zhash"
       },
       "Goalcoin": {
-        "id": 87,
-        "tag": "GOAL",
-        "algorithm": "Scrypt"
+        "Id": 87,
+        "Tag": "GOAL",
+        "Algorithm": "Scrypt"
       },
       "GamePass": {
-        "id": 376,
-        "tag": "GPN",
-        "algorithm": "KawPow"
+        "Id": 376,
+        "Tag": "GPN",
+        "Algorithm": "KawPow"
       },
       "GainProX": {
-        "id": 367,
-        "tag": "GPRX",
-        "algorithm": "GhostRider"
+        "Id": 367,
+        "Tag": "GPRX",
+        "Algorithm": "GhostRider"
       },
       "Graft": {
-        "id": 261,
-        "tag": "GRFT",
-        "algorithm": "RandomXG"
+        "Id": 261,
+        "Tag": "GRFT",
+        "Algorithm": "RandomXG"
       },
       "Grimm": {
-        "id": 325,
-        "tag": "GRIMM",
-        "algorithm": "Equihash (150,5)"
+        "Id": 325,
+        "Tag": "GRIMM",
+        "Algorithm": "Equihash (150,5)"
       },
       "Grin-CT31": {
-        "id": 299,
-        "tag": "GRIN",
-        "algorithm": "Cuckatoo31"
+        "Id": 299,
+        "Tag": "GRIN",
+        "Algorithm": "Cuckatoo31"
       },
       "Grin-CT32": {
-        "id": 324,
-        "tag": "GRIN",
-        "algorithm": "Cuckatoo32"
+        "Id": 324,
+        "Tag": "GRIN",
+        "Algorithm": "Cuckatoo32"
       },
       "Grin-CR29": {
-        "id": 293,
-        "tag": "GRIN",
-        "algorithm": "Cuckarooz29"
+        "Id": 293,
+        "Tag": "GRIN",
+        "Algorithm": "Cuckarooz29"
       },
       "Garlicoin": {
-        "id": 243,
-        "tag": "GRLC",
-        "algorithm": "Allium"
+        "Id": 243,
+        "Tag": "GRLC",
+        "Algorithm": "Allium"
       },
       "GroestlCoin": {
-        "id": 48,
-        "tag": "GRS",
-        "algorithm": "Groestl"
+        "Id": 48,
+        "Tag": "GRS",
+        "Algorithm": "Groestl"
       },
       "Gravium": {
-        "id": 262,
-        "tag": "GRV",
-        "algorithm": "X16R"
+        "Id": 262,
+        "Tag": "GRV",
+        "Algorithm": "X16R"
       },
       "Gentarium": {
-        "id": 267,
-        "tag": "GTM",
-        "algorithm": "Lyra2z"
+        "Id": 267,
+        "Tag": "GTM",
+        "Algorithm": "Lyra2z"
       },
       "Halcyon": {
-        "id": 122,
-        "tag": "HAL",
-        "algorithm": "NeoScrypt"
+        "Id": 122,
+        "Tag": "HAL",
+        "Algorithm": "NeoScrypt"
       },
       "Hanacoin": {
-        "id": 270,
-        "tag": "HANA",
-        "algorithm": "Lyra2REv3"
+        "Id": 270,
+        "Tag": "HANA",
+        "Algorithm": "Lyra2REv3"
       },
       "Heldcoin": {
-        "id": 253,
-        "tag": "HDLC",
-        "algorithm": "Scrypt"
+        "Id": 253,
+        "Tag": "HDLC",
+        "Algorithm": "Scrypt"
       },
       "Hirocoin": {
-        "id": 33,
-        "tag": "HIRO",
-        "algorithm": "X11"
+        "Id": 33,
+        "Tag": "HIRO",
+        "Algorithm": "X11"
       },
       "Hilux": {
-        "id": 295,
-        "tag": "HLX",
-        "algorithm": "X16R"
+        "Id": 295,
+        "Tag": "HLX",
+        "Algorithm": "X16R"
       },
       "Handshake": {
-        "id": 327,
-        "tag": "HNS",
-        "algorithm": "Handshake"
+        "Id": 327,
+        "Tag": "HNS",
+        "Algorithm": "Handshake"
       },
       "HelpTheHomeless": {
-        "id": 258,
-        "tag": "HTH",
-        "algorithm": "X25X"
+        "Id": 258,
+        "Tag": "HTH",
+        "Algorithm": "X25X"
       },
       "Hoosat": {
-        "id": 406,
-        "tag": "HTN",
-        "algorithm": "Pyrin"
+        "Id": 406,
+        "Tag": "HTN",
+        "Algorithm": "Pyrin"
       },
       "Hush": {
-        "id": 168,
-        "tag": "HUSH",
-        "algorithm": "Equihash"
+        "Id": 168,
+        "Tag": "HUSH",
+        "Algorithm": "Equihash"
       },
       "Heavycoin": {
-        "id": 35,
-        "tag": "HVC",
-        "algorithm": "Heavycoin"
+        "Id": 35,
+        "Tag": "HVC",
+        "Algorithm": "Heavycoin"
       },
       "Hypra": {
-        "id": 365,
-        "tag": "HYP",
-        "algorithm": "EthashB3"
+        "Id": 365,
+        "Tag": "HYP",
+        "Algorithm": "EthashB3"
       },
       "Ivugeocoin": {
-        "id": 142,
-        "tag": "IEC",
-        "algorithm": "Scrypt"
+        "Id": 142,
+        "Tag": "IEC",
+        "Algorithm": "Scrypt"
       },
       "Imagecoin": {
-        "id": 311,
-        "tag": "IMG",
-        "algorithm": "X11"
+        "Id": 311,
+        "Tag": "IMG",
+        "Algorithm": "X11"
       },
       "Influxcoin": {
-        "id": 149,
-        "tag": "INFX",
-        "algorithm": "X11"
+        "Id": 149,
+        "Tag": "INFX",
+        "Algorithm": "X11"
       },
       "Innova": {
-        "id": 229,
-        "tag": "INN",
-        "algorithm": "NeoScrypt"
+        "Id": 229,
+        "Tag": "INN",
+        "Algorithm": "NeoScrypt"
       },
       "Iridium": {
-        "id": 345,
-        "tag": "IRD",
-        "algorithm": "CryptoNightTurtle"
+        "Id": 345,
+        "Tag": "IRD",
+        "Algorithm": "CryptoNightTurtle"
       },
       "IronFish": {
-        "id": 411,
-        "tag": "IRON",
-        "algorithm": "FishHash"
+        "Id": 411,
+        "Tag": "IRON",
+        "Algorithm": "FishHash"
       },
       "IronFish Old": {
-        "id": 360,
-        "tag": "IRON",
-        "algorithm": "IronFish"
+        "Id": 360,
+        "Tag": "IRON",
+        "Algorithm": "IronFish"
       },
       "Jackpotcoin": {
-        "id": 80,
-        "tag": "JPC",
-        "algorithm": "JHA"
+        "Id": 80,
+        "Tag": "JPC",
+        "Algorithm": "JHA"
       },
       "Karmacoin": {
-        "id": 38,
-        "tag": "KARM",
-        "algorithm": "X11"
+        "Id": 38,
+        "Tag": "KARM",
+        "Algorithm": "X11"
       },
       "Kaspa": {
-        "id": 352,
-        "tag": "KAS",
-        "algorithm": "kHeavyHash"
+        "Id": 352,
+        "Tag": "KAS",
+        "Algorithm": "kHeavyHash",
+        "Popular": true
       },
       "Kylacoin": {
-        "id": 379,
-        "tag": "KCN",
-        "algorithm": "SHA3d"
+        "Id": 379,
+        "Tag": "KCN",
+        "Algorithm": "SHA3d"
       },
       "Kadena": {
-        "id": 334,
-        "tag": "KDA",
-        "algorithm": "Kadena"
+        "Id": 334,
+        "Tag": "KDA",
+        "Algorithm": "Kadena"
       },
       "Kiirocoin": {
-        "id": 363,
-        "tag": "KIIRO",
-        "algorithm": "FiroPow"
+        "Id": 363,
+        "Tag": "KIIRO",
+        "Algorithm": "FiroPow"
       },
       "Karlsen": {
-        "id": 386,
-        "tag": "KLS",
-        "algorithm": "Karlsenhash"
+        "Id": 386,
+        "Tag": "KLS",
+        "Algorithm": "Karlsenhash"
       },
       "Komodo": {
-        "id": 174,
-        "tag": "KMD",
-        "algorithm": "Equihash"
+        "Id": 174,
+        "Tag": "KMD",
+        "Algorithm": "Equihash"
       },
       "Krypton": {
-        "id": 163,
-        "tag": "KR",
-        "algorithm": "Ethash"
+        "Id": 163,
+        "Tag": "KR",
+        "Algorithm": "Ethash"
       },
       "Karbo": {
-        "id": 176,
-        "tag": "KRB",
-        "algorithm": "CryptoNight"
+        "Id": 176,
+        "Tag": "KRB",
+        "Algorithm": "CryptoNight"
       },
       "LBRY": {
-        "id": 164,
-        "tag": "LBC",
-        "algorithm": "LBRY"
+        "Id": 164,
+        "Tag": "LBC",
+        "Algorithm": "LBRY"
       },
       "LitecoinCash": {
-        "id": 231,
-        "tag": "LCC",
-        "algorithm": "SHA-256"
+        "Id": 231,
+        "Tag": "LCC",
+        "Algorithm": "SHA-256"
       },
       "LitecoinPlus": {
-        "id": 275,
-        "tag": "LCP",
-        "algorithm": "Scrypt"
+        "Id": 275,
+        "Tag": "LCP",
+        "Algorithm": "Scrypt"
       },
       "Logicoin": {
-        "id": 57,
-        "tag": "LGC",
-        "algorithm": "X11"
+        "Id": 57,
+        "Tag": "LGC",
+        "Algorithm": "X11"
       },
       "Legendarycoin": {
-        "id": 68,
-        "tag": "LGD",
-        "algorithm": "Scrypt"
+        "Id": 68,
+        "Tag": "LGD",
+        "Algorithm": "Scrypt"
       },
       "LimecoinX": {
-        "id": 46,
-        "tag": "LIMX",
-        "algorithm": "X11"
+        "Id": 46,
+        "Tag": "LIMX",
+        "Algorithm": "X11"
       },
       "Linx": {
-        "id": 195,
-        "tag": "LINX",
-        "algorithm": "Scrypt"
+        "Id": 195,
+        "Tag": "LINX",
+        "Algorithm": "Scrypt"
       },
       "Loki": {
-        "id": 249,
-        "tag": "LOKI",
-        "algorithm": "RandomXL"
+        "Id": 249,
+        "Tag": "LOKI",
+        "Algorithm": "RandomXL"
       },
       "Larissa": {
-        "id": 398,
-        "tag": "LRS",
-        "algorithm": "Ethash"
+        "Id": 398,
+        "Tag": "LRS",
+        "Algorithm": "Ethash"
       },
       "Litecoin": {
-        "id": 4,
-        "tag": "LTC",
-        "algorithm": "Scrypt"
+        "Id": 4,
+        "Tag": "LTC",
+        "Algorithm": "Scrypt"
       },
       "LitecoinX": {
-        "id": 78,
-        "tag": "LTCX",
-        "algorithm": "X11"
+        "Id": 78,
+        "Tag": "LTCX",
+        "Algorithm": "X11"
       },
       "Lethean": {
-        "id": 296,
-        "tag": "LTHN",
-        "algorithm": "ChukwaV2"
+        "Id": 296,
+        "Tag": "LTHN",
+        "Algorithm": "ChukwaV2"
       },
       "Luxcoin": {
-        "id": 212,
-        "tag": "LUX",
-        "algorithm": "RX2"
+        "Id": 212,
+        "Tag": "LUX",
+        "Algorithm": "RX2"
       },
       "Magnet": {
-        "id": 237,
-        "tag": "MAG",
-        "algorithm": "X11"
+        "Id": 237,
+        "Tag": "MAG",
+        "Algorithm": "X11"
       },
       "Mano": {
-        "id": 254,
-        "tag": "MANO",
-        "algorithm": "Lyra2z"
+        "Id": 254,
+        "Tag": "MANO",
+        "Algorithm": "Lyra2z"
       },
       "Marucoin ": {
-        "id": 84,
-        "tag": "MARU",
-        "algorithm": "X13"
+        "Id": 84,
+        "Tag": "MARU",
+        "Algorithm": "X13"
       },
       "Maxcoin": {
-        "id": 73,
-        "tag": "MAX",
-        "algorithm": "Keccak"
+        "Id": 73,
+        "Tag": "MAX",
+        "Algorithm": "Keccak"
       },
       "Maza": {
-        "id": 70,
-        "tag": "MAZA",
-        "algorithm": "SHA-256"
+        "Id": 70,
+        "Tag": "MAZA",
+        "Algorithm": "SHA-256"
       },
       "MCT+": {
-        "id": 257,
-        "tag": "MCT",
-        "algorithm": "Lyra2z"
+        "Id": 257,
+        "Tag": "MCT",
+        "Algorithm": "Lyra2z"
       },
       "Megacoin": {
-        "id": 26,
-        "tag": "MEC",
-        "algorithm": "Scrypt"
+        "Id": 26,
+        "Tag": "MEC",
+        "Algorithm": "Scrypt"
       },
       "Kittehcoin": {
-        "id": 16,
-        "tag": "MEOW",
-        "algorithm": "Scrypt"
+        "Id": 16,
+        "Tag": "MEOW",
+        "Algorithm": "Scrypt"
       },
       "Meowcoin": {
-        "id": 354,
-        "tag": "MEWC",
-        "algorithm": "MeowPow"
+        "Id": 354,
+        "Tag": "MEWC",
+        "Algorithm": "MeowPow"
       },
       "Millionaire": {
-        "id": 91,
-        "tag": "MIL",
-        "algorithm": "X11"
+        "Id": 91,
+        "Tag": "MIL",
+        "Algorithm": "X11"
       },
       "Mindcoin": {
-        "id": 155,
-        "tag": "MND",
-        "algorithm": "X11"
+        "Id": 155,
+        "Tag": "MND",
+        "Algorithm": "X11"
       },
       "Minex": {
-        "id": 265,
-        "tag": "MNX",
-        "algorithm": "Mars"
+        "Id": 265,
+        "Tag": "MNX",
+        "Algorithm": "Mars"
       },
       "Monacoin": {
-        "id": 148,
-        "tag": "MONA",
-        "algorithm": "Lyra2REv2"
+        "Id": 148,
+        "Tag": "MONA",
+        "Algorithm": "Lyra2REv2"
       },
       "Mooncoin": {
-        "id": 119,
-        "tag": "MOON",
-        "algorithm": "Scrypt"
+        "Id": 119,
+        "Tag": "MOON",
+        "Algorithm": "Scrypt"
       },
       "microCoin": {
-        "id": 41,
-        "tag": "MRC",
-        "algorithm": "Chacha (Nf14)"
+        "Id": 41,
+        "Tag": "MRC",
+        "Algorithm": "Chacha (Nf14)"
       },
       "Masari": {
-        "id": 273,
-        "tag": "MSR",
-        "algorithm": "CryptoNightFastV2"
+        "Id": 273,
+        "Tag": "MSR",
+        "Algorithm": "CryptoNightFastV2"
       },
       "MonetaryUnit": {
-        "id": 143,
-        "tag": "MUE",
-        "algorithm": "X11"
+        "Id": 143,
+        "Tag": "MUE",
+        "Algorithm": "X11"
       },
       "Muniti": {
-        "id": 47,
-        "tag": "MUN",
-        "algorithm": "X11"
+        "Id": 47,
+        "Tag": "MUN",
+        "Algorithm": "X11"
       },
       "Musicoin": {
-        "id": 178,
-        "tag": "MUSIC",
-        "algorithm": "Ethash"
+        "Id": 178,
+        "Tag": "MUSIC",
+        "Algorithm": "Ethash"
       },
       "MWC-CT31": {
-        "id": 323,
-        "tag": "MWC",
-        "algorithm": "Cuckatoo31"
+        "Id": 323,
+        "Tag": "MWC",
+        "Algorithm": "Cuckatoo31"
       },
       "MWC-CR29": {
-        "id": 322,
-        "tag": "MWC",
-        "algorithm": "Cuckarood29"
+        "Id": 322,
+        "Tag": "MWC",
+        "Algorithm": "Cuckarood29"
       },
       "Nautiluscoin": {
-        "id": 82,
-        "tag": "NAUT",
-        "algorithm": "Scrypt"
+        "Id": 82,
+        "Tag": "NAUT",
+        "Algorithm": "Scrypt"
       },
       "Neoxa": {
-        "id": 351,
-        "tag": "NEOX",
-        "algorithm": "KawPow"
+        "Id": 351,
+        "Tag": "NEOX",
+        "Algorithm": "KawPow"
       },
       "Netsis": {
-        "id": 394,
-        "tag": "NET",
-        "algorithm": "X11"
+        "Id": 394,
+        "Tag": "NET",
+        "Algorithm": "X11"
       },
       "Nexa": {
-        "id": 357,
-        "tag": "NEXA",
-        "algorithm": "NexaPow"
+        "Id": 357,
+        "Tag": "NEXA",
+        "Algorithm": "NexaPow"
       },
       "Nimiq": {
-        "id": 300,
-        "tag": "NIM",
-        "algorithm": "Argon2d-NIM"
+        "Id": 300,
+        "Tag": "NIM",
+        "Algorithm": "Argon2d-NIM"
       },
       "Nirmata": {
-        "id": 405,
-        "tag": "NIR",
-        "algorithm": "ProgPowZ"
+        "Id": 405,
+        "Tag": "NIR",
+        "Algorithm": "ProgPowZ"
       },
       "Nix": {
-        "id": 264,
-        "tag": "NIX",
-        "algorithm": "Lyra2REv2"
+        "Id": 264,
+        "Tag": "NIX",
+        "Algorithm": "Lyra2REv2"
       },
       "Gulden": {
-        "id": 64,
-        "tag": "NLG",
-        "algorithm": "Sigma"
+        "Id": 64,
+        "Tag": "NLG",
+        "Algorithm": "Sigma"
       },
       "Namecoin": {
-        "id": 55,
-        "tag": "NMC",
-        "algorithm": "SHA-256"
+        "Id": 55,
+        "Tag": "NMC",
+        "Algorithm": "SHA-256"
       },
       "Noblecoin": {
-        "id": 44,
-        "tag": "NOBL",
-        "algorithm": "M7M"
+        "Id": 44,
+        "Tag": "NOBL",
+        "Algorithm": "M7M"
       },
       "DNotes": {
-        "id": 146,
-        "tag": "NOTE",
-        "algorithm": "Scrypt"
+        "Id": 146,
+        "Tag": "NOTE",
+        "Algorithm": "Scrypt"
       },
       "Novo": {
-        "id": 381,
-        "tag": "NOVO",
-        "algorithm": "SHA256DT"
+        "Id": 381,
+        "Tag": "NOVO",
+        "Algorithm": "SHA256DT"
       },
       "Energi": {
-        "id": 282,
-        "tag": "NRG",
-        "algorithm": "Energi"
+        "Id": 282,
+        "Tag": "NRG",
+        "Algorithm": "Energi"
       },
       "Nautilus": {
-        "id": 409,
-        "tag": "NTL",
-        "algorithm": "Karlsenhash"
+        "Id": 409,
+        "Tag": "NTL",
+        "Algorithm": "Karlsenhash"
       },
       "Novacoin": {
-        "id": 30,
-        "tag": "NVC",
-        "algorithm": "Scrypt"
+        "Id": 30,
+        "Tag": "NVC",
+        "Algorithm": "Scrypt"
       },
       "Nexel-AI": {
-        "id": 396,
-        "tag": "NXL",
-        "algorithm": "Karlsenhash"
+        "Id": 396,
+        "Tag": "NXL",
+        "Algorithm": "Karlsenhash"
       },
       "Nexus": {
-        "id": 302,
-        "tag": "NXS",
-        "algorithm": "NexusHash"
+        "Id": 302,
+        "Tag": "NXS",
+        "Algorithm": "NexusHash"
       },
       "Nyancoin": {
-        "id": 17,
-        "tag": "NYAN",
-        "algorithm": "Scrypt"
+        "Id": 17,
+        "Tag": "NYAN",
+        "Algorithm": "Scrypt"
       },
       "Obsidian": {
-        "id": 403,
-        "tag": "OBN",
-        "algorithm": "Scrypt"
+        "Id": 403,
+        "Tag": "OBN",
+        "Algorithm": "Scrypt"
       },
       "OctaSpace": {
-        "id": 361,
-        "tag": "OCTA",
-        "algorithm": "Ethash"
+        "Id": 361,
+        "Tag": "OCTA",
+        "Algorithm": "Ethash"
       },
       "DeepOnion": {
-        "id": 216,
-        "tag": "ONION",
-        "algorithm": "X13"
+        "Id": 216,
+        "Tag": "ONION",
+        "Algorithm": "X13"
       },
       "Onix": {
-        "id": 194,
-        "tag": "ONX",
-        "algorithm": "X11"
+        "Id": 194,
+        "Tag": "ONX",
+        "Algorithm": "X11"
       },
       "Orbitcoin": {
-        "id": 72,
-        "tag": "ORB",
-        "algorithm": "NeoScrypt"
+        "Id": 72,
+        "Tag": "ORB",
+        "Algorithm": "NeoScrypt"
       },
       "Galactrum": {
-        "id": 233,
-        "tag": "ORE",
-        "algorithm": "Lyra2REv2"
+        "Id": 233,
+        "Tag": "ORE",
+        "Algorithm": "Lyra2REv2"
       },
       "Osmium": {
-        "id": 414,
-        "tag": "OSMI",
-        "algorithm": "X11"
+        "Id": 414,
+        "Tag": "OSMI",
+        "Algorithm": "X11"
       },
       "Paccoin": {
-        "id": 239,
-        "tag": "PAC",
-        "algorithm": "X11"
+        "Id": 239,
+        "Tag": "PAC",
+        "Algorithm": "X11"
       },
       "Paprikacoin": {
-        "id": 374,
-        "tag": "PAPRY",
-        "algorithm": "KawPow"
+        "Id": 374,
+        "Tag": "PAPRY",
+        "Algorithm": "KawPow"
       },
       "Pascalcoin": {
-        "id": 172,
-        "tag": "PASC",
-        "algorithm": "RandomHash"
+        "Id": 172,
+        "Tag": "PASC",
+        "Algorithm": "RandomHash"
       },
       "PascalLite": {
-        "id": 177,
-        "tag": "PASL",
-        "algorithm": "Pascal"
+        "Id": 177,
+        "Tag": "PASL",
+        "Algorithm": "Pascal"
       },
       "PepePow": {
-        "id": 385,
-        "tag": "PEPEW",
-        "algorithm": "Memehash"
+        "Id": 385,
+        "Tag": "PEPEW",
+        "Algorithm": "Memehash"
       },
       "Pigeoncoin": {
-        "id": 246,
-        "tag": "PGN",
-        "algorithm": "X21S"
+        "Id": 246,
+        "Tag": "PGN",
+        "Algorithm": "X21S"
       },
       "Pengolincoin": {
-        "id": 332,
-        "tag": "PGO",
-        "algorithm": "CryptoNightTurtle"
+        "Id": 332,
+        "Tag": "PGO",
+        "Algorithm": "CryptoNightTurtle"
       },
       "Pinkcoin": {
-        "id": 205,
-        "tag": "PINK",
-        "algorithm": "Scrypt"
+        "Id": 205,
+        "Tag": "PINK",
+        "Algorithm": "Scrypt"
       },
       "Pirl": {
-        "id": 211,
-        "tag": "PIRL",
-        "algorithm": "Ethash"
+        "Id": 211,
+        "Tag": "PIRL",
+        "Algorithm": "Ethash"
       },
       "Potcoin": {
-        "id": 18,
-        "tag": "POT",
-        "algorithm": "Scrypt"
+        "Id": 18,
+        "Tag": "POT",
+        "Algorithm": "Scrypt"
       },
       "Peercoin": {
-        "id": 52,
-        "tag": "PPC",
-        "algorithm": "SHA-256"
+        "Id": 52,
+        "Tag": "PPC",
+        "Algorithm": "SHA-256"
       },
       "Procyon": {
-        "id": 401,
-        "tag": "PRCO",
-        "algorithm": "KawPow"
+        "Id": 401,
+        "Tag": "PRCO",
+        "Algorithm": "KawPow"
       },
       "Phoenixcoin": {
-        "id": 71,
-        "tag": "PXC",
-        "algorithm": "NeoScrypt"
+        "Id": 71,
+        "Tag": "PXC",
+        "Algorithm": "NeoScrypt"
       },
       "Prime-XI": {
-        "id": 190,
-        "tag": "PXI",
-        "algorithm": "X11"
+        "Id": 190,
+        "Tag": "PXI",
+        "Algorithm": "X11"
       },
       "Pyrin": {
-        "id": 391,
-        "tag": "PYI",
-        "algorithm": "Pyrin"
+        "Id": 391,
+        "Tag": "PYI",
+        "Algorithm": "Pyrin"
       },
       "Québecoin": {
-        "id": 45,
-        "tag": "QBC",
-        "algorithm": "X11"
+        "Id": 45,
+        "Tag": "QBC",
+        "Algorithm": "X11"
       },
       "Quazarcoin": {
-        "id": 105,
-        "tag": "QCN",
-        "algorithm": "CryptoNight"
+        "Id": 105,
+        "Tag": "QCN",
+        "Algorithm": "CryptoNight"
       },
       "QuarkChain": {
-        "id": 318,
-        "tag": "QKC",
-        "algorithm": "Ethash"
+        "Id": 318,
+        "Tag": "QKC",
+        "Algorithm": "Ethash"
       },
       "Qyno": {
-        "id": 269,
-        "tag": "QNO",
-        "algorithm": "NeoScrypt"
+        "Id": 269,
+        "Tag": "QNO",
+        "Algorithm": "NeoScrypt"
       },
       "Quark": {
-        "id": 137,
-        "tag": "QRK",
-        "algorithm": "Quark"
+        "Id": 137,
+        "Tag": "QRK",
+        "Algorithm": "Quark"
       },
       "Quantum R L": {
-        "id": 263,
-        "tag": "QRL",
-        "algorithm": "RandomX"
+        "Id": 263,
+        "Tag": "QRL",
+        "Algorithm": "RandomX"
       },
       "Rubycoin": {
-        "id": 95,
-        "tag": "RBY",
-        "algorithm": "Scrypt"
+        "Id": 95,
+        "Tag": "RBY",
+        "Algorithm": "Scrypt"
       },
       "Reddcoin": {
-        "id": 11,
-        "tag": "RDD",
-        "algorithm": "Scrypt"
+        "Id": 11,
+        "Tag": "RDD",
+        "Algorithm": "Scrypt"
       },
       "Ripoffcoin": {
-        "id": 108,
-        "tag": "RIPO",
-        "algorithm": "Scrypt"
+        "Id": 108,
+        "Tag": "RIPO",
+        "Algorithm": "Scrypt"
       },
       "Rito": {
-        "id": 319,
-        "tag": "RITO",
-        "algorithm": "X21S"
+        "Id": 319,
+        "Tag": "RITO",
+        "Algorithm": "X21S"
       },
       "RonPaulCoin": {
-        "id": 58,
-        "tag": "RPC",
-        "algorithm": "Scrypt"
+        "Id": 58,
+        "Tag": "RPC",
+        "Algorithm": "Scrypt"
       },
       "Reaction": {
-        "id": 395,
-        "tag": "RTC",
-        "algorithm": "GhostRider"
+        "Id": 395,
+        "Tag": "RTC",
+        "Algorithm": "GhostRider"
       },
       "Raptoreum": {
-        "id": 347,
-        "tag": "RTM",
-        "algorithm": "GhostRider"
+        "Id": 347,
+        "Tag": "RTM",
+        "Algorithm": "GhostRider"
       },
       "Rupee": {
-        "id": 235,
-        "tag": "RUP",
-        "algorithm": "Lyra2REv2"
+        "Id": 235,
+        "Tag": "RUP",
+        "Algorithm": "Lyra2REv2"
       },
       "Ravencoin": {
-        "id": 234,
-        "tag": "RVN",
-        "algorithm": "KawPow"
+        "Id": 234,
+        "Tag": "RVN",
+        "Algorithm": "KawPow"
       },
       "Radiant": {
-        "id": 356,
-        "tag": "RXD",
-        "algorithm": "SHA512256d"
+        "Id": 356,
+        "Tag": "RXD",
+        "Algorithm": "SHA512256d"
       },
       "Ryo": {
-        "id": 260,
-        "tag": "RYO",
-        "algorithm": "CryptoNightGPU"
+        "Id": 260,
+        "Tag": "RYO",
+        "Algorithm": "CryptoNightGPU"
       },
       "Razor": {
-        "id": 96,
-        "tag": "RZR",
-        "algorithm": "Scrypt"
+        "Id": 96,
+        "Tag": "RZR",
+        "Algorithm": "Scrypt"
       },
       "Saturn2coin": {
-        "id": 39,
-        "tag": "SAT2",
-        "algorithm": "Scrypt"
+        "Id": 39,
+        "Tag": "SAT2",
+        "Algorithm": "Scrypt"
       },
       "Satoxcoin": {
-        "id": 375,
-        "tag": "SATOX",
-        "algorithm": "KawPow"
+        "Id": 375,
+        "Tag": "SATOX",
+        "Algorithm": "KawPow"
       },
       "Sia": {
-        "id": 161,
-        "tag": "SC",
-        "algorithm": "Sia"
+        "Id": 161,
+        "Tag": "SC",
+        "Algorithm": "Sia"
       },
       "Scorecoin": {
-        "id": 181,
-        "tag": "SCORE",
-        "algorithm": "Scrypt"
+        "Id": 181,
+        "Tag": "SCORE",
+        "Algorithm": "Scrypt"
       },
       "ScPrime": {
-        "id": 358,
-        "tag": "SCP",
-        "algorithm": "Sia"
+        "Id": 358,
+        "Tag": "SCP",
+        "Algorithm": "Sia"
       },
       "Sedra": {
-        "id": 404,
-        "tag": "SDR",
-        "algorithm": "kHeavyHash"
+        "Id": 404,
+        "Tag": "SDR",
+        "Algorithm": "kHeavyHash"
       },
       "Seraph": {
-        "id": 247,
-        "tag": "SERA",
-        "algorithm": "PHI1612"
+        "Id": 247,
+        "Tag": "SERA",
+        "Algorithm": "PHI1612"
       },
       "Sero": {
-        "id": 328,
-        "tag": "SERO",
-        "algorithm": "ProgPow"
+        "Id": 328,
+        "Tag": "SERO",
+        "Algorithm": "ProgPow"
       },
       "Shift": {
-        "id": 156,
-        "tag": "SHIFT",
-        "algorithm": "Ethash"
+        "Id": 156,
+        "Tag": "SHIFT",
+        "Algorithm": "Ethash"
       },
       "Sibcoin": {
-        "id": 169,
-        "tag": "SIB",
-        "algorithm": "X11Gost"
+        "Id": 169,
+        "Tag": "SIB",
+        "Algorithm": "X11Gost"
       },
       "Signatum": {
-        "id": 191,
-        "tag": "SIGT",
-        "algorithm": "Skunkhash"
+        "Id": 191,
+        "Tag": "SIGT",
+        "Algorithm": "Skunkhash"
       },
       "Sinovate": {
-        "id": 277,
-        "tag": "SIN",
-        "algorithm": "X25X"
+        "Id": 277,
+        "Tag": "SIN",
+        "Algorithm": "X25X"
       },
       "Skeincoin": {
-        "id": 244,
-        "tag": "SKC",
-        "algorithm": "Skein"
+        "Id": 244,
+        "Tag": "SKC",
+        "Algorithm": "Skein"
       },
       "Skydoge": {
-        "id": 369,
-        "tag": "SKY",
-        "algorithm": "Skydoge"
+        "Id": 369,
+        "Tag": "SKY",
+        "Algorithm": "Skydoge"
       },
       "Sterlingcoin": {
-        "id": 117,
-        "tag": "SLG",
-        "algorithm": "X13"
+        "Id": 117,
+        "Tag": "SLG",
+        "Algorithm": "X13"
       },
       "SmartCash": {
-        "id": 197,
-        "tag": "SMART",
-        "algorithm": "Keccak"
+        "Id": 197,
+        "Tag": "SMART",
+        "Algorithm": "Keccak"
       },
       "Smartcoin": {
-        "id": 159,
-        "tag": "SMC",
-        "algorithm": "X11"
+        "Id": 159,
+        "Tag": "SMC",
+        "Algorithm": "X11"
       },
       "Soilcoin": {
-        "id": 189,
-        "tag": "SOIL",
-        "algorithm": "Ethash"
+        "Id": 189,
+        "Tag": "SOIL",
+        "Algorithm": "Ethash"
       },
       "Sono": {
-        "id": 204,
-        "tag": "SONO",
-        "algorithm": "SonoA"
+        "Id": 204,
+        "Tag": "SONO",
+        "Algorithm": "SonoA"
       },
       "Spaincoin": {
-        "id": 12,
-        "tag": "SPA",
-        "algorithm": "Scrypt-N"
+        "Id": 12,
+        "Tag": "SPA",
+        "Algorithm": "Scrypt-N"
       },
       "Savecoin": {
-        "id": 77,
-        "tag": "SPC",
-        "algorithm": "SHA-256"
+        "Id": 77,
+        "Tag": "SPC",
+        "Algorithm": "SHA-256"
       },
       "Spider": {
-        "id": 303,
-        "tag": "SPDR",
-        "algorithm": "PHI2"
+        "Id": 303,
+        "Tag": "SPDR",
+        "Algorithm": "PHI2"
       },
       "SimpleBank": {
-        "id": 252,
-        "tag": "SPLB",
-        "algorithm": "NeoScrypt"
+        "Id": 252,
+        "Tag": "SPLB",
+        "Algorithm": "NeoScrypt"
       },
       "Securecoin": {
-        "id": 139,
-        "tag": "SRC",
-        "algorithm": "Quark"
+        "Id": 139,
+        "Tag": "SRC",
+        "Algorithm": "Quark"
       },
       "Straks": {
-        "id": 240,
-        "tag": "STAK",
-        "algorithm": "Lyra2REv2"
+        "Id": 240,
+        "Tag": "STAK",
+        "Algorithm": "Lyra2REv2"
       },
       "Startcoin": {
-        "id": 132,
-        "tag": "START",
-        "algorithm": "X11"
+        "Id": 132,
+        "Tag": "START",
+        "Algorithm": "X11"
       },
       "Starcoin": {
-        "id": 346,
-        "tag": "STC",
-        "algorithm": "CryptoNightSTC"
+        "Id": 346,
+        "Tag": "STC",
+        "Algorithm": "CryptoNightSTC"
       },
       "Sumokoin": {
-        "id": 196,
-        "tag": "SUMO",
-        "algorithm": "CryptoNightR"
+        "Id": 196,
+        "Tag": "SUMO",
+        "Algorithm": "CryptoNightR"
       },
       "Talkcoin": {
-        "id": 94,
-        "tag": "TAC",
-        "algorithm": "NIST5"
+        "Id": 94,
+        "Tag": "TAC",
+        "Algorithm": "NIST5"
       },
       "Tecra": {
-        "id": 342,
-        "tag": "TCR",
-        "algorithm": "MTP-TCR"
+        "Id": 342,
+        "Tag": "TCR",
+        "Algorithm": "MTP-TCR"
       },
       "Fedoracoin": {
-        "id": 2,
-        "tag": "TIPS",
-        "algorithm": "Scrypt"
+        "Id": 2,
+        "Tag": "TIPS",
+        "Algorithm": "Scrypt"
       },
       "Toncoin": {
-        "id": 348,
-        "tag": "TONCOIN",
-        "algorithm": "Ton"
+        "Id": 348,
+        "Tag": "TONCOIN",
+        "Algorithm": "Ton"
       },
       "Traid": {
-        "id": 274,
-        "tag": "TRAID",
-        "algorithm": "NeoScrypt"
+        "Id": 274,
+        "Tag": "TRAID",
+        "Algorithm": "NeoScrypt"
       },
       "Turtlecoin": {
-        "id": 292,
-        "tag": "TRTL",
-        "algorithm": "ChukwaV2"
+        "Id": 292,
+        "Tag": "TRTL",
+        "Algorithm": "ChukwaV2"
       },
       "BitTubeCash": {
-        "id": 256,
-        "tag": "TUBE",
-        "algorithm": "CuckooCycle"
+        "Id": 256,
+        "Tag": "TUBE",
+        "Algorithm": "CuckooCycle"
       },
       "Trezarcoin": {
-        "id": 215,
-        "tag": "TZC",
-        "algorithm": "NeoScrypt"
+        "Id": 215,
+        "Tag": "TZC",
+        "Algorithm": "NeoScrypt"
       },
       "Ubiq": {
-        "id": 173,
-        "tag": "UBQ",
-        "algorithm": "Ubqhash"
+        "Id": 173,
+        "Tag": "UBQ",
+        "Algorithm": "Ubqhash"
       },
       "Unbreakable": {
-        "id": 83,
-        "tag": "UNB",
-        "algorithm": "SHA-256"
+        "Id": 83,
+        "Tag": "UNB",
+        "Algorithm": "SHA-256"
       },
       "Universal": {
-        "id": 223,
-        "tag": "UNIT",
-        "algorithm": "SHA-256"
+        "Id": 223,
+        "Tag": "UNIT",
+        "Algorithm": "SHA-256"
       },
       "Unobtanium": {
-        "id": 54,
-        "tag": "UNO",
-        "algorithm": "SHA-256"
+        "Id": 54,
+        "Tag": "UNO",
+        "Algorithm": "SHA-256"
       },
       "eUtopium": {
-        "id": 106,
-        "tag": "UPM",
-        "algorithm": "NIST5"
+        "Id": 106,
+        "Tag": "UPM",
+        "Algorithm": "NIST5"
       },
       "uPlexa": {
-        "id": 309,
-        "tag": "UPX",
-        "algorithm": "CryptoNightUPX"
+        "Id": 309,
+        "Tag": "UPX",
+        "Algorithm": "CryptoNightUPX"
       },
       "Urocoin": {
-        "id": 100,
-        "tag": "URO",
-        "algorithm": "X11"
+        "Id": 100,
+        "Tag": "URO",
+        "Algorithm": "X11"
       },
       "USDe": {
-        "id": 31,
-        "tag": "USDE",
-        "algorithm": "Scrypt"
+        "Id": 31,
+        "Tag": "USDE",
+        "Algorithm": "Scrypt"
       },
       "Ultracoin": {
-        "id": 3,
-        "tag": "UTC",
-        "algorithm": "Chacha (Nf14)"
+        "Id": 3,
+        "Tag": "UTC",
+        "Algorithm": "Chacha (Nf14)"
       },
       "Vidulum": {
-        "id": 331,
-        "tag": "VDL",
-        "algorithm": "EquihashZero"
+        "Id": 331,
+        "Tag": "VDL",
+        "Algorithm": "EquihashZero"
       },
       "Veil-ProgPow": {
-        "id": 286,
-        "tag": "VEIL",
-        "algorithm": "ProgPow"
+        "Id": 286,
+        "Tag": "VEIL",
+        "Algorithm": "ProgPow"
       },
       "Veil-SHA": {
-        "id": 335,
-        "tag": "VEIL",
-        "algorithm": "SHA-256"
+        "Id": 335,
+        "Tag": "VEIL",
+        "Algorithm": "SHA-256"
       },
       "Veil-RandomX": {
-        "id": 336,
-        "tag": "VEIL",
-        "algorithm": "RandomX"
+        "Id": 336,
+        "Tag": "VEIL",
+        "Algorithm": "RandomX"
       },
       "Veilcoin": {
-        "id": 98,
-        "tag": "VEIL_old",
-        "algorithm": "X13"
+        "Id": 98,
+        "Tag": "VEIL_old",
+        "Algorithm": "X13"
       },
       "Viacoin": {
-        "id": 107,
-        "tag": "VIA",
-        "algorithm": "Scrypt"
+        "Id": 107,
+        "Tag": "VIA",
+        "Algorithm": "Scrypt"
       },
       "Vivo": {
-        "id": 200,
-        "tag": "VIVO",
-        "algorithm": "NeoScrypt"
+        "Id": 200,
+        "Tag": "VIVO",
+        "Algorithm": "NeoScrypt"
       },
       "Vultaic": {
-        "id": 402,
-        "tag": "VLC",
-        "algorithm": "KawPow"
+        "Id": 402,
+        "Tag": "VLC",
+        "Algorithm": "KawPow"
       },
       "VirtualMining": {
-        "id": 62,
-        "tag": "VMC",
-        "algorithm": "Scrypt-N"
+        "Id": 62,
+        "Tag": "VMC",
+        "Algorithm": "Scrypt-N"
       },
       "Verus": {
-        "id": 333,
-        "tag": "VRSC",
-        "algorithm": "VerusHash"
+        "Id": 333,
+        "Tag": "VRSC",
+        "Algorithm": "VerusHash"
       },
       "Vertcoin": {
-        "id": 5,
-        "tag": "VTC",
-        "algorithm": "Verthash"
+        "Id": 5,
+        "Tag": "VTC",
+        "Algorithm": "Verthash"
       },
       "Vertical": {
-        "id": 259,
-        "tag": "VTL",
-        "algorithm": "LBK3"
+        "Id": 259,
+        "Tag": "VTL",
+        "Algorithm": "LBK3"
       },
       "Worldcoin": {
-        "id": 29,
-        "tag": "WDC",
-        "algorithm": "Scrypt"
+        "Id": 29,
+        "Tag": "WDC",
+        "Algorithm": "Scrypt"
       },
       "X11": {
-        "id": 69,
-        "tag": "XC",
-        "algorithm": "X11"
+        "Id": 69,
+        "Tag": "XC",
+        "Algorithm": "X11"
       },
       "Cryptonite": {
-        "id": 184,
-        "tag": "XCN",
-        "algorithm": "M7"
+        "Id": 184,
+        "Tag": "XCN",
+        "Algorithm": "M7"
       },
       "Dagger": {
-        "id": 350,
-        "tag": "XDAG",
-        "algorithm": "RandomX"
+        "Id": 350,
+        "Tag": "XDAG",
+        "Algorithm": "RandomX"
       },
       "DigitalNote": {
-        "id": 104,
-        "tag": "XDN",
-        "algorithm": "Wish"
+        "Id": 104,
+        "Tag": "XDN",
+        "Algorithm": "Wish"
       },
       "XDNA": {
-        "id": 266,
-        "tag": "XDNA",
-        "algorithm": "Hex"
+        "Id": 266,
+        "Tag": "XDNA",
+        "Algorithm": "Hex"
       },
       "eCash": {
-        "id": 370,
-        "tag": "XEC",
-        "algorithm": "SHA-256"
+        "Id": 370,
+        "Tag": "XEC",
+        "Algorithm": "SHA-256"
       },
       "Equilibria": {
-        "id": 341,
-        "tag": "XEQ",
-        "algorithm": "CryptoNightGPU"
+        "Id": 341,
+        "Tag": "XEQ",
+        "Algorithm": "CryptoNightGPU"
       },
       "Honorcoin": {
-        "id": 109,
-        "tag": "XHC",
-        "algorithm": "X13"
+        "Id": 109,
+        "Tag": "XHC",
+        "Algorithm": "X13"
       },
       "HavenProtocol": {
-        "id": 279,
-        "tag": "XHV",
-        "algorithm": "CryptoNightHaven"
+        "Id": 279,
+        "Tag": "XHV",
+        "Algorithm": "CryptoNightHaven"
       },
       "Scala": {
-        "id": 280,
-        "tag": "XLA",
-        "algorithm": "CryptoNightDefyx"
+        "Id": 280,
+        "Tag": "XLA",
+        "Algorithm": "CryptoNightDefyx"
       },
       "Solaris": {
-        "id": 179,
-        "tag": "XLR",
-        "algorithm": "Xevan"
+        "Id": 179,
+        "Tag": "XLR",
+        "Algorithm": "Xevan"
       },
       "Monoeci": {
-        "id": 203,
-        "tag": "XMCC",
-        "algorithm": "X11"
+        "Id": 203,
+        "Tag": "XMCC",
+        "Algorithm": "X11"
       },
       "Motion": {
-        "id": 248,
-        "tag": "XMN",
-        "algorithm": "X16R"
+        "Id": 248,
+        "Tag": "XMN",
+        "Algorithm": "X16R"
       },
       "MoneroOriginal": {
-        "id": 238,
-        "tag": "XMO",
-        "algorithm": "CryptoNight"
+        "Id": 238,
+        "Tag": "XMO",
+        "Algorithm": "CryptoNight"
       },
       "Monero": {
-        "id": 101,
-        "tag": "XMR",
-        "algorithm": "RandomX"
+        "Id": 101,
+        "Tag": "XMR",
+        "Algorithm": "RandomX"
       },
       "Myriad-Argon2d": {
-        "id": 67,
-        "tag": "XMY",
-        "algorithm": "Argon2d"
+        "Id": 67,
+        "Tag": "XMY",
+        "Algorithm": "Argon2d"
       },
       "Myriad-Groestl": {
-        "id": 49,
-        "tag": "XMY",
-        "algorithm": "Myr-Groestl"
+        "Id": 49,
+        "Tag": "XMY",
+        "Algorithm": "Myr-Groestl"
       },
       "Myriad-SHA": {
-        "id": 56,
-        "tag": "XMY",
-        "algorithm": "SHA-256"
+        "Id": 56,
+        "Tag": "XMY",
+        "Algorithm": "SHA-256"
       },
       "Myriad-Yescrypt": {
-        "id": 66,
-        "tag": "XMY",
-        "algorithm": "Yescrypt"
+        "Id": 66,
+        "Tag": "XMY",
+        "Algorithm": "Yescrypt"
       },
       "Myriad-Scrypt": {
-        "id": 32,
-        "tag": "XMY",
-        "algorithm": "Scrypt"
+        "Id": 32,
+        "Tag": "XMY",
+        "Algorithm": "Scrypt"
       },
       "Neurai": {
-        "id": 366,
-        "tag": "XNA",
-        "algorithm": "KawPow"
+        "Id": 366,
+        "Tag": "XNA",
+        "Algorithm": "KawPow"
       },
       "PowBlocks": {
-        "id": 377,
-        "tag": "XPB",
-        "algorithm": "Ethash"
+        "Id": 377,
+        "Tag": "XPB",
+        "Algorithm": "Ethash"
       },
       "Paycoin": {
-        "id": 121,
-        "tag": "XPY",
-        "algorithm": "SHA-256"
+        "Id": 121,
+        "Tag": "XPY",
+        "Algorithm": "SHA-256"
       },
       "xRhodium": {
-        "id": 317,
-        "tag": "XRC",
-        "algorithm": "X13"
+        "Id": 317,
+        "Tag": "XRC",
+        "Algorithm": "X13"
       },
       "Vcash": {
-        "id": 130,
-        "tag": "XVC",
-        "algorithm": "Blake (XVC)"
+        "Id": 130,
+        "Tag": "XVC",
+        "Algorithm": "Blake (XVC)"
       },
       "Verge-Scrypt": {
-        "id": 150,
-        "tag": "XVG",
-        "algorithm": "Scrypt"
+        "Id": 150,
+        "Tag": "XVG",
+        "Algorithm": "Scrypt"
       },
       "Verge-Groestl": {
-        "id": 218,
-        "tag": "XVG",
-        "algorithm": "Myr-Groestl"
+        "Id": 218,
+        "Tag": "XVG",
+        "Algorithm": "Myr-Groestl"
       },
       "Verge-Lyra2REv2": {
-        "id": 217,
-        "tag": "XVG",
-        "algorithm": "Lyra2REv2"
+        "Id": 217,
+        "Tag": "XVG",
+        "Algorithm": "Lyra2REv2"
       },
       "Verge-Blake (2s)": {
-        "id": 220,
-        "tag": "XVG",
-        "algorithm": "Blake (2s)"
+        "Id": 220,
+        "Tag": "XVG",
+        "Algorithm": "Blake (2s)"
       },
       "Verge-X17": {
-        "id": 219,
-        "tag": "XVG",
-        "algorithm": "X17"
+        "Id": 219,
+        "Tag": "XVG",
+        "Algorithm": "X17"
       },
       "Swap": {
-        "id": 301,
-        "tag": "XWP",
-        "algorithm": "Cuckaroo29s"
+        "Id": 301,
+        "Tag": "XWP",
+        "Algorithm": "Cuckaroo29s"
       },
       "YACoin": {
-        "id": 42,
-        "tag": "YAC",
-        "algorithm": "Chacha (Nf17)"
+        "Id": 42,
+        "Tag": "YAC",
+        "Algorithm": "Chacha (Nf17)"
       },
       "Ycash": {
-        "id": 339,
-        "tag": "YEC",
-        "algorithm": "EquihashZero"
+        "Id": 339,
+        "Tag": "YEC",
+        "Algorithm": "EquihashZero"
       },
       "Zano": {
-        "id": 330,
-        "tag": "ZANO",
-        "algorithm": "ProgPowZ"
+        "Id": 330,
+        "Tag": "ZANO",
+        "Algorithm": "ProgPowZ"
       },
       "Zclassic": {
-        "id": 167,
-        "tag": "ZCL",
-        "algorithm": "EquihashZero"
+        "Id": 167,
+        "Tag": "ZCL",
+        "Algorithm": "EquihashZero"
       },
       "Zdeex": {
-        "id": 400,
-        "tag": "ZDEEX",
-        "algorithm": "Equihash"
+        "Id": 400,
+        "Tag": "ZDEEX",
+        "Algorithm": "Equihash"
       },
       "Zcash": {
-        "id": 166,
-        "tag": "ZEC",
-        "algorithm": "Equihash"
+        "Id": 166,
+        "Tag": "ZEC",
+        "Algorithm": "Equihash"
       },
       "Horizen": {
-        "id": 185,
-        "tag": "ZEN",
-        "algorithm": "Equihash"
+        "Id": 185,
+        "Tag": "ZEN",
+        "Algorithm": "Equihash"
       },
       "Zephyr": {
-        "id": 371,
-        "tag": "ZEPH",
-        "algorithm": "RandomX"
+        "Id": 371,
+        "Tag": "ZEPH",
+        "Algorithm": "RandomX"
       },
       "Zero": {
-        "id": 210,
-        "tag": "ZER",
-        "algorithm": "EquihashZero"
+        "Id": 210,
+        "Tag": "ZER",
+        "Algorithm": "EquihashZero"
       },
       "Zetacoin": {
-        "id": 53,
-        "tag": "ZET",
-        "algorithm": "SHA-256"
+        "Id": 53,
+        "Tag": "ZET",
+        "Algorithm": "SHA-256"
       },
       "01coin": {
-        "id": 338,
-        "tag": "ZOC",
-        "algorithm": "NeoScrypt"
+        "Id": 338,
+        "Tag": "ZOC",
+        "Algorithm": "NeoScrypt"
       }
     }
   }

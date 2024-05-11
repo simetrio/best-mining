@@ -27,7 +27,11 @@ async function loadData(onSuccess) {
     });
 
     const coins = [];
-    Object.keys(coinsObject.coins).forEach(x => coins.push(coinsObject.coins[x]));
+    Object.keys(coinsObject.coins).forEach(x => {
+        const coin = coinsObject.coins[x];
+        coin.Title = x;
+        coins.push(coin);
+    });
 
     window.dataBase = { products, coins };
     console.log(window.dataBase);

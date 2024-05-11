@@ -30,9 +30,13 @@ function showCoinsMiningCalculator() {
 
 function updateCoinsMiningCalculator() {
     const search = document.getElementById('mining-calculator-search').value;
-    const coins = window.dataBase.coins.filter(x => !search || x.tag.toLowerCase().indexOf(search) != -1);
+    const coins = window.dataBase.coins
+        .filter(x => !search
+            || x.Tag.toLowerCase().startsWith(search)
+            || x.Title.toLowerCase().startsWith(search)
+        );
 
-    document.getElementById('mining-calculator-coins-items').innerHTML = 
+    document.getElementById('mining-calculator-coins-items').innerHTML =
         fillCoinsItemsMiningCalculatorTemplate(coinMiningCalculatorTemplate, coins);
 }
 
@@ -91,11 +95,11 @@ function fillMiningCalculatorResultTemplate(template, data) {
         // Month
         .replace(new RegExp('{month-estimated_rewards}', 'g'), prepareCoin(estimated_rewards * 30))
         .replace(new RegExp('{month-revenue}', 'g'), prepareDollar(revenue * 30))
-        .replace(new RegExp('{month-revenue-ruble}', 'g'), prepareRuble(revenue* 30))
+        .replace(new RegExp('{month-revenue-ruble}', 'g'), prepareRuble(revenue * 30))
         .replace(new RegExp('{month-cost}', 'g'), prepareDollar(cost * 30))
-        .replace(new RegExp('{month-cost-ruble}', 'g'), prepareRuble(cost* 30))
+        .replace(new RegExp('{month-cost-ruble}', 'g'), prepareRuble(cost * 30))
         .replace(new RegExp('{month-profit}', 'g'), prepareDollar(profit * 30))
-        .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit* 30))
+        .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit * 30))
         ;
 }
 
@@ -112,8 +116,9 @@ function fillCoinsItemsMiningCalculatorTemplate(template, coins) {
 
     coins.forEach(coin => {
         coinsHtml += template
-            .replace(new RegExp('{id}', 'g'), coin.tag.toLowerCase())
-            .replace(new RegExp('{coin}', 'g'), coin.tag)
+            .replace(new RegExp('{id}', 'g'), coin.Tag.toLowerCase())
+            .replace(new RegExp('{coin}', 'g'), coin.Tag)
+            .replace(new RegExp('{title}', 'g'), coin.Title)
             ;
     });
 
@@ -261,7 +266,7 @@ const coinsMiningCalculatorTemplate = `
 `;
 
 const coinMiningCalculatorTemplate = `
-<div class="col-lg-1 p-1">
-    <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{coin}</a>
+<div class="col-lg-3 p-1">
+    <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{title} ({coin})</a>
 </div>
 `;
