@@ -81,7 +81,7 @@ function showAsicMiningCalculator() {
         return;
     }
 
-    const productId = element.getAttribute('data-product-id');
+    const productId = element.getAttribute('data-asic-id');
     const product = window.dataBase.products.find(x => x.Id === productId);
 
     element.innerHTML = fillMiningCalculatorAsicTemplate(asicMiningCalculatorTemplate, product);

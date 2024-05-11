@@ -122,9 +122,39 @@ public class PublisherTests
         }
     }
 
+    private void CreateDefaultProducts()
+    {
+        var asicsDirectory = "/home/roman/projects/best-mining/best-mining/pages/calculators/mining/asics";
+        var json = File.ReadAllText("/home/roman/projects/best-mining/best-mining/docs/data/products.json");
+        var products = JsonSerializer.Deserialize<Product[]>(json)!;
+
+        foreach (var product in products)
+        {
+            if (File.Exists(Path.Combine(asicsDirectory, product.Id, "index.html")))
+            {
+                continue;
+            }
+
+            Directory.CreateDirectory(Path.Combine(asicsDirectory, product.Id));
+            File.WriteAllText(
+                Path.Combine(asicsDirectory, product.Id, "index.html"),
+                @$"Расчет доходности асик майнера {product.Brand} {product.Model} {product.HashRate} в рублях и долларах
+<div id=""mining-calculator-asic"" data-asic-id=""{product.Id}""></div>"
+            );
+        }
+    }
+
     public class Coin
     {
         public string Tag { get; set; }
         public string Title { get; set; }
+    }
+
+    public class Product
+    {
+        public string Id { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public string HashRate { get; set; }
     }
 }
