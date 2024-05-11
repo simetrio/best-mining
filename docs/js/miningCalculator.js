@@ -30,11 +30,20 @@ function fillMiningCalculatorSingleTemplate(template, data) {
 }
 
 function fillMiningCalculatorResultTemplate(template, data) {
+    const estimated_rewards = parseFloat(data.estimated_rewards);
+    const revenue = parseFloat(data.revenue.replace('$', ''));
+    const cost = parseFloat(data.cost.replace('$', ''));
+    const profit = parseFloat(data.profit.replace('$', ''));
+
     return template
-        .replace(new RegExp('{day-estimated_rewards}', 'g'), data.estimated_rewards)
-        .replace(new RegExp('{day-revenue}', 'g'), data.revenue)
-        .replace(new RegExp('{day-cost}', 'g'), data.cost)
-        .replace(new RegExp('{day-profit}', 'g'), data.profit)
+        // Day
+        .replace(new RegExp('{day-estimated_rewards}', 'g'), estimated_rewards)
+        .replace(new RegExp('{day-revenue}', 'g'), revenue)
+        .replace(new RegExp('{day-revenue-ruble}', 'g'), toRuble(revenue, 1))
+        .replace(new RegExp('{day-cost}', 'g'), cost)
+        .replace(new RegExp('{day-cost-ruble}', 'g'), toRuble(cost, 1))
+        .replace(new RegExp('{day-profit}', 'g'), profit)
+        .replace(new RegExp('{day-profit-ruble}', 'g'), toRuble(profit, 1))
         ;
 }
 
@@ -125,9 +134,9 @@ const singleMiningCalculatorResultTemplate = `
     <tr>
         <td>День</td>
         <td>{day-estimated_rewards}</td>
-        <td>{day-revenue}</td>
-        <td>{day-cost}</td>
-        <td>{day-profit}</td>
+        <td>{day-revenue-ruble} ₽ / {day-revenue} $</td>
+        <td>{day-cost-ruble} ₽ / {day-cost} $</td>
+        <td>{day-profit-ruble} ₽ / {day-profit} $</td>
     </tr>
 </table>
 `

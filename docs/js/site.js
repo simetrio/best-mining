@@ -33,8 +33,9 @@ async function loadData(onSuccess) {
 
 const dollar = 98;
 
-function toRuble(price) {
-    return Math.round(price * dollar / 1000) * 1000;
+function toRuble(price, round) {
+    round = !!round ? round : 1000;
+    return Math.round(price * dollar / round) * round;
 }
 
 function toDollar(price) {
