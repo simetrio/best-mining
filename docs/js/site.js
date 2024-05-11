@@ -29,8 +29,17 @@ async function loadData(onSuccess) {
     const coins = [];
     Object.keys(coinsObject.coins).forEach(x => {
         const coin = coinsObject.coins[x];
-        coin.Title = x;
-        coins.push(coin);
+        if (coin.status !== "Active") {
+            return;
+        }
+
+        coins.push({
+            Id: coin.id,
+            Tag: coin.tag,
+            Title: x,
+            Algorithm: coin.algorithm,
+            Popular: coin.popular || false,
+        });
     });
 
     window.dataBase = { products, coins };

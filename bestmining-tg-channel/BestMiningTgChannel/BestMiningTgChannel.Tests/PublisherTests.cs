@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text.Json;
 using BestMiningTgChannel.Publisher;
 
 namespace BestMiningTgChannel.Tests;
@@ -97,5 +98,33 @@ public class PublisherTests
                 destinationRootDirectory
             );
         }
+    }
+
+    private void CreateDefaultCoins()
+    {
+        var coinsDirectory = "/home/roman/projects/best-mining/best-mining/pages/calculators/mining/coins";
+        var json = File.ReadAllText("/home/roman/projects/best-mining/best-mining/docs/data/coins2.json");
+        var coins = JsonSerializer.Deserialize<Coin[]>(json)!;
+
+        foreach (var coin in coins)
+        {
+            if (File.Exists(Path.Combine(coinsDirectory, coin.Tag.ToLower(), "index.html")))
+            {
+                continue;
+            }
+
+            Directory.CreateDirectory(Path.Combine(coinsDirectory, coin.Tag.ToLower()));
+            File.WriteAllText(
+                Path.Combine(coinsDirectory, coin.Tag.ToLower(), "index.html"),
+                @$"Расчет доходности криптовалюты {coin.Title} в рублях и долларах
+<div id=""mining-calculator-coin"" data-coin=""{coin.Tag}""></div>"
+            );
+        }
+    }
+
+    public class Coin
+    {
+        public string Tag { get; set; }
+        public string Title { get; set; }
     }
 }
