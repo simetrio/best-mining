@@ -31,10 +31,19 @@ function fillMiningCalculatorSingleTemplate(template, data) {
 
 // *** Calculator ***
 
+const coins = {
+    "BTC": 1,
+    "ETC": 162,
+    "DOGE": 6,
+    "KAS": 352,
+}
+
 async function calculateMining() {
-    // const hashRate = document.getElementById('mc-hash-rate').value;
-    // const hashRate = document.getElementById('mc-hash-rate').value;
-    // const hashRate = document.getElementById('mc-hash-rate').value;
+    const coin = coins[document.getElementById('mc-coin').value];
+    const hashRate = document.getElementById('mc-hash-rate').value;
+    const power = document.getElementById('mc-power').value;
+    const cost = toDollar(parseFloat(document.getElementById('mc-cost').value));
+    const poolComission = document.getElementById('mc-pool-comission').value;
 
     const c = await (await fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
@@ -42,7 +51,7 @@ async function calculateMining() {
             'Content-Type': 'application/json;charset=utf-8',
             'Accept': 'application/json'
         },
-        body: `{"Action": "CalculateMining", "Command": "hr=200.0&p=3500.0&fee=0.0&cost=0.1&cost_currency=USD&hcost=0.0&span_br=1h&span_d="}`
+        body: `{"Action": "CalculateMining", "Command": "${coin}.json?hr=${hashRate}&p=${power}&fee=${poolComission}&cost=${cost}&cost_currency=USD&hcost=0.0&span_br=1h&span_d="}`
     })).json();
 
     console.log(c);
@@ -54,7 +63,7 @@ const singleMiningCalculatorTemplate = `
 <div class="card m-3">
     <div class="card-body">
         <h3 class="card-title mb-4">Доходность</h3>
-        <input id="mc-coin" type="hidden" value="{coint}" />
+        <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
             <div class="col">
                 <div data-mdb-input-init class="form-outline">

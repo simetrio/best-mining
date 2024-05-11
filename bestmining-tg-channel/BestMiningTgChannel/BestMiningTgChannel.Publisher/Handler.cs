@@ -383,7 +383,7 @@ public static class MiningCalculator
     public static string Send(string url)
     {
         return new HttpClient()
-            .GetStringAsync($"https://whattomine.com/coins/1.json?{url}")
+            .GetStringAsync($"https://whattomine.com/coins/{url}")
             .GetAwaiter()
             .GetResult()
             ;

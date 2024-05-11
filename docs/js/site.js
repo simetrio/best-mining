@@ -31,9 +31,14 @@ async function loadData(onSuccess) {
     onSuccess();
 }
 
+const dollar = 98;
+
 function toRuble(price) {
-    const dollar = 98;
     return Math.round(price * dollar / 1000) * 1000;
+}
+
+function toDollar(price) {
+    return Math.round(price / dollar * 100) / 100;
 }
 
 function initMdb() {
