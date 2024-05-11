@@ -3,6 +3,7 @@ function showMiningCalculator() {
     showCoinsMiningCalculator();
     showCoinMiningCalculator();
     showAsicsMiningCalculator();
+    showAsicMiningCalculator();
 }
 
 // *** Show ***
@@ -42,6 +43,18 @@ function updateCoinsMiningCalculator() {
         fillCoinsItemsMiningCalculatorTemplate(coinItemMiningCalculatorTemplate, coins);
 }
 
+function showCoinMiningCalculator() {
+    const element = document.getElementById('mining-calculator-coin');
+    if (!element) {
+        return;
+    }
+
+    const coinId = element.getAttribute('data-coin');
+    const coin = window.dataBase.coins.find(x => x.Tag === coinId);
+
+    element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin);
+}
+
 function showAsicsMiningCalculator() {
     const element = document.getElementById('mining-calculator-asics');
     if (!element) {
@@ -62,16 +75,16 @@ function updateAsicsMiningCalculator() {
         fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
 }
 
-function showCoinMiningCalculator() {
-    const element = document.getElementById('mining-calculator-coin');
+function showAsicMiningCalculator() {
+    const element = document.getElementById('mining-calculator-asic');
     if (!element) {
         return;
     }
 
-    const coinId = element.getAttribute('data-coin');
-    const coin = window.dataBase.coins.find(x => x.Tag === coinId);
+    const productId = element.getAttribute('data-product-id');
+    const product = window.dataBase.products.find(x => x.Id === productId);
 
-    element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin);
+    element.innerHTML = fillMiningCalculatorAsicTemplate(asicMiningCalculatorTemplate, product);
 }
 
 // *** Frames ***
@@ -188,6 +201,14 @@ function fillAsicsItemsMiningCalculatorTemplate(template, asics) {
     return asicsHtml;
 }
 
+function fillMiningCalculatorAsicTemplate(template, product) {
+    const calculatorHtml = fillMiningCalculatorProductTemplate(template, product);
+
+    return calculatorHtml
+        .replace(new RegExp('{name}', 'g'), product.Name)
+        ;
+}
+
 // *** Calculator ***
 
 async function calculateMining() {
@@ -276,6 +297,49 @@ const coinMiningCalculatorTemplate = `
             <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-power" class="form-control" value="1000" />
+                    <label class="form-label" for="mc-power">Потребление, Вт</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-cost" class="form-control" value="4.5" />
+                    <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-pool-comission" class="form-control" value="0" />
+                    <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button data-mdb-ripple-init type="button" class="btn btn-primary mb-4 px-5" onclick="calculateMining()">
+                Рассчитать
+            </button>
+        </div>
+
+        <div id="mc-result"></div>
+    </div>
+</div>
+`;
+
+const asicMiningCalculatorTemplate = `
+<h1 class="mx-3">Расчет доходности асика {name}</h1>
+<div class="card m-3">
+    <div class="card-body">
+        <input id="mc-coin" type="hidden" value="{coin}" />
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
+                    <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="mc-power" class="form-control" value="{power}" />
                     <label class="form-label" for="mc-power">Потребление, Вт</label>
                 </div>
             </div>
