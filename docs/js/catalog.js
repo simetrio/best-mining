@@ -133,8 +133,8 @@ function fillPricesTemplate(template, templateItem, product) {
     product.Prices.forEach(price => {
         pricesHtml += templateItem
             .replace(new RegExp('{name}', 'g'), product.Name)
-            .replace(new RegExp('{priceRuble}', 'g'), new Intl.NumberFormat("ru").format(price.ValueRuble))
-            .replace(new RegExp('{price}', 'g'), new Intl.NumberFormat("ru").format(price.Value))
+            .replace(new RegExp('{priceRuble}', 'g'), formatCurrency(price.ValueRuble))
+            .replace(new RegExp('{price}', 'g'), formatCurrency(price.Value))
             .replace(new RegExp('{delivery}', 'g'), price.Delivery)
             ;
     });
@@ -149,8 +149,8 @@ function fillProductTemplate(template, product) {
         .replace(new RegExp('{id}', 'g'), product.Id)
         .replace(new RegExp('{img}', 'g'), product.Imgs[0])
         .replace(new RegExp('{name}', 'g'), product.Name)
-        .replace(new RegExp('{priceRuble}', 'g'), new Intl.NumberFormat("ru").format(product.Prices[0].ValueRuble))
-        .replace(new RegExp('{price}', 'g'), new Intl.NumberFormat("ru").format(product.Prices[0].Value))
+        .replace(new RegExp('{priceRuble}', 'g'), formatCurrency(product.Prices[0].ValueRuble))
+        .replace(new RegExp('{price}', 'g'), formatCurrency(product.Prices[0].Value))
         .replace(new RegExp('{brandId}', 'g'), product.Brand.toLowerCase())
         .replace(new RegExp('{brand}', 'g'), product.Brand)
         ;

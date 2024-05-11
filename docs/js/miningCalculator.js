@@ -35,15 +35,43 @@ function fillMiningCalculatorResultTemplate(template, data) {
     const cost = parseFloat(data.cost.replace('$', ''));
     const profit = parseFloat(data.profit.replace('$', ''));
 
+    const prepareCoin = value => roundToDigits(value, 9);
+    const prepareDollar = value => formatCurrency(roundToDigits(value, 2));
+    const prepareRuble = value => formatCurrency(toRuble(value, 2));
+
     return template
+        // Hour
+        .replace(new RegExp('{hour-estimated_rewards}', 'g'), prepareCoin(estimated_rewards / 24))
+        .replace(new RegExp('{hour-revenue}', 'g'), prepareDollar(revenue / 24))
+        .replace(new RegExp('{hour-revenue-ruble}', 'g'), prepareRuble(revenue / 24))
+        .replace(new RegExp('{hour-cost}', 'g'), prepareDollar(cost / 24))
+        .replace(new RegExp('{hour-cost-ruble}', 'g'), prepareRuble(cost / 24))
+        .replace(new RegExp('{hour-profit}', 'g'), prepareDollar(profit / 24))
+        .replace(new RegExp('{hour-profit-ruble}', 'g'), prepareRuble(profit / 24))
         // Day
-        .replace(new RegExp('{day-estimated_rewards}', 'g'), estimated_rewards)
-        .replace(new RegExp('{day-revenue}', 'g'), revenue)
-        .replace(new RegExp('{day-revenue-ruble}', 'g'), toRuble(revenue, 1))
-        .replace(new RegExp('{day-cost}', 'g'), cost)
-        .replace(new RegExp('{day-cost-ruble}', 'g'), toRuble(cost, 1))
-        .replace(new RegExp('{day-profit}', 'g'), profit)
-        .replace(new RegExp('{day-profit-ruble}', 'g'), toRuble(profit, 1))
+        .replace(new RegExp('{day-estimated_rewards}', 'g'), prepareCoin(estimated_rewards))
+        .replace(new RegExp('{day-revenue}', 'g'), prepareDollar(revenue))
+        .replace(new RegExp('{day-revenue-ruble}', 'g'), prepareRuble(revenue))
+        .replace(new RegExp('{day-cost}', 'g'), prepareDollar(cost))
+        .replace(new RegExp('{day-cost-ruble}', 'g'), prepareRuble(cost))
+        .replace(new RegExp('{day-profit}', 'g'), prepareDollar(profit))
+        .replace(new RegExp('{day-profit-ruble}', 'g'), prepareRuble(profit))
+        // Week
+        .replace(new RegExp('{week-estimated_rewards}', 'g'), prepareCoin(estimated_rewards * 7))
+        .replace(new RegExp('{week-revenue}', 'g'), prepareDollar(revenue * 7))
+        .replace(new RegExp('{week-revenue-ruble}', 'g'), prepareRuble(revenue * 7))
+        .replace(new RegExp('{week-cost}', 'g'), prepareDollar(cost * 7))
+        .replace(new RegExp('{week-cost-ruble}', 'g'), prepareRuble(cost * 7))
+        .replace(new RegExp('{week-profit}', 'g'), prepareDollar(profit * 7))
+        .replace(new RegExp('{week-profit-ruble}', 'g'), prepareRuble(profit * 7))
+        // Month
+        .replace(new RegExp('{month-estimated_rewards}', 'g'), prepareCoin(estimated_rewards * 30))
+        .replace(new RegExp('{month-revenue}', 'g'), prepareDollar(revenue * 30))
+        .replace(new RegExp('{month-revenue-ruble}', 'g'), prepareRuble(revenue* 30))
+        .replace(new RegExp('{month-cost}', 'g'), prepareDollar(cost * 30))
+        .replace(new RegExp('{month-cost-ruble}', 'g'), prepareRuble(cost* 30))
+        .replace(new RegExp('{month-profit}', 'g'), prepareDollar(profit * 30))
+        .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit* 30))
         ;
 }
 
@@ -57,6 +85,9 @@ const coins = {
 }
 
 async function calculateMining() {
+    const element = document.getElementById('mc-result');
+    element.innerHTML = loader;
+
     const coin = coins[document.getElementById('mc-coin').value];
     const hashRate = document.getElementById('mc-hash-rate').value;
     const power = document.getElementById('mc-power').value;
@@ -85,25 +116,25 @@ const singleMiningCalculatorTemplate = `
         <h3 class="card-title mb-4">Расчет доходности</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
-            <div class="col">
+            <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
                     <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-power" class="form-control" value={power} />
                     <label class="form-label" for="mc-power">Потребление, Вт</label>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-cost" class="form-control" value="4.5" />
                     <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-pool-comission" class="form-control" value="0" />
                     <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
@@ -132,11 +163,40 @@ const singleMiningCalculatorResultTemplate = `
         <th scope="col">Прибыль</th>
     </tr>
     <tr>
-        <td>День</td>
+        <th>Час</th>
+        <td>{hour-estimated_rewards}</td>
+        <td>{hour-revenue-ruble} ₽ / {hour-revenue} $</td>
+        <td>{hour-cost-ruble} ₽ / {hour-cost} $</td>
+        <th>{hour-profit-ruble} ₽ / {hour-profit} $</th>
+    </tr>
+    <tr>
+        <th>День</th>
         <td>{day-estimated_rewards}</td>
         <td>{day-revenue-ruble} ₽ / {day-revenue} $</td>
         <td>{day-cost-ruble} ₽ / {day-cost} $</td>
-        <td>{day-profit-ruble} ₽ / {day-profit} $</td>
+        <th>{day-profit-ruble} ₽ / {day-profit} $</th>
+    </tr>
+    <tr>
+        <th>Неделя</th>
+        <td>{week-estimated_rewards}</td>
+        <td>{week-revenue-ruble} ₽ / {week-revenue} $</td>
+        <td>{week-cost-ruble} ₽ / {week-cost} $</td>
+        <th>{week-profit-ruble} ₽ / {week-profit} $</th>
+    </tr>
+    <tr>
+        <th>Месяц</th>
+        <td>{month-estimated_rewards}</td>
+        <td>{month-revenue-ruble} ₽ / {month-revenue} $</td>
+        <td>{month-cost-ruble} ₽ / {month-cost} $</td>
+        <th>{month-profit-ruble} ₽ / {month-profit} $</th>
     </tr>
 </table>
-`
+`;
+
+const loader = `
+<div class="text-center">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+</div>
+`;

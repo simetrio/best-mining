@@ -42,6 +42,15 @@ function toDollar(price) {
     return Math.round(price / dollar * 1000) / 1000;
 }
 
+function roundToDigits(value, digits) {
+    const multiplier = Math.pow(10, digits);
+    return Math.round(value * multiplier) / multiplier;
+}
+
+function formatCurrency(value) {
+    return new Intl.NumberFormat('ru').format(value);
+}
+
 function initMdb() {
     var script = document.createElement('script');
     script.setAttribute('type', 'text/javascript');
