@@ -12,6 +12,11 @@ public class Handler : HandlerBase
 {
     protected override string HandleRequest(string body, RequestData? requestData)
     {
+        if (requestData == null)
+        {
+            return "Command is empty";
+        }
+
         switch (requestData.Action)
         {
             case Action.Send:
@@ -489,9 +494,24 @@ public abstract class HandlerBase
         Logger.Debug(body);
 
         var request = GetRequest(body);
-        var response = HandleRequest(request);
 
+        if (IsCors(request))
+        {
+            return CorsOk();
+        }
+
+        var response = HandleRequest(request);
         return new Response(200, response);
+    }
+
+    private Response CorsOk()
+    {
+        return new Response(200, "{}");
+    }
+
+    private bool IsCors(Request request)
+    {
+        return request.httpMethod == "OPTIONS";
     }
 
     private string HandleRequest(Request request)
@@ -513,7 +533,7 @@ public abstract class HandlerBase
     {
         try
         {
-            var requestDataDto = JsonSerializer.Deserialize<RequestDataDto>(body)!;
+            var requestDataDto = JsonSerializer.Deserialize<RequestDataDto>(ExtractBody(body))!;
 
             return new RequestData
             {
@@ -524,6 +544,18 @@ public abstract class HandlerBase
         catch (Exception)
         {
             return null;
+        }
+    }
+
+    private string ExtractBody(string body)
+    {
+        try
+        {
+            return Encoding.UTF8.GetString(Convert.FromBase64String(body));
+        }
+        catch (Exception)
+        {
+            return body;
         }
     }
 
@@ -579,6 +611,13 @@ public class Response
 
     public int StatusCode { get; set; }
     public string Body { get; set; }
+
+    public Dictionary<string, string> Headers { get; } = new Dictionary<string, string>
+        {
+            {"Access-Control-Allow-Headers", "*"},
+            {"Access-Control-Allow-Methods", "*"},
+            {"Access-Control-Allow-Origin", "*"},
+        };
 }
 
 public static class Logger
