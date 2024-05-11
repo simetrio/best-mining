@@ -19,13 +19,14 @@ function closeTgModal() {
 
 async function loadData(onSuccess) {
     const products = await (await fetch('/data/products.json')).json();
+    const coins = await (await fetch('/data/coins.json')).json();
 
     products.forEach(product => {
         product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
         product.Prices.forEach(price => price.ValueRuble = toRuble(price.Value));
     });
 
-    window.dataBase = { products };
+    window.dataBase = { products, coins };
     console.log(window.dataBase);
 
     onSuccess();
