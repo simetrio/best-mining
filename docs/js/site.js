@@ -10,7 +10,7 @@ function openTgModal() {
         }
 
         document.getElementById('show-tg-modal').click();
-    }, 2000);
+    }, 10000);
 }
 
 function closeTgModal() {
