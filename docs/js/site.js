@@ -38,7 +38,7 @@ function toRuble(price) {
 }
 
 function toDollar(price) {
-    return Math.round(price / dollar * 100) / 100;
+    return Math.round(price / dollar * 1000) / 1000;
 }
 
 function initMdb() {

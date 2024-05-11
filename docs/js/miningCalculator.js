@@ -29,6 +29,15 @@ function fillMiningCalculatorSingleTemplate(template, data) {
         ;
 }
 
+function fillMiningCalculatorResultTemplate(template, data) {
+    return template
+        .replace(new RegExp('{day-estimated_rewards}', 'g'), data.estimated_rewards)
+        .replace(new RegExp('{day-revenue}', 'g'), data.revenue)
+        .replace(new RegExp('{day-cost}', 'g'), data.cost)
+        .replace(new RegExp('{day-profit}', 'g'), data.profit)
+        ;
+}
+
 // *** Calculator ***
 
 const coins = {
@@ -45,7 +54,7 @@ async function calculateMining() {
     const cost = toDollar(parseFloat(document.getElementById('mc-cost').value));
     const poolComission = document.getElementById('mc-pool-comission').value;
 
-    const c = await (await fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
+    const result = await (await fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8',
@@ -54,7 +63,9 @@ async function calculateMining() {
         body: `{"Action": "CalculateMining", "Command": "${coin}.json?hr=${hashRate}&p=${power}&fee=${poolComission}&cost=${cost}&cost_currency=USD&hcost=0.0&span_br=1h&span_d="}`
     })).json();
 
-    console.log(c);
+    console.log(result);
+
+    document.getElementById('mc-result').innerHTML = fillMiningCalculatorResultTemplate(singleMiningCalculatorResultTemplate, result);
 }
 
 // *** Templates ***
@@ -62,7 +73,7 @@ async function calculateMining() {
 const singleMiningCalculatorTemplate = `
 <div class="card m-3">
     <div class="card-body">
-        <h3 class="card-title mb-4">Доходность</h3>
+        <h3 class="card-title mb-4">Расчет доходности</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
             <div class="col">
@@ -79,7 +90,7 @@ const singleMiningCalculatorTemplate = `
             </div>
             <div class="col">
                 <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="mc-cost" class="form-control" value="5" />
+                    <input type="text" id="mc-cost" class="form-control" value="4.5" />
                     <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
                 </div>
             </div>
@@ -101,3 +112,22 @@ const singleMiningCalculatorTemplate = `
     </div>
 </div>
 `;
+
+const singleMiningCalculatorResultTemplate = `
+<table class="table table-sm">
+    <tr>
+        <th scope="col">Период</th>
+        <th scope="col">Награда</th>
+        <th scope="col">Доход</th>
+        <th scope="col">Расход</th>
+        <th scope="col">Прибыль</th>
+    </tr>
+    <tr>
+        <td>День</td>
+        <td>{day-estimated_rewards}</td>
+        <td>{day-revenue}</td>
+        <td>{day-cost}</td>
+        <td>{day-profit}</td>
+    </tr>
+</table>
+`
