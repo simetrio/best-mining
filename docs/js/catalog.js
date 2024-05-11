@@ -77,12 +77,26 @@ function showCatalogProduct() {
     element.innerHTML = renderProduct(product);
 }
 
+// *** Frame ***
+
+function getCatalogProductSlim(product) {
+    return renderProductSlim(product)
+}
+
 // *** Render ***
 
 function renderProductWide(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
 
     return fillProductTemplate(productWideTemplate, product)
+        .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
+        ;
+}
+
+function renderProductSlim(product) {
+    const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicSlimTemplate, product);
+
+    return fillProductTemplate(productSlimTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         ;
 }
@@ -231,6 +245,25 @@ const productTemplate = `
 {miningCalculator}
 `;
 
+const productSlimTemplate = `
+<div class="card">
+    <a href="/catalog/{id}">
+        <img src="/img/{img}" class="card-img-top" alt="{name}" />
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="/catalog/{id}">{name}</a>
+        </h5>
+        <dl class="mt-4">
+            {characteristics}
+        </dl>
+        <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
+        <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
+            target="_blank">Заказать</a>
+    </div>
+</div>
+`;
+
 const productPricesTemplate = `
 <div class="card m-3">
     <div class="card-body">
@@ -262,6 +295,11 @@ const productCharacteristicTemplate = `
 <dd class="col-sm-9">{value}</dd>
 `;
 
+
+const productCharacteristicSlimTemplate = `
+<dt>{name}</dt>
+<dd>{value}</dd>
+`;
 const brandTemplate = `
 <div class="col">
     <div class="card">
