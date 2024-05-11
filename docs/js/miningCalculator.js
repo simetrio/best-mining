@@ -73,7 +73,7 @@ function fillMiningCalculatorProductTemplate(template, product) {
 function fillMiningCalculatorCoinTemplate(template, coin) {
     return template
         .replace(new RegExp('{coin}', 'g'), coin.Tag)
-        .replace(new RegExp('{hashrate}', 'g'), coin.HashRate)
+        .replace(new RegExp('{hashrate}', 'g'), coin.HashRate || '')
         .replace(new RegExp('{title}', 'g'), coin.Title)
         ;
 }

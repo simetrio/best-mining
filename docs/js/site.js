@@ -38,6 +38,7 @@ async function loadData(onSuccess) {
             Tag: coin.tag,
             Title: x,
             Algorithm: coin.algorithm,
+            HashRate: coin.hashRate,
             Popular: coin.popular || false,
         });
     });
