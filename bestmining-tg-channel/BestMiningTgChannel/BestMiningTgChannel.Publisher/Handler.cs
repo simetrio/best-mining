@@ -14,9 +14,8 @@ public class Handler : HandlerBase
     {
         Logger.Log($"Action {requestData?.Action.ToString() ?? "null"}");
 
-        switch (requestData?.Action)
+        switch (requestData?.Action ?? Action.Send)
         {
-            case null:
             case Action.Send:
                 ChartSender.Send();
                 NewsSender.Send();
