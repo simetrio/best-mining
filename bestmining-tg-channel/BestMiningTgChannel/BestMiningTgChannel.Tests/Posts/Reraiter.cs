@@ -7,7 +7,7 @@ public static class Reraiter
 {
     public static string Rerait(string message)
     {
-        // return File.ReadAllText("/home/roman/pool-rerait.txt");
+        return File.ReadAllText("/home/roman/pool-rerait.txt");
 
         var json = _jsonTemplate.Replace("{message}", FormatMessage(message));
 
@@ -62,7 +62,7 @@ public static class Reraiter
   ""modelUri"": ""gpt://b1gn410mgu2s1lqpq2va/yandexgpt"",
   ""messages"": [
     {
-      ""text"": ""сделай рерайт текста"",
+      ""text"": ""перескажи своими словами"",
       ""role"": ""system""
     },
     {
@@ -73,7 +73,7 @@ public static class Reraiter
   ""completionOptions"": {
     ""stream"": false,
     ""maxTokens"": 5000,
-    ""temperature"": 0.3
+    ""temperature"": 1
   }
 }
     ";
