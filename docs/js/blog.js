@@ -42,7 +42,7 @@ function fillBlogPostsItemTemplate(template, posts) {
 // *** Templates ***
 
 const blogPostsTemplate = `
-<h1 class="mb-4">Блог</h1>
+<h1 class="mb-4">Блог компании BestMining</h1>
 <div class="row">
     {posts}
 </div>
