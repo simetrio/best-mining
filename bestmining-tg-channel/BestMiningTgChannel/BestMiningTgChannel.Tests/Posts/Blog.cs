@@ -112,7 +112,7 @@ public static class Blog
             return;
         }
 
-        posts = posts.Append(post).ToArray();
+        posts = new[] { post }.Concat(posts).ToArray();
         File.WriteAllText(
             postsFileName,
             JsonSerializer.Serialize(posts, new JsonSerializerOptions { WriteIndented = true })

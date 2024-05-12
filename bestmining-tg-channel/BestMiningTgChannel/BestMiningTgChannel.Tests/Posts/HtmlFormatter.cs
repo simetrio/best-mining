@@ -23,6 +23,7 @@ public static class HtmlFormatter
         if (line.StartsWith("* ")
             || line.StartsWith("• ")
             || line.StartsWith("— ")
+            || line.StartsWith("- ")
             || char.IsDigit(line[0])
         )
         {
@@ -42,7 +43,7 @@ public static class HtmlFormatter
         line
             .Replace("*", "")
             .Replace("•", "")
-            .Replace("—", "")
+            .Trim('-', '—')
             .Trim();
 
     private static string CleanHeader(string line) => line.Trim(':');
