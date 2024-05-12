@@ -1,22 +1,27 @@
 [
-    {
-        "Id": "viabtc",
-        "Name": "ViaBTC",
-        "Img": "tg-channel-news-1.jpg"
-    },
-    {
-        "Id": "trustpool",
-        "Name": "Trustpool",
-        "Img": "tg-channel-news-2.jpg"
-    },
-    {
-        "Id": "2miners",
-        "Name": "2Miners",
-        "Img": "tg-channel-news-3.jpg"
-    },
-    {
-        "Id": "k1pool",
-        "Name": "K1Pool",
-        "Img": "tg-channel-news-4.jpg"
-    }
+  {
+    "Id": "viabtc",
+    "Name": "ViaBTC",
+    "Img": "tg-channel-news-1.jpg"
+  },
+  {
+    "Id": "trustpool",
+    "Name": "Trustpool",
+    "Img": "tg-channel-news-2.jpg"
+  },
+  {
+    "Id": "2miners",
+    "Name": "2Miners",
+    "Img": "tg-channel-news-3.jpg"
+  },
+  {
+    "Id": "k1pool",
+    "Name": "K1Pool",
+    "Img": "tg-channel-news-4.jpg"
+  },
+  {
+    "Id": "antpool",
+    "Name": "Antpool",
+    "Img": "tg-channel-news-4.jpg"
+  }
 ]
