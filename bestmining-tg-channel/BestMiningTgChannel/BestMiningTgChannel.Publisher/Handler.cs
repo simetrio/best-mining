@@ -12,13 +12,11 @@ public class Handler : HandlerBase
 {
     protected override string HandleRequest(string body, RequestData? requestData)
     {
-        if (requestData == null)
-        {
-            return "Command is empty";
-        }
+        Logger.Log($"Action {requestData?.Action.ToString() ?? "null"}");
 
-        switch (requestData.Action)
+        switch (requestData?.Action)
         {
+            case null:
             case Action.Send:
                 ChartSender.Send();
                 NewsSender.Send();
@@ -29,7 +27,7 @@ public class Handler : HandlerBase
                 return MiningCalculator.Send(requestData.Command);
 
             default:
-                return "Command not found";
+                return "Action not found";
         }
     }
 }
