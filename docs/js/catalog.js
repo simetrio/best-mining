@@ -4,6 +4,7 @@ function showCatalog() {
     showCatalogBrandWide();
     showCatalogBrands();
     showCatalogProduct();
+    showCatalogAnalogs();
 }
 
 // *** Show ***
@@ -81,6 +82,22 @@ function showCatalogProduct() {
     element.innerHTML = renderProduct(product);
 }
 
+function showCatalogAnalogs() {
+    const element = document.getElementById('catalog-product-analogs');
+    if (!element) {
+        return;
+    }
+
+    const productId = element.getAttribute('data-product-id');
+    const product = window.dataBase.products.find(x => x.Id === productId);
+    const products = window.dataBase.products
+        .filter(x => x.MiningCalculator.Algorithm === product.MiningCalculator.Algorithm
+                && x.Id !== productId)
+        .slice(0, 4);
+
+    element.innerHTML = renderProductsAnalogsSlim(products);
+}
+
 // *** Frame ***
 
 function getCatalogProductSlimTall(product) {
@@ -106,6 +123,18 @@ function renderProductSlimTall(product) {
 
     return fillProductTemplate(productSlimTallTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
+        ;
+}
+
+function renderProductsAnalogsSlim(products) {
+    let productsHtml = '';
+
+    products.forEach(product => {
+        productsHtml += renderProductSlim(product);
+    });
+
+    return productsAnalogsSlimTemplate
+        .replace(new RegExp('{products}', 'g'), productsHtml)
         ;
 }
 
@@ -290,6 +319,13 @@ const productSlimTallTemplate = `
 `;
 
 const productsSlimTemplate = `
+<div class="row">
+    {products}
+</div>
+`;
+
+const productsAnalogsSlimTemplate = `
+<h2 class="my-3">Похожие товары</h2>
 <div class="row">
     {products}
 </div>
