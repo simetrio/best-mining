@@ -42,6 +42,7 @@ async function loadData(onSuccess) {
             Algorithm: coin.algorithm,
             HashRate: coin.hashRate,
             Popular: coin.popular || false,
+            Img: coin.img || "",
         });
     });
 

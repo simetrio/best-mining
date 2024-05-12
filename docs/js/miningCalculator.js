@@ -2,6 +2,7 @@ function showMiningCalculator() {
     showProductMiningCalculator();
     showCoinsMiningCalculator();
     showCoinMiningCalculator();
+    showCoinsTopMiningCalculatorTop();
     showAsicsMiningCalculator();
     showAsicMiningCalculator();
 }
@@ -53,6 +54,17 @@ function showCoinMiningCalculator() {
     const coin = window.dataBase.coins.find(x => x.Tag === coinId);
 
     element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin);
+}
+
+function showCoinsTopMiningCalculatorTop() {
+    const element = document.getElementById('mining-calculator-coins-top');
+    if (!element) {
+        return;
+    }
+
+    const coins = window.dataBase.coins.filter(x => x.Popular).slice(0, 4);
+
+    element.innerHTML = fillMiningCalculatorCoinsTopTemplate(coinsTopTemplate, coinsTopItemTemplate, coins);
 }
 
 function showAsicsMiningCalculator() {
@@ -110,6 +122,29 @@ function fillMiningCalculatorCoinTemplate(template, coin) {
         .replace(new RegExp('{hashrate}', 'g'), coin.HashRate || '')
         .replace(new RegExp('{title}', 'g'), coin.Title)
         ;
+}
+
+function fillMiningCalculatorCoinsTopTemplate(template, templateItem, coins) {
+    let posts = fillMiningCalculatorCoinsTopItemsTemplate(templateItem, coins);
+
+    return template
+        .replace(new RegExp('{coins}', 'g'), posts)
+        ;
+}
+
+function fillMiningCalculatorCoinsTopItemsTemplate(template, coins) {
+    let coinsHtml = '';
+
+    coins.forEach(coin => {
+        coinsHtml += template
+            .replace(new RegExp('{id}', 'g'), coin.Tag.toLowerCase())
+            .replace(new RegExp('{img}', 'g'), coin.Img)
+            .replace(new RegExp('{title}', 'g'), coin.Title)
+            .replace(new RegExp('{tag}', 'g'), coin.Tag)
+            ;
+    });
+
+    return coinsHtml;
 }
 
 function fillMiningCalculatorResultTemplate(template, data) {
@@ -441,6 +476,29 @@ const coinsMiningCalculatorTemplate = `
 const coinItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
     <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{title} ({coin})</a>
+</div>
+`;
+
+const coinsTopTemplate = `
+<h2 class="my-4">Популярные монеты</h2>
+<div class="row">
+    {coins}
+</div>
+`;
+
+const coinsTopItemTemplate = `
+<div class="card col-lg-3">
+    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+        <img src="/img/tg-channel/{img}" class="img-fluid" />
+        <a href="/calculators/mining/coins/{id}">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+    </div>
+    <div class="card-body">
+        <a href="/calculators/mining/coins/{id}">
+            <h5 class="card-title">{title} ({tag})</h5>
+        </a>
+    </div>
 </div>
 `;
 

@@ -463,7 +463,8 @@
       "lagging": false,
       "listed": true,
       "status": "Active",
-      "testing": false
+      "testing": false,
+      "img": "tg-channel-news-1.jpg"
     },
     "BitcoinPrivate": {
       "id": 230,
@@ -993,7 +994,8 @@
       "lagging": false,
       "listed": true,
       "status": "Active",
-      "testing": false
+      "testing": false,
+      "img": "tg-channel-news-2.jpg"
     },
     "Dogether": {
       "id": 393,
@@ -1158,7 +1160,8 @@
       "lagging": false,
       "listed": true,
       "status": "Active",
-      "testing": false
+      "testing": false,
+      "img": "tg-channel-news-3.jpg"
     },
     "Ethereum": {
       "id": 151,
@@ -1758,7 +1761,8 @@
       "lagging": false,
       "listed": true,
       "status": "Active",
-      "testing": false
+      "testing": false,
+      "img": "tg-channel-news-4.jpg"
     },
     "Kylacoin": {
       "id": 379,
