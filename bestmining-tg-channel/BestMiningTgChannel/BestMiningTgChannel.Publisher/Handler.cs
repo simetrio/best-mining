@@ -297,7 +297,7 @@ public static class NewsSender
   ""completionOptions"": {
     ""stream"": false,
     ""maxTokens"": 500,
-    ""temperature"": 0.3
+    ""temperature"": 1
   }
 }
     ";
