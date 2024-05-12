@@ -241,7 +241,7 @@ async function calculateMining() {
 // *** Templates ***
 
 const productMiningCalculatorTemplate = `
-<div class="card m-3">
+<div class="card my-3">
     <div class="card-body">
         <h3 class="card-title mb-4">Расчет доходности</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
@@ -285,8 +285,8 @@ const productMiningCalculatorTemplate = `
 
 
 const coinMiningCalculatorTemplate = `
-<h1 class="mx-3">Расчет доходности {title}</h1>
-<div class="card m-3">
+<h1>Расчет доходности {title}</h1>
+<div class="card">
     <div class="card-body">
         <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
@@ -328,8 +328,8 @@ const coinMiningCalculatorTemplate = `
 `;
 
 const asicMiningCalculatorTemplate = `
-<h1 class="mx-3">Расчет доходности асика {name}</h1>
-<div class="row m-3">
+<h1>Расчет доходности асика {name}</h1>
+<div class="row">
     <div class="col-lg-3">
         {product}
     </div>
@@ -425,7 +425,7 @@ const loader = `
 `;
 
 const coinsMiningCalculatorTemplate = `
-<div class="card m-3">
+<div class="card">
     <div class="m-4">
         <div class="form-outline" data-mdb-input-init>
             <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateCoinsMiningCalculator()" />
@@ -445,7 +445,7 @@ const coinItemMiningCalculatorTemplate = `
 `;
 
 const asicsMiningCalculatorTemplate = `
-<div class="card m-3">
+<div class="card">
     <div class="m-4">
         <div class="form-outline" data-mdb-input-init>
             <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateAsicsMiningCalculator()" />

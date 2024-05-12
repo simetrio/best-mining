@@ -174,7 +174,7 @@ function fillProductTemplate(template, product) {
 
 // *** Templates ***
 const productWideTemplate = `
-<div class="card m-3">
+<div class="card">
     <div class="row g-0">
         <div class="col-md-4">
             <a href="/catalog/{id}">
@@ -208,14 +208,14 @@ const productWideTemplate = `
 
 const productTemplate = `
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb mx-3">
+  <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Главная</a></li>
     <li class="breadcrumb-item"><a href="/catalog/">Каталог</a></li>
     <li class="breadcrumb-item"><a href="/catalog/brands/{brandId}/">{brand}</a></li>
     <li class="breadcrumb-item active" aria-current="page">{name}</li>
   </ol>
 </nav>
-<div class="card m-3">
+<div class="card">
     <div class="row g-0">
         <div class="col-md-4">
             <img src="/img/{img}" alt="{name}" class="img-fluid rounded-start" />
@@ -265,7 +265,7 @@ const productSlimTallTemplate = `
 `;
 
 const productPricesTemplate = `
-<div class="card m-3">
+<div class="card my-3">
     <div class="card-body">
         <h3 class="card-title mb-3">Прайс</h3>
         <table class="table table-sm">
@@ -314,7 +314,7 @@ const brandTemplate = `
 `;
 
 const brandsTemplate = `
-<div class="row my-3 mx-2 gx-3">
+<div class="row my-3 gx-3">
     {brands}
 </div>
 `;

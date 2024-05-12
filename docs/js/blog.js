@@ -1,5 +1,6 @@
 function showBlog() {
     showBlogPosts();
+    showBlogTop();
 }
 
 // *** Show ***
@@ -13,6 +14,17 @@ function showBlogPosts() {
     const posts = window.dataBase.posts;
 
     element.innerHTML = fillBlogPostsTemplate(blogPostsTemplate, blogPostsItemTemplate, posts);
+}
+
+function showBlogTop() {
+    const element = document.getElementById('blog-top');
+    if (!element) {
+        return;
+    }
+
+    const posts = window.dataBase.posts.slice(0, 4);
+
+    element.innerHTML = fillBlogPostsTemplate(blogPostsTopTemplate, blogPostsItemTemplate, posts);
 }
 
 // *** Fill ***
@@ -43,6 +55,13 @@ function fillBlogPostsItemTemplate(template, posts) {
 
 const blogPostsTemplate = `
 <h1 class="mb-4">Блог компании BestMining</h1>
+<div class="row">
+    {posts}
+</div>
+`;
+
+const blogPostsTopTemplate = `
+<h2 class="my-4">Блог</h2>
 <div class="row">
     {posts}
 </div>

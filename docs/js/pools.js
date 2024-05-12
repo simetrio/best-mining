@@ -1,5 +1,6 @@
 function showPools() {
     showPoolsList();
+    showPoolsTop();
 }
 
 // *** Show ***
@@ -13,6 +14,17 @@ function showPoolsList() {
     const pools = window.dataBase.pools;
 
     element.innerHTML = fillPoolsTemplate(poolsTemplate, poolsItemTemplate, pools);
+}
+
+function showPoolsTop() {
+    const element = document.getElementById('pools-top');
+    if (!element) {
+        return;
+    }
+
+    const pools = window.dataBase.pools.slice(0, 4);
+
+    element.innerHTML = fillPoolsTemplate(poolsTopTemplate, poolsItemTemplate, pools);
 }
 
 // *** Fill ***
@@ -48,6 +60,13 @@ const poolsTemplate = `
 </div>
 `;
 
+const poolsTopTemplate = `
+<h2 class="my-4">Лучшие пулы</h2>
+<div class="row">
+    {pools}
+</div>
+`;
+
 const poolsItemTemplate = `
 <div class="card col-lg-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
@@ -58,7 +77,7 @@ const poolsItemTemplate = `
     </div>
     <div class="card-body">
         <a href="/pools/{id}">
-            <h5 class="card-title">Пул {name}</h5>
+            <h5 class="card-title">{name}</h5>
         </a>
     </div>
 </div>
