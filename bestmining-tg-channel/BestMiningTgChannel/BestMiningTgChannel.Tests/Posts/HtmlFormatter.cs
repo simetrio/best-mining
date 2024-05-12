@@ -36,7 +36,7 @@ public static class HtmlFormatter
 
     private static string Clean(string line) => line.Replace("*", "").Trim();
 
-    private static string CleanStartDigits(string line) => line.IndexOf('.') != -1
+    private static string CleanStartDigits(string line) => char.IsDigit(line[0]) && line.IndexOf('.') != -1
         ? line.Substring(line.IndexOf('.') + 1).Trim()
         : line;
 }
