@@ -32,7 +32,7 @@ public static class HtmlFormatter
         return FormatParagraph(line);
     }
 
-    private static string FormatHeader(string line) => $"<h3>{Clean(line)}</h3>";
+    private static string FormatHeader(string line) => $@"<h3 class=""my-3"">{CleanHeader(Clean(line))}</h3>";
 
     private static string FormatList(string line) => $"<li>{CleanStartDigits(Clean(line))}</li>";
 
@@ -44,6 +44,8 @@ public static class HtmlFormatter
             .Replace("•", "")
             .Replace("—", "")
             .Trim();
+
+    private static string CleanHeader(string line) => line.Trim(':');
 
     private static string CleanStartDigits(string line) =>
         char.IsDigit(line[0]) && line.IndexOf('.') != -1

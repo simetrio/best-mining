@@ -8,6 +8,7 @@ public static class Reraiter
     public static string Rerait(string message)
     {
         // return File.ReadAllText("/home/roman/pool-rerait.txt");
+        // return File.ReadAllText("/home/roman/blog-rerait.txt");
 
         var json = _jsonTemplate.Replace("{message}", FormatMessage(message));
 
