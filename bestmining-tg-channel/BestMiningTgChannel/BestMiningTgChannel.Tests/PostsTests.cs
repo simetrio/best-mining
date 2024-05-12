@@ -12,4 +12,13 @@ public class PostsTests
 
         Pools.Create();
     }
+
+    [Fact]
+    public void Text()
+    {
+        Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
+        Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+
+        Texts.Create();
+    }
 }
