@@ -61,7 +61,11 @@ function showCatalogBrands() {
         return;
     }
 
-    const brands = new Set(window.dataBase.products.map(x => x.Brand));
+    const brands = Array.from(new Set(window.dataBase.products.map(x => x.Brand)))
+        .map(brand => ({
+            name: brand,
+            img: window.dataBase.products.find(x => x.Brand === brand).Imgs[0]
+        }));
     element.innerHTML = renderBrands(brands);
 }
 
@@ -104,7 +108,7 @@ function renderProductSlimTall(product) {
 function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
-    const miningCalculatorHtml = getSingleMiningCalculator(product);console.log(miningCalculatorHtml)
+    const miningCalculatorHtml = getSingleMiningCalculator(product); console.log(miningCalculatorHtml)
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
@@ -118,8 +122,9 @@ function renderBrands(brands) {
 
     brands.forEach(brand => {
         brandsHtml += brandTemplate
-            .replace(new RegExp('{id}', 'g'), brand.toLowerCase())
-            .replace(new RegExp('{name}', 'g'), brand)
+            .replace(new RegExp('{id}', 'g'), brand.name.toLowerCase())
+            .replace(new RegExp('{name}', 'g'), brand.name)
+            .replace(new RegExp('{img}', 'g'), brand.img)
             ;
     });
 
@@ -174,7 +179,7 @@ function fillProductTemplate(template, product) {
 
 // *** Templates ***
 const productWideTemplate = `
-<div class="card">
+<div class="card my-3">
     <div class="row g-0">
         <div class="col-md-4">
             <a href="/catalog/{id}">
@@ -302,13 +307,17 @@ const productCharacteristicSlimTemplate = `
 `;
 
 const brandTemplate = `
-<div class="col">
-    <div class="card">
-        <div class="card-body text-center">
-            <h5 class="card-title mt-2">
-                <a href="/catalog/brands/{id}/">{name}</a>
-            </h5>
-        </div>
+<div class="card col-lg-3">
+    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light" style="min-height: 320px;">
+        <img src="/img/{img}" class="img-fluid" />
+        <a href="/catalog/brands/{id}/">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+    </div>
+    <div class="card-body text-center">
+        <a href="/catalog/brands/{id}/">
+            <h3 class="card-title">{name}</h3>
+        </a>
     </div>
 </div>
 `;

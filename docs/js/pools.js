@@ -75,7 +75,7 @@ const poolsItemTemplate = `
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </a>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
         <a href="/pools/{id}">
             <h5 class="card-title">{name}</h5>
         </a>
