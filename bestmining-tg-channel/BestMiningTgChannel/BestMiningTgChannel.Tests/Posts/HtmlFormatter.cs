@@ -20,7 +20,11 @@ public static class HtmlFormatter
             return FormatHeader(line);
         }
 
-        if (line.StartsWith("* ") || char.IsDigit(line[0]))
+        if (line.StartsWith("* ")
+            || line.StartsWith("• ")
+            || line.StartsWith("— ")
+            || char.IsDigit(line[0])
+        )
         {
             return FormatList(line);
         }
@@ -28,15 +32,21 @@ public static class HtmlFormatter
         return FormatParagraph(line);
     }
 
-    private static string FormatHeader(string line) => $"<h2>{Clean(line)}</h2>";
+    private static string FormatHeader(string line) => $"<h3>{Clean(line)}</h3>";
 
     private static string FormatList(string line) => $"<li>{CleanStartDigits(Clean(line))}</li>";
 
     private static string FormatParagraph(string line) => $@"<p class=""card-text my-3"">{Clean(line)}</p>";
 
-    private static string Clean(string line) => line.Replace("*", "").Trim();
+    private static string Clean(string line) =>
+        line
+            .Replace("*", "")
+            .Replace("•", "")
+            .Replace("—", "")
+            .Trim();
 
-    private static string CleanStartDigits(string line) => char.IsDigit(line[0]) && line.IndexOf('.') != -1
-        ? line.Substring(line.IndexOf('.') + 1).Trim()
-        : line;
+    private static string CleanStartDigits(string line) =>
+        char.IsDigit(line[0]) && line.IndexOf('.') != -1
+            ? line.Substring(line.IndexOf('.') + 1).Trim()
+            : line;
 }
