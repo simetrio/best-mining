@@ -17,9 +17,13 @@ public class Handler : HandlerBase
         switch (requestData?.Action ?? Action.Send)
         {
             case Action.Send:
-                ChartSender.Send();
-                NewsSender.Send();
-                PricesSender.Send();
+                Utils.WithNotifyAboutError(() =>
+                {
+                    ChartSender.Send();
+                    NewsSender.Send();
+                    PricesSender.Send();
+                }, "Не удалось выполнить действие Send");
+
                 return "Ok";
 
             case Action.CalculateMining:
@@ -390,6 +394,22 @@ public static class MiningCalculator
 #endregion
 
 #region Common
+
+public static class Utils
+{
+    public static void WithNotifyAboutError(System.Action action, string message)
+    {
+        try
+        {
+            action();
+        }
+        catch (Exception)
+        {
+            Telegram.SendMessage(message);
+            throw;
+        }
+    }
+}
 
 public static class MessageTemplate
 {

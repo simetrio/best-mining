@@ -157,7 +157,7 @@ function renderProductSlim(product) {
 function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
-    const miningCalculatorHtml = getSingleMiningCalculator(product); console.log(miningCalculatorHtml)
+    const miningCalculatorHtml = getSingleMiningCalculator(product);
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
