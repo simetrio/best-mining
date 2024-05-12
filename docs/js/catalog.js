@@ -87,6 +87,10 @@ function getCatalogProductSlimTall(product) {
     return renderProductSlimTall(product)
 }
 
+function renderProductsSlimHashRate(products) {
+    return renderProductsSlim(products)
+}
+
 // *** Render ***
 
 function renderProductWide(product) {
@@ -103,6 +107,22 @@ function renderProductSlimTall(product) {
     return fillProductTemplate(productSlimTallTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
         ;
+}
+
+function renderProductsSlim(products) {
+    let productsHtml = '';
+
+    products.forEach(product => {
+        productsHtml += renderProductSlim(product);
+    });
+
+    return productsSlimTemplate
+        .replace(new RegExp('{products}', 'g'), productsHtml)
+        ;
+}
+
+function renderProductSlim(product) {
+    return fillProductTemplate(productSlimTemplate, product);
 }
 
 function renderProduct(product) {
@@ -262,6 +282,32 @@ const productSlimTallTemplate = `
         <dl class="mt-4">
             {characteristics}
         </dl>
+        <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
+        <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
+            target="_blank">Заказать</a>
+    </div>
+</div>
+`;
+
+const productsSlimTemplate = `
+<div class="row">
+    {products}
+</div>
+`;
+
+const productSlimTemplate = `
+<div class="card col-lg-3">
+    <div style="min-height: 320px;">
+        <a href="/catalog/{id}">
+            <img src="/img/{img}" class="card-img-top" alt="{name}" />
+        </a>
+    </div>
+    <div class="card-body">
+        <div style="min-height: 50px;">
+            <h5 class="card-title">
+                <a href="/catalog/{id}">{name}</a>
+            </h5>
+        </div>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
         <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
             target="_blank">Заказать</a>

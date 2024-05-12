@@ -53,7 +53,10 @@ function showCoinMiningCalculator() {
     const coinId = element.getAttribute('data-coin');
     const coin = window.dataBase.coins.find(x => x.Tag === coinId);
 
-    element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin);
+    const products = window.dataBase.products
+        .filter(x => x.MiningCalculator.Algorithm.indexOf(coin.Algorithm.toLowerCase()) !== -1);
+
+    element.innerHTML = fillMiningCalculatorCoinTemplate(coinMiningCalculatorTemplate, coin, products);
 }
 
 function showCoinsTopMiningCalculatorTop() {
@@ -116,11 +119,16 @@ function fillMiningCalculatorProductTemplate(template, product) {
         ;
 }
 
-function fillMiningCalculatorCoinTemplate(template, coin) {
+function fillMiningCalculatorCoinTemplate(template, coin, products) {
+    const productsHtml = products.length > 0 ? renderProductsSlimHashRate(products) : "";
+    const productsHeaderHtml = products.length > 0 ? `<h2 class="my-3">Асики для майнинга ${coin.Title}</h2>` : "";
+    
     return template
         .replace(new RegExp('{coin}', 'g'), coin.Tag)
         .replace(new RegExp('{hashrate}', 'g'), coin.HashRate || '')
         .replace(new RegExp('{title}', 'g'), coin.Title)
+        .replace(new RegExp('{productsHeader}', 'g'), productsHeaderHtml)
+        .replace(new RegExp('{products}', 'g'), productsHtml)
         ;
 }
 
@@ -360,6 +368,9 @@ const coinMiningCalculatorTemplate = `
         <div id="mc-result"></div>
     </div>
 </div>
+
+{productsHeader}
+{products}
 `;
 
 const asicMiningCalculatorTemplate = `

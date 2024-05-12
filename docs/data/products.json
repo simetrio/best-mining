@@ -37,7 +37,8 @@
             "Coin": "ETC",
             "HashRate": "MH/s",
             "HashRateValue": "2050",
-            "Power": "520"
+            "Power": "520",
+            "Algorithm": "etchash/ethash"
         },
         "Imgs": [
             "JasminerX16Q2050.png"
@@ -89,7 +90,8 @@
             "Coin": "ETC",
             "HashRate": "MH/s",
             "HashRateValue": "1950",
-            "Power": "620"
+            "Power": "620",
+            "Algorithm": "etchash/ethash"
         },
         "Imgs": [
             "JasminerX16Q1950.png"
@@ -133,7 +135,8 @@
             "Coin": "ETC",
             "HashRate": "MH/s",
             "HashRateValue": "5800",
-            "Power": "1900"
+            "Power": "1900",
+            "Algorithm": "etchash/ethash"
         },
         "Imgs": [
             "JasminerX16P5800.png"
@@ -177,7 +180,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "234",
-            "Power": "3500"
+            "Power": "3500",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerS21Pro.jpg"
@@ -225,7 +229,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "200",
-            "Power": "3500"
+            "Power": "3500",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerS21.jpg"
@@ -273,7 +278,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "195",
-            "Power": "3400"
+            "Power": "3400",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerS21.jpg"
@@ -321,7 +327,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "188",
-            "Power": "3300"
+            "Power": "3300",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerS21.jpg"
@@ -369,7 +376,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "190",
-            "Power": "3600"
+            "Power": "3600",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerT21.jpg"
@@ -417,7 +425,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "120",
-            "Power": "2760"
+            "Power": "2760",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "AntminerS19kPro.jpg"
@@ -461,7 +470,8 @@
             "Coin": "ETC",
             "HashRate": "MH/s",
             "HashRateValue": "3780",
-            "Power": "2200"
+            "Power": "2200",
+            "Algorithm": "etchash/ethash"
         },
         "Imgs": [
             "AntminerE9Pro.jpg"
@@ -505,7 +515,8 @@
             "Coin": "ETC",
             "HashRate": "MH/s",
             "HashRateValue": "3680",
-            "Power": "2200"
+            "Power": "2200",
+            "Algorithm": "etchash/ethash"
         },
         "Imgs": [
             "AntminerE9Pro.jpg"
@@ -553,7 +564,8 @@
             "Coin": "DOGE",
             "HashRate": "MH/s",
             "HashRateValue": "9500",
-            "Power": "3300"
+            "Power": "3300",
+            "Algorithm": "scrypt"
         },
         "Imgs": [
             "AntminerL7.jpg"
@@ -601,7 +613,8 @@
             "Coin": "DOGE",
             "HashRate": "MH/s",
             "HashRateValue": "9300",
-            "Power": "3300"
+            "Power": "3300",
+            "Algorithm": "scrypt"
         },
         "Imgs": [
             "AntminerL7.jpg"
@@ -649,7 +662,8 @@
             "Coin": "DOGE",
             "HashRate": "MH/s",
             "HashRateValue": "9050",
-            "Power": "3300"
+            "Power": "3300",
+            "Algorithm": "scrypt"
         },
         "Imgs": [
             "AntminerL7.jpg"
@@ -693,7 +707,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "166",
-            "Power": "3320"
+            "Power": "3320",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "WhatsminerM60.png"
@@ -737,7 +752,8 @@
             "Coin": "BTC",
             "HashRate": "TH/s",
             "HashRateValue": "132",
-            "Power": "3432"
+            "Power": "3432",
+            "Algorithm": "sha-256"
         },
         "Imgs": [
             "WhatsminerM50S.png"
@@ -781,7 +797,8 @@
             "Coin": "KAS",
             "HashRate": "TH/s",
             "HashRateValue": "6",
-            "Power": "3200"
+            "Power": "3200",
+            "Algorithm": "kheavyhash"
         },
         "Imgs": [
             "IceriverKASKS3M.jpg"
@@ -825,7 +842,8 @@
             "Coin": "KAS",
             "HashRate": "TH/s",
             "HashRateValue": "0.2",
-            "Power": "100"
+            "Power": "100",
+            "Algorithm": "kheavyhash"
         },
         "Imgs": [
             "IceriverKASKS0Pro.jpg"
