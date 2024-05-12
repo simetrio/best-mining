@@ -83,6 +83,7 @@ function main() {
     loadData(() => {
         showCatalog();
         showMiningCalculator();
+        showBlog();
 
         // Всегда в конце
         initMdb();
