@@ -2,21 +2,21 @@
     {
         "Id": "viabtc",
         "Name": "ViaBTC",
-        "Img": "/img/tg-channel/tg-channel-news-1.jpg"
+        "Img": "tg-channel-news-1.jpg"
     },
     {
         "Id": "trustpool",
         "Name": "Trustpool",
-        "Img": "/img/tg-channel/tg-channel-news-2.jpg"
+        "Img": "tg-channel-news-2.jpg"
     },
     {
         "Id": "2miners",
         "Name": "2Miners",
-        "Img": "/img/tg-channel/tg-channel-news-3.jpg"
+        "Img": "tg-channel-news-3.jpg"
     },
     {
-        "Id": "antpool",
-        "Name": "Antpool",
-        "Img": "/img/tg-channel/tg-channel-news-4.jpg"
+        "Id": "k1pool",
+        "Name": "K1Pool",
+        "Img": "tg-channel-news-4.jpg"
     }
 ]

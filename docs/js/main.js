@@ -84,6 +84,7 @@ function main() {
         showCatalog();
         showMiningCalculator();
         showBlog();
+        showPools();
 
         // Всегда в конце
         initMdb();
