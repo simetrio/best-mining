@@ -7,10 +7,14 @@ public static class Reraiter
 {
     public static string Rerait(string message)
     {
-        // return File.ReadAllText("/home/roman/pool-rerait.txt");
-        // return File.ReadAllText("/home/roman/blog-rerait.txt");
+        if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            return File.ReadAllText("/home/roman/rerait.txt");
+        }
 
-        var json = _jsonTemplate.Replace("{message}", FormatMessage(message));
+        var json = _jsonTemplate
+            .Replace("{message}", FormatMessage(message))
+            .Replace("{temperature}", Settings.YaTemperature);
 
         using var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("Authorization", $"Api-Key {Settings.YaIamToken}");
@@ -28,7 +32,9 @@ public static class Reraiter
         var jsonResponse = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
         var responseObject = JsonSerializer.Deserialize<YaResponse>(jsonResponse)!;
 
-        return responseObject.result.alternatives[0].message.text;
+        string text = responseObject.result.alternatives[0].message.text;
+        File.WriteAllText("/home/roman/rerait.txt", text);
+        return text;
     }
 
     private static string FormatMessage(string message)
@@ -75,7 +81,7 @@ public static class Reraiter
   ""completionOptions"": {
     ""stream"": false,
     ""maxTokens"": 5000,
-    ""temperature"": 0.8
+    ""temperature"": {temperature}
   }
 }
     ";

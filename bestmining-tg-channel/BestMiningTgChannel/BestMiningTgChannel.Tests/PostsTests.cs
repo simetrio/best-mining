@@ -7,8 +7,15 @@ public class PostsTests
     [Fact]
     public void Blog()
     {
-        Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
-        Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+        Setup("0.8", false);
+
+        Tests.Blog.Create();
+    }
+
+    [Fact]
+    public void BlogCurrent()
+    {
+        Setup("0.8", true);
 
         Tests.Blog.Create();
     }
@@ -16,8 +23,7 @@ public class PostsTests
     [Fact]
     public void Pool()
     {
-        Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
-        Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+        Setup("0.8", false);
 
         Pools.Create();
     }
@@ -25,9 +31,16 @@ public class PostsTests
     [Fact]
     public void Text()
     {
-        Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
-        Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+        Setup("0.8", false);
 
         Texts.Create();
+    }
+
+    private void Setup(string temperature, bool reraitCurrent)
+    {
+        Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
+        Environment.SetEnvironmentVariable("YaFolderId", File.ReadAllText("/home/roman/YaFolderId.txt").Trim());
+        Environment.SetEnvironmentVariable("YaTemperature", temperature);
+        Environment.SetEnvironmentVariable("ReraitCurrent", reraitCurrent.ToString());
     }
 }
