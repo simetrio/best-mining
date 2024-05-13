@@ -24,7 +24,7 @@ public static class HtmlFormatter
             || line.StartsWith("• ")
             || line.StartsWith("— ")
             || line.StartsWith("- ")
-            || char.IsDigit(line[0])
+            || (char.IsDigit(line[0]) && line[1] == '.')
         )
         {
             return FormatList(line);
@@ -49,7 +49,7 @@ public static class HtmlFormatter
     private static string CleanHeader(string line) => line.Trim(':');
 
     private static string CleanStartDigits(string line) =>
-        char.IsDigit(line[0]) && line.IndexOf('.') != -1
+        char.IsDigit(line[0]) && line[1] == '.'
             ? line.Substring(line.IndexOf('.') + 1).Trim()
             : line;
 }

@@ -17,9 +17,11 @@ public static class Blog
 
     private static (string Title, string Text) Rerait()
     {
-        var url = File.ReadAllText("/home/roman/blog.txt").Trim();
+        var lines = File.ReadAllLines("/home/roman/blog.txt");
+        var url = lines[0].Trim();
+        var title = lines[1].Trim();
 
-        var (title, source) = LoadUrl(url);
+        var source = LoadUrl(url);
         File.WriteAllText("/home/roman/blog-source.txt", source);
 
         var text = Reraiter.Rerait(source);
@@ -28,7 +30,7 @@ public static class Blog
         return (title, text);
     }
 
-    private static (string Url, string Source) LoadUrl(string url)
+    private static string LoadUrl(string url)
     {
         var html = new HttpClient()
             .GetStringAsync(url)
@@ -38,17 +40,10 @@ public static class Blog
         var htmlDocument = new HtmlDocument();
         htmlDocument.LoadHtml(html);
 
-        var title = htmlDocument
-            .DocumentNode
-            .SelectSingleNode("/html/body/section/div/div[2]/div[1]/h1")
-            .InnerHtml;
-
-        var source = htmlDocument
+        return htmlDocument
             .DocumentNode
             .SelectSingleNode("/html/body/section/div/div[2]/div[1]/div[1]")
             .InnerText;
-
-        return (title, source);
     }
 
     private static Post CreatePost(string title)
