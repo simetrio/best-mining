@@ -75,7 +75,7 @@ public static class Reraiter
   ""completionOptions"": {
     ""stream"": false,
     ""maxTokens"": 5000,
-    ""temperature"": 0.9
+    ""temperature"": 0.8
   }
 }
     ";
