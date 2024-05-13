@@ -56,10 +56,7 @@ public static class Pools
         }
 
         pools = pools.Append(pool).ToArray();
-        File.WriteAllText(
-            poolsFileName,
-            JsonSerializer.Serialize(pools, new JsonSerializerOptions { WriteIndented = true })
-        );
+        File.WriteAllText(poolsFileName, pools.ToJson());
     }
 
     private static void Save(Pool pool, string title, string text)

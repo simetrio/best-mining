@@ -5,6 +5,27 @@ namespace BestMiningTgChannel.Tests;
 
 public static class Reraiter
 {
+    public static string Rerait(ParserResult parserResult)
+    {
+
+        // throw new NotImplementedException();
+        var result = new StringBuilder();
+
+        foreach (var item in parserResult.Items)
+        {
+            if (!string.IsNullOrEmpty(item.Head))
+            {
+                result.AppendLine($"**{item.Head}**");
+            }
+
+            result.AppendLine(Rerait(item.Text));
+            Task.Delay(1000).GetAwaiter().GetResult();
+        }
+
+        File.WriteAllText("/home/roman/rerait.txt", result.ToString());
+        return result.ToString();
+    }
+
     public static string Rerait(string message)
     {
         if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))

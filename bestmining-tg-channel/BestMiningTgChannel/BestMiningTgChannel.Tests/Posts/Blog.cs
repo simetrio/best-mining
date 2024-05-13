@@ -1,7 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using HtmlAgilityPack;
 
 namespace BestMiningTgChannel.Tests;
 
@@ -22,7 +21,7 @@ public static class Blog
         var title = lines[1].Trim();
 
         var source = LoadUrl(url);
-        File.WriteAllText("/home/roman/blog-source.txt", source);
+        File.WriteAllText("/home/roman/blog-source.txt", source.ToJson());
 
         var text = Reraiter.Rerait(source);
         File.WriteAllText("/home/roman/blog-rerait.txt", text);
@@ -30,20 +29,9 @@ public static class Blog
         return (title, text);
     }
 
-    private static string LoadUrl(string url)
+    private static ParserResult LoadUrl(string url)
     {
-        var html = new HttpClient()
-            .GetStringAsync(url)
-            .GetAwaiter()
-            .GetResult();
-
-        var htmlDocument = new HtmlDocument();
-        htmlDocument.LoadHtml(html);
-
-        return htmlDocument
-            .DocumentNode
-            .SelectSingleNode("/html/body/section/div/div[2]/div[1]/div[1]")
-            .InnerText;
+        return Parser.Parse(url);
     }
 
     private static Post CreatePost(string title)
@@ -108,10 +96,7 @@ public static class Blog
         }
 
         posts = new[] { post }.Concat(posts).ToArray();
-        File.WriteAllText(
-            postsFileName,
-            JsonSerializer.Serialize(posts, new JsonSerializerOptions { WriteIndented = true })
-        );
+        File.WriteAllText(postsFileName, posts.ToJson());
     }
 
     private static void Save(Post post, string text)
