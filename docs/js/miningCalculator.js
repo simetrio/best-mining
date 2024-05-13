@@ -486,7 +486,7 @@ const coinsMiningCalculatorTemplate = `
 
 const coinItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
-    <a href="/calculators/mining/coins/{id}" class="btn btn-secondary btn-block">{title} ({coin})</a>
+    <a href="/calculators/mining/coins/{id}/" class="btn btn-secondary btn-block">{title} ({coin})</a>
 </div>
 `;
 
@@ -501,12 +501,12 @@ const coinsTopItemTemplate = `
 <div class="card col-lg-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
-        <a href="/calculators/mining/coins/{id}">
+        <a href="/calculators/mining/coins/{id}/">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </a>
     </div>
     <div class="card-body text-center">
-        <a href="/calculators/mining/coins/{id}">
+        <a href="/calculators/mining/coins/{id}/">
             <h5 class="card-title">{title} ({tag})</h5>
         </a>
     </div>
@@ -529,6 +529,6 @@ const asicsMiningCalculatorTemplate = `
 
 const asicItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
-    <a href="/calculators/mining/asics/{id}" class="btn btn-secondary btn-block">{name}</a>
+    <a href="/calculators/mining/asics/{id}/" class="btn btn-secondary btn-block">{name}</a>
 </div>
 `;

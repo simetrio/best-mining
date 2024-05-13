@@ -71,12 +71,12 @@ const blogPostsItemTemplate = `
 <div class="card col-lg-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
-        <a href="/blog/{id}">
+        <a href="/blog/{id}/">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </a>
     </div>
     <div class="card-body">
-        <a href="/blog/{id}">
+        <a href="/blog/{id}/">
             <h5 class="card-title">{title}</h5>
         </a>
     </div>

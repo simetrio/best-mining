@@ -231,13 +231,13 @@ const productWideTemplate = `
 <div class="card my-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <a href="/catalog/{id}">
+            <a href="/catalog/{id}/">
                 <img src="/img/{img}" alt="{name}" class="img-fluid rounded-start" />
             </a>
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <a href="/catalog/{id}">
+                <a href="/catalog/{id}/">
                     <h3 class="card-title">{name}</h3>
                 </a>
                 <p class="card-text">
@@ -301,12 +301,12 @@ const productTemplate = `
 
 const productSlimTallTemplate = `
 <div class="card">
-    <a href="/catalog/{id}">
+    <a href="/catalog/{id}/">
         <img src="/img/{img}" class="card-img-top" alt="{name}" />
     </a>
     <div class="card-body">
         <h5 class="card-title">
-            <a href="/catalog/{id}">{name}</a>
+            <a href="/catalog/{id}/">{name}</a>
         </h5>
         <dl class="mt-4">
             {characteristics}
@@ -334,14 +334,14 @@ const productsAnalogsSlimTemplate = `
 const productSlimTemplate = `
 <div class="card col-lg-3">
     <div style="min-height: 320px;">
-        <a href="/catalog/{id}">
+        <a href="/catalog/{id}/">
             <img src="/img/{img}" class="card-img-top" alt="{name}" />
         </a>
     </div>
     <div class="card-body">
         <div style="min-height: 50px;">
             <h5 class="card-title">
-                <a href="/catalog/{id}">{name}</a>
+                <a href="/catalog/{id}/">{name}</a>
             </h5>
         </div>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
