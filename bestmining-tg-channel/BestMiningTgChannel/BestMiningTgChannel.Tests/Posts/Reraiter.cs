@@ -7,6 +7,10 @@ public static class Reraiter
 {
     public static string Rerait(ParserResult parserResult)
     {
+        if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            return File.ReadAllText("/home/roman/rerait.txt");
+        }
 
         // throw new NotImplementedException();
         var result = new StringBuilder();
