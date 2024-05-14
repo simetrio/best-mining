@@ -21,8 +21,8 @@ public class Handler : HandlerBase
                 Utils.WithNotifyAboutError(() =>
                 {
                     ChartSender.Send();
-                    // NewsSender.Send();
-                    // PricesSender.Send();
+                    NewsSender.Send();
+                    PricesSender.Send();
                 }, "Не удалось выполнить действие Send");
 
                 return "Ok";
