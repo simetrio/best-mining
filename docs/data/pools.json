@@ -10,14 +10,24 @@
     "Img": "tg-channel-news-2.jpg"
   },
   {
+    "Id": "k1pool",
+    "Name": "K1Pool",
+    "Img": "tg-channel-news-4.jpg"
+  },
+  {
+    "Id": "emcd",
+    "Name": "EMCD",
+    "Img": "tg-channel-news-3.jpg"
+  },
+  {
     "Id": "2miners",
     "Name": "2Miners",
     "Img": "tg-channel-news-3.jpg"
   },
   {
-    "Id": "k1pool",
-    "Name": "K1Pool",
-    "Img": "tg-channel-news-4.jpg"
+    "Id": "binance",
+    "Name": "Binance",
+    "Img": "tg-channel-news-1.jpg"
   },
   {
     "Id": "antpool",
