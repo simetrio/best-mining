@@ -36,8 +36,8 @@ function updateCoinsMiningCalculator() {
     const search = document.getElementById('mining-calculator-search').value;
     const coins = window.dataBase.coins
         .filter(x => !search
-            || x.Tag.toLowerCase().startsWith(search)
-            || x.Title.toLowerCase().startsWith(search)
+            || x.Tag.toLowerCase().startsWith(search.toLowerCase())
+            || x.Title.toLowerCase().startsWith(search.toLowerCase())
         );
 
     document.getElementById('mining-calculator-coins-items').innerHTML =
@@ -84,7 +84,7 @@ function showAsicsMiningCalculator() {
 function updateAsicsMiningCalculator() {
     const search = document.getElementById('mining-calculator-search').value;
     const asics = window.dataBase.products
-        .filter(x => !search || x.Name.toLowerCase().indexOf(search) !== -1);
+        .filter(x => !search || x.Name.toLowerCase().indexOf(search.toLowerCase()) !== -1);
 
     document.getElementById('mining-calculator-asics-items').innerHTML =
         fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
