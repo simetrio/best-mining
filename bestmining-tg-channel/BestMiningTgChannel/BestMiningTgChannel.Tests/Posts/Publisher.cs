@@ -11,8 +11,9 @@ public static class Publisher
         var webServerRootDirectory = "/var/www/best-mining";
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
 
-        Publisher.PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
-        Publisher.CopyToWebServer(destinationRootDirectory, "", webServerRootDirectory);
+        PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
+        CopyToWebServer(destinationRootDirectory, "", webServerRootDirectory);
+        MergeScripts(destinationRootDirectory);
     }
 
     private static void PublishInner(
@@ -95,6 +96,23 @@ public static class Publisher
                 destinationRootDirectory
             );
         }
+    }
+
+    private static void MergeScripts(string destinationRootDirectory)
+    {
+        var commonJs = @$"
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "catalog.js"))}
+
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "miningCalculator.js"))}
+
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "blog.js"))}
+
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "pools.js"))}
+
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "main.js"))}
+        ";
+
+        File.WriteAllText(Path.Combine(destinationRootDirectory, "js", "common.js"), commonJs);
     }
 
     private static void CreateDefaultCoins()
