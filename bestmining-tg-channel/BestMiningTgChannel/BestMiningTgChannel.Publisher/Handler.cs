@@ -5,6 +5,7 @@ using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types;
 using System.Text;
 using System.Globalization;
+using HtmlAgilityPack;
 
 namespace BestMiningTgChannel.Publisher;
 
@@ -20,8 +21,8 @@ public class Handler : HandlerBase
                 Utils.WithNotifyAboutError(() =>
                 {
                     ChartSender.Send();
-                    NewsSender.Send();
-                    PricesSender.Send();
+                    // NewsSender.Send();
+                    // PricesSender.Send();
                 }, "Не удалось выполнить действие Send");
 
                 return "Ok";
@@ -105,19 +106,38 @@ public static class ChartSender
             .Replace("\n", "")
             ;
 
+        var htmlDocument = new HtmlDocument();
+        htmlDocument.LoadHtml(html);
+
+        var document = htmlDocument
+            .DocumentNode
+            .SelectNodes("//table")
+            .Single(x => x.GetAttributeValue("data-coin-table-target", "") == "table")
+            .ChildNodes
+            .Single(x => x.Name.ToLower() == "tbody");
+
         var currencies = new[] { "Bitcoin", "Ethereum" };
 
         foreach (var currency in currencies)
         {
-            var block = html.Substring(html.IndexOf($">{currency}<"));
+            var row = document.ChildNodes
+                .Where(x => x.Name.ToLower() == "tr")
+                .First(x => x.InnerText.Contains(currency));
 
-            var name = GetString(block, [">"]);
-            var value = GetString(block, ["$"]).Replace(",", "");
-            var percent = GetString(block, ["data-24h=\"true\"", ":"], "}").Replace(",", "");
+            var value = row.ChildNodes
+                .Where(x => x.Name.ToLower() == "td")
+                .Skip(4)
+                .First()
+                .GetAttributeValue("data-sort", "");
+            var percent = row.ChildNodes
+                .Where(x => x.Name.ToLower() == "td")
+                .Skip(6)
+                .First()
+                .GetAttributeValue("data-sort", "");;
 
             yield return new Chart
             {
-                Currency = name,
+                Currency = currency,
                 Value = decimal.Parse(value, CultureInfo.InvariantCulture),
                 DiffPercent = decimal.Parse(percent, CultureInfo.InvariantCulture) / 100m,
             };
