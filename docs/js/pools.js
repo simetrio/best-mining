@@ -68,7 +68,7 @@ const poolsTopTemplate = `
 `;
 
 const poolsItemTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
         <a href="/pools/{id}/">

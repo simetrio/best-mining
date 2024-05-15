@@ -333,7 +333,7 @@ const productsAnalogsSlimTemplate = `
 `;
 
 const productSlimTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div style="min-height: 320px;">
         <a href="/catalog/{id}/">
             <img src="/img/{img}" class="card-img-top" alt="{name}" />
@@ -390,7 +390,7 @@ const productCharacteristicSlimTemplate = `
 `;
 
 const brandTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light" style="min-height: 320px;">
         <img src="/img/{img}" class="img-fluid" />
         <a href="/catalog/brands/{id}/">
@@ -702,25 +702,25 @@ const productMiningCalculatorTemplate = `
         <h3 class="card-title mb-4">Расчет доходности</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
                     <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-power" class="form-control" value="{power}" />
                     <label class="form-label" for="mc-power">Потребление, Вт</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-cost" class="form-control" value="4.5" />
                     <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-pool-comission" class="form-control" value="0" />
                     <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
@@ -746,25 +746,25 @@ const coinMiningCalculatorTemplate = `
     <div class="card-body">
         <input id="mc-coin" type="hidden" value="{coin}" />
         <div class="row mb-4">
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-hash-rate" class="form-control" value="1000" />
                     <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-power" class="form-control" value="1000" />
                     <label class="form-label" for="mc-power">Потребление, Вт</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-cost" class="form-control" value="4.5" />
                     <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-pool-comission" class="form-control" value="0" />
                     <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
@@ -796,25 +796,25 @@ const asicMiningCalculatorTemplate = `
         <div class="card-body">
             <input id="mc-coin" type="hidden" value="{coin}" />
             <div class="row mb-4">
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
                         <label class="form-label" for="mc-hash-rate">Хешрейт, {hashrate}</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text" id="mc-power" class="form-control" value="{power}" />
                         <label class="form-label" for="mc-power">Потребление, Вт</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text" id="mc-cost" class="form-control" value="4.5" />
                         <label class="form-label" for="mc-cost">Цена на электроэнергию, ₽</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text" id="mc-pool-comission" class="form-control" value="0" />
                         <label class="form-label" for="mc-pool-comission">Комиссия пула, %</label>
@@ -911,7 +911,7 @@ const coinsTopTemplate = `
 `;
 
 const coinsTopItemTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
         <a href="/calculators/mining/coins/{id}/">
@@ -1016,7 +1016,7 @@ const blogPostsTopTemplate = `
 `;
 
 const blogPostsItemTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
         <a href="/blog/{id}/">
@@ -1101,7 +1101,7 @@ const poolsTopTemplate = `
 `;
 
 const poolsItemTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
         <img src="/img/tg-channel/{img}" class="img-fluid" />
         <a href="/pools/{id}/">

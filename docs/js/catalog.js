@@ -332,7 +332,7 @@ const productsAnalogsSlimTemplate = `
 `;
 
 const productSlimTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div style="min-height: 320px;">
         <a href="/catalog/{id}/">
             <img src="/img/{img}" class="card-img-top" alt="{name}" />
@@ -389,7 +389,7 @@ const productCharacteristicSlimTemplate = `
 `;
 
 const brandTemplate = `
-<div class="card col-lg-3">
+<div class="card col-lg-3 my-3">
     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light" style="min-height: 320px;">
         <img src="/img/{img}" class="img-fluid" />
         <a href="/catalog/brands/{id}/">
