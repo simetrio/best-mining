@@ -11,5 +11,6 @@ public static class Parser
     {
         { "miningmoon.ru", GetAsicParser.Parse},
         { "ibmm.ru", IbmmParser.Parse},
+        { "crypto.ru", CryptoParser.Parse},
     };
 }

@@ -104,14 +104,14 @@ public static class Blog
             Directory.CreateDirectory(directory);
         }
 
-        var html = $@"<nav aria-label=""breadcrumb"">
+        var html = $@"{post.Title}
+<nav aria-label=""breadcrumb"">
     <ol class=""breadcrumb"">
         <li class=""breadcrumb-item""><a href=""/"">Главная</a></li>
         <li class=""breadcrumb-item""><a href=""/blog/"">Блог</a></li>
         <li class=""breadcrumb-item active"" aria-current=""page"">{post.Title}</li>
     </ol>
 </nav>
-{post.Title}
 <h1>{post.Title}</h1>
 <div class=""card my-3"">
     <div class=""card-body"">

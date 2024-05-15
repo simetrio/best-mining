@@ -72,6 +72,7 @@ public static class Reraiter
             .Replace("://", "")
             .Replace("\t", "")
             .Replace("\"", "")
+            .Replace("\r", "")
             ;
     }
 

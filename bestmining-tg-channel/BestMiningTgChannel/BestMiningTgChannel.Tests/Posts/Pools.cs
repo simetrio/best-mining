@@ -72,14 +72,14 @@ public static class Pools
             Directory.CreateDirectory(directory);
         }
 
-        var html = $@"<nav aria-label=""breadcrumb"">
+        var html = $@"{title}
+<nav aria-label=""breadcrumb"">
     <ol class=""breadcrumb"">
         <li class=""breadcrumb-item""><a href=""/"">Главная</a></li>
         <li class=""breadcrumb-item""><a href=""/pools/"">Пулы</a></li>
         <li class=""breadcrumb-item active"" aria-current=""page"">{pool.Name}</li>
     </ol>
 </nav>
-{title}
 <h1>Пул {pool.Name}</h1>
 <div class=""my-3"">
     <a class=""btn btn-primary"" href=""/"" rel=""nofollow"" target=""_blank"">
