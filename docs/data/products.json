@@ -34,7 +34,7 @@
             }
         ],
         "MiningCalculator": {
-            "Coin": "ETC",
+            "Coin": "ETHW",
             "HashRate": "MH/s",
             "HashRateValue": "2050",
             "Power": "520",
@@ -87,7 +87,7 @@
             }
         ],
         "MiningCalculator": {
-            "Coin": "ETC",
+            "Coin": "ETHW",
             "HashRate": "MH/s",
             "HashRateValue": "1950",
             "Power": "620",
@@ -132,7 +132,7 @@
             }
         ],
         "MiningCalculator": {
-            "Coin": "ETC",
+            "Coin": "ETHW",
             "HashRate": "MH/s",
             "HashRateValue": "5800",
             "Power": "1900",
@@ -467,7 +467,7 @@
             }
         ],
         "MiningCalculator": {
-            "Coin": "ETC",
+            "Coin": "ETHW",
             "HashRate": "MH/s",
             "HashRateValue": "3780",
             "Power": "2200",
@@ -512,7 +512,7 @@
             }
         ],
         "MiningCalculator": {
-            "Coin": "ETC",
+            "Coin": "ETHW",
             "HashRate": "MH/s",
             "HashRateValue": "3680",
             "Power": "2200",

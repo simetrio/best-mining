@@ -529,13 +529,14 @@ function fillMiningCalculatorProductTemplate(template, product) {
         .replace(new RegExp('{hashrate}', 'g'), product.MiningCalculator.HashRate)
         .replace(new RegExp('{hashrate-value}', 'g'), product.MiningCalculator.HashRateValue)
         .replace(new RegExp('{power}', 'g'), product.MiningCalculator.Power)
+        .replace(new RegExp('{product-id}', 'g'), product.Id)
         ;
 }
 
 function fillMiningCalculatorCoinTemplate(template, coin, products) {
     const productsHtml = products.length > 0 ? renderProductsSlimHashRate(products) : "";
     const productsHeaderHtml = products.length > 0 ? `<h2 class="my-3">Асики для майнинга ${coin.Title}</h2>` : "";
-    
+
     return template
         .replace(new RegExp('{coin}', 'g'), coin.Tag)
         .replace(new RegExp('{hashrate}', 'g'), coin.HashRate || '')
@@ -568,7 +569,7 @@ function fillMiningCalculatorCoinsTopItemsTemplate(template, coins) {
     return coinsHtml;
 }
 
-function fillMiningCalculatorResultTemplate(template, data) {
+function fillMiningCalculatorResultTemplate(template, templateProduct, data, product) {
     const estimated_rewards = parseFloat(data.estimated_rewards);
     const revenue = parseFloat(data.revenue.replace('$', ''));
     const cost = parseFloat(data.cost.replace('$', ''));
@@ -578,7 +579,10 @@ function fillMiningCalculatorResultTemplate(template, data) {
     const prepareDollar = value => formatCurrency(roundToDigits(value, 2));
     const prepareRuble = value => formatCurrency(toRuble(value, 2));
 
+    const productHtml = fillMiningCalculatorProductResultTemplate(templateProduct, product, {revenue, cost, profit});
+
     return template
+        .replace(new RegExp('{product}', 'g'), productHtml)
         // Hour
         .replace(new RegExp('{hour-estimated_rewards}', 'g'), prepareCoin(estimated_rewards / 24))
         .replace(new RegExp('{hour-revenue}', 'g'), prepareDollar(revenue / 24))
@@ -611,6 +615,25 @@ function fillMiningCalculatorResultTemplate(template, data) {
         .replace(new RegExp('{month-cost-ruble}', 'g'), prepareRuble(cost * 30))
         .replace(new RegExp('{month-profit}', 'g'), prepareDollar(profit * 30))
         .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit * 30))
+        ;
+}
+
+function fillMiningCalculatorProductResultTemplate(template, product, data) {
+    if (!product) {
+        return "";
+    }
+
+    const roi = product.Prices[0].Value / data.profit / 30;
+    const hashratePrice = product.Prices[0].Value / product.MiningCalculator.HashRateValue;
+    const powerPercent = data.cost / data.revenue * 100;
+    const yearProfitPercent = data.profit * 365 / product.Prices[0].Value * 100;
+
+    return template
+        .replace(new RegExp('{roi}', 'g'), roundToDigits(roi, 1))
+        .replace(new RegExp('{hashrate}', 'g'), product.MiningCalculator.HashRate)
+        .replace(new RegExp('{hashrate-price}', 'g'), roundToDigits(hashratePrice, 2))
+        .replace(new RegExp('{power-percent}', 'g'), roundToDigits(powerPercent, 0))
+        .replace(new RegExp('{year-profit-percent}', 'g'), roundToDigits(yearProfitPercent, 0))
         ;
 }
 
@@ -679,6 +702,7 @@ async function calculateMining() {
     const power = document.getElementById('mc-power').value;
     const cost = toDollar(parseFloat(document.getElementById('mc-cost').value));
     const poolComission = document.getElementById('mc-pool-comission').value;
+    const productId = document.getElementById('mc-product-id').value;
 
     const result = await (await fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
@@ -691,7 +715,14 @@ async function calculateMining() {
 
     console.log(result);
 
-    document.getElementById('mc-result').innerHTML = fillMiningCalculatorResultTemplate(singleMiningCalculatorResultTemplate, result);
+    const product = !!productId ? window.dataBase.products.find(x => x.Id === productId) : null;
+
+    document.getElementById('mc-result').innerHTML = fillMiningCalculatorResultTemplate(
+        singleMiningCalculatorResultTemplate,
+        singleMiningCalculatorProductResultTemplate,
+        result,
+        product
+    );
 }
 
 // *** Templates ***
@@ -701,7 +732,8 @@ const productMiningCalculatorTemplate = `
     <div class="card-body">
         <h3 class="card-title mb-4">Расчет доходности</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
-        <div class="row mb-4">
+        <input id="mc-product-id" type="hidden" value="{product-id}" />
+        <div class="row">
             <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
@@ -752,7 +784,7 @@ const coinMiningCalculatorTemplate = `
 <div class="card">
     <div class="card-body">
         <input id="mc-coin" type="hidden" value="{coin}" />
-        <div class="row mb-4">
+        <div class="row">
             <div class="col-md-3 mb-4">
                 <div data-mdb-input-init class="form-outline">
                     <input type="text" id="mc-hash-rate" class="form-control" value="1000" />
@@ -809,7 +841,8 @@ const asicMiningCalculatorTemplate = `
     <div class="card col-lg-9">
         <div class="card-body">
             <input id="mc-coin" type="hidden" value="{coin}" />
-            <div class="row mb-4">
+            <input id="mc-product-id" type="hidden" value="{product-id}" />
+            <div class="row">
                 <div class="col-md-3 mb-4">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text" id="mc-hash-rate" class="form-control" value="{hashrate-value}" />
@@ -850,7 +883,7 @@ const asicMiningCalculatorTemplate = `
 `;
 
 const singleMiningCalculatorResultTemplate = `
-<table class="table table-sm">
+<table class="table table-sm my-3">
     <tr>
         <th scope="col">Период</th>
         <th scope="col">Награда</th>
@@ -887,6 +920,21 @@ const singleMiningCalculatorResultTemplate = `
         <th>{month-profit-ruble} ₽ / {month-profit} $</th>
     </tr>
 </table>
+{product}
+`;
+
+const singleMiningCalculatorProductResultTemplate = `
+<h3 class="text-center my-3">Показатели</h3>
+<div class="row">
+    <dt class="col-md-3">Окупаемость</dt>
+    <dd class="col-md-3">{roi} мес.</dd>
+    <dt class="col-md-3">Стоимость {hashrate}</dt>
+    <dd class="col-md-3">{hashrate-price} $ за 1 {hashrate}</dd>
+    <dt class="col-md-3">Годовая доходность</dt>
+    <dd class="col-md-3">{year-profit-percent}%</dd>
+    <dt class="col-md-3">Доля затрат на ээ</dt>
+    <dd class="col-md-3">{power-percent}%</dd>
+</div>
 `;
 
 const loader = `
