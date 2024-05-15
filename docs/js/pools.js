@@ -54,7 +54,6 @@ function fillPoolsItemTemplate(template, pools) {
 // *** Templates ***
 
 const poolsTemplate = `
-<h1 class="mb-4">Пулы для майнинга криптовалюты</h1>
 <div class="row">
     {pools}
 </div>

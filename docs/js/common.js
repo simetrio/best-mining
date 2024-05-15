@@ -741,6 +741,13 @@ const productMiningCalculatorTemplate = `
 
 
 const coinMiningCalculatorTemplate = `
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/calculators/mining/coins/">Доходность криптовалют</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{title}</li>
+  </ol>
+</nav>
 <h1>Расчет доходности {title}</h1>
 <div class="card">
     <div class="card-body">
@@ -787,6 +794,13 @@ const coinMiningCalculatorTemplate = `
 `;
 
 const asicMiningCalculatorTemplate = `
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/calculators/mining/asics/">Доходность асиков</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{name}</li>
+  </ol>
+</nav>
 <h1>Расчет доходности асика {name}</h1>
 <div class="row">
     <div class="col-lg-3">
@@ -1002,7 +1016,6 @@ function fillBlogPostsItemTemplate(template, posts) {
 // *** Templates ***
 
 const blogPostsTemplate = `
-<h1 class="mb-4">Блог компании BestMining</h1>
 <div class="row">
     {posts}
 </div>
@@ -1087,7 +1100,6 @@ function fillPoolsItemTemplate(template, pools) {
 // *** Templates ***
 
 const poolsTemplate = `
-<h1 class="mb-4">Пулы для майнинга криптовалюты</h1>
 <div class="row">
     {pools}
 </div>
