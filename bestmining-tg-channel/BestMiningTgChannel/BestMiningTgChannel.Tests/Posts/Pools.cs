@@ -16,9 +16,12 @@ public static class Pools
     {
         var lines = File.ReadAllLines("/home/roman/pool.txt");
 
-        var title = lines[0];
-        var name = lines[1];
-        var source = string.Join(" ", lines.Skip(2));
+        var url = lines[0].Trim();
+        var title = lines[1];
+        var name = lines[2];
+
+        var source = Parser.Parse(url);
+        File.WriteAllText("/home/roman/pool-source.txt", source.ToJson());
 
         var text = Reraiter.Rerait(source);
         File.WriteAllText("/home/roman/pool-rerait.txt", text);
@@ -69,7 +72,14 @@ public static class Pools
             Directory.CreateDirectory(directory);
         }
 
-        var html = $@"{title}
+        var html = $@"<nav aria-label=""breadcrumb"">
+    <ol class=""breadcrumb"">
+        <li class=""breadcrumb-item""><a href=""/"">Главная</a></li>
+        <li class=""breadcrumb-item""><a href=""/pools/"">Пулы</a></li>
+        <li class=""breadcrumb-item active"" aria-current=""page"">{pool.Name}</li>
+    </ol>
+</nav>
+{title}
 <h1>Пул {pool.Name}</h1>
 <div class=""my-3"">
     <a class=""btn btn-primary"" href=""/"" rel=""nofollow"" target=""_blank"">

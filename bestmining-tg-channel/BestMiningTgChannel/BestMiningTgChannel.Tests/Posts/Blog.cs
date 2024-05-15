@@ -20,18 +20,13 @@ public static class Blog
         var url = lines[0].Trim();
         var title = lines[1].Trim();
 
-        var source = LoadUrl(url);
+        var source = Parser.Parse(url);
         File.WriteAllText("/home/roman/blog-source.txt", source.ToJson());
 
         var text = Reraiter.Rerait(source);
         File.WriteAllText("/home/roman/blog-rerait.txt", text);
 
         return (title, text);
-    }
-
-    private static ParserResult LoadUrl(string url)
-    {
-        return Parser.Parse(url);
     }
 
     private static Post CreatePost(string title)
@@ -109,7 +104,14 @@ public static class Blog
             Directory.CreateDirectory(directory);
         }
 
-        var html = $@"{post.Title}
+        var html = $@"<nav aria-label=""breadcrumb"">
+    <ol class=""breadcrumb"">
+        <li class=""breadcrumb-item""><a href=""/"">Главная</a></li>
+        <li class=""breadcrumb-item""><a href=""/blog/"">Блог</a></li>
+        <li class=""breadcrumb-item active"" aria-current=""page"">{post.Title}</li>
+    </ol>
+</nav>
+{post.Title}
 <h1>{post.Title}</h1>
 <div class=""card my-3"">
     <div class=""card-body"">

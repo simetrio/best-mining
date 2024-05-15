@@ -10,5 +10,6 @@ public static class Parser
     private static Dictionary<string, Func<string, ParserResult>> Parsers { get; } = new Dictionary<string, Func<string, ParserResult>>
     {
         { "miningmoon.ru", GetAsicParser.Parse},
+        { "ibmm.ru", IbmmParser.Parse},
     };
 }

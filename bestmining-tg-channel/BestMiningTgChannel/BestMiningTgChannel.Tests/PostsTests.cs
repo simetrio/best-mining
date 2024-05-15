@@ -29,6 +29,14 @@ public class PostsTests
     }
 
     [Fact]
+    public void PoolCurrent()
+    {
+        Setup("0.8", true);
+
+        Pools.Create();
+    }
+
+    [Fact]
     public void Text()
     {
         Setup("0.8", false);

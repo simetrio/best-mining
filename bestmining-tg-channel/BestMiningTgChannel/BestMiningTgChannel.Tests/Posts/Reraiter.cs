@@ -17,9 +17,9 @@ public static class Reraiter
 
         foreach (var item in parserResult.Items)
         {
-            if (!string.IsNullOrEmpty(item.Head))
+            if (!string.IsNullOrEmpty(item.Head.Trim()))
             {
-                result.AppendLine($"**{item.Head}**");
+                result.AppendLine($"**{item.Head.Trim()}**");
             }
 
             result.AppendLine(Rerait(item.Text));
@@ -40,6 +40,7 @@ public static class Reraiter
         var json = _jsonTemplate
             .Replace("{message}", FormatMessage(message))
             .Replace("{temperature}", Settings.YaTemperature);
+        File.WriteAllText("/home/roman/request.txt", json);
 
         using var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("Authorization", $"Api-Key {Settings.YaIamToken}");
@@ -52,9 +53,11 @@ public static class Reraiter
            .GetAwaiter()
            .GetResult();
 
-        response.EnsureSuccessStatusCode();
 
         var jsonResponse = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+        File.WriteAllText("/home/roman/html.txt", jsonResponse);
+
+        response.EnsureSuccessStatusCode();
         var responseObject = JsonSerializer.Deserialize<YaResponse>(jsonResponse)!;
 
         string text = responseObject.result.alternatives[0].message.text;
@@ -67,6 +70,8 @@ public static class Reraiter
         return message
             .Replace("\n", " ")
             .Replace("://", "")
+            .Replace("\t", "")
+            .Replace("\"", "")
             ;
     }
 
