@@ -35,6 +35,36 @@ public static class Reraiter
         return result.ToString();
     }
 
+    public static string Create(ParserResult parserResult)
+    {
+        if (Settings.ParseOnly.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            throw new Exception("Только парсинг");
+        }
+
+        if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            return File.ReadAllText("/home/roman/rerait.txt");
+        }
+
+        // throw new NotImplementedException();
+        var result = new StringBuilder();
+
+        foreach (var item in parserResult.Items)
+        {
+            if (!string.IsNullOrEmpty(item.Head.Trim()))
+            {
+                result.AppendLine($"**{item.Head.Trim()}**");
+            }
+
+            result.AppendLine(Create(item.Text));
+            Task.Delay(1000).GetAwaiter().GetResult();
+        }
+
+        File.WriteAllText("/home/roman/rerait.txt", result.ToString());
+        return result.ToString();
+    }
+
     public static string Rerait(string message)
     {
         return Send(message, "перескажи своими словами с сохранением структуры");

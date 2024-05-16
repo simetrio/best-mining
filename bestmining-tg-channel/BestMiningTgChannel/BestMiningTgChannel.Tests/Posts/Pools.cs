@@ -33,11 +33,22 @@ public static class Pools
     {
         var lines = File.ReadAllLines("/home/roman/pool.txt");
 
-        var description = lines[0].Trim();
+        var descriptions = lines[0].Trim().Split(';');
         var title = lines[1];
         var name = lines[2];
 
-        var text = Reraiter.Create(description);
+        var source = new ParserResult
+        {
+            Items = descriptions
+                .Select(x => new ParserResultItem
+                {
+                    Head = x.Trim(),
+                    Text = x.Trim(),
+                })
+                .ToArray()
+        };
+
+        var text = Reraiter.Create(source);
         File.WriteAllText("/home/roman/pool-rerait.txt", text);
 
         return (name, title, text);
