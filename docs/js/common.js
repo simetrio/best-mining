@@ -702,7 +702,7 @@ async function calculateMining() {
     const power = document.getElementById('mc-power').value;
     const cost = toDollar(parseFloat(document.getElementById('mc-cost').value));
     const poolComission = document.getElementById('mc-pool-comission').value;
-    const productId = document.getElementById('mc-product-id').value;
+    const productId = document.getElementById('mc-product-id')?.value;
 
     const result = await (await fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
