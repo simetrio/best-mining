@@ -4,9 +4,9 @@ namespace BestMiningTgChannel.Tests;
 
 public static class Pools
 {
-    public static void Create()
+    public static void Create(bool isRerait = true)
     {
-        var (name, title, text) = Rerait();
+        var (name, title, text) = isRerait ? Rerait() : CreateNew();
         var pool = CreatePool(name);
         AddToStorage(pool);
         Save(pool, title, text);
@@ -24,6 +24,20 @@ public static class Pools
         File.WriteAllText("/home/roman/pool-source.txt", source.ToJson());
 
         var text = Reraiter.Rerait(source);
+        File.WriteAllText("/home/roman/pool-rerait.txt", text);
+
+        return (name, title, text);
+    }
+
+    private static (string Name, string Title, string Text) CreateNew()
+    {
+        var lines = File.ReadAllLines("/home/roman/pool.txt");
+
+        var description = lines[0].Trim();
+        var title = lines[1];
+        var name = lines[2];
+
+        var text = Reraiter.Create(description);
         File.WriteAllText("/home/roman/pool-rerait.txt", text);
 
         return (name, title, text);

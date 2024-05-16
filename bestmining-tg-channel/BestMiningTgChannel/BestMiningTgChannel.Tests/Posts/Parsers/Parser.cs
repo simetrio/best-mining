@@ -12,6 +12,7 @@ public static class Parser
         { "miningmoon.ru", GetAsicParser.Parse},
         { "ibmm.ru", IbmmParser.Parse},
         { "crypto.ru", CryptoParser.Parse},
+        { "cryptonisation.com", CryptonisationParser.Parse},
 
         // Должен быть самым последним
         { "text", TextParser.Parse},

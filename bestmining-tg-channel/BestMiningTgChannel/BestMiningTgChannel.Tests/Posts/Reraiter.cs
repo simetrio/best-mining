@@ -7,6 +7,11 @@ public static class Reraiter
 {
     public static string Rerait(ParserResult parserResult)
     {
+        if (Settings.ParseOnly.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            throw new Exception("Только парсинг");
+        }
+
         if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
         {
             return File.ReadAllText("/home/roman/rerait.txt");
@@ -32,12 +37,28 @@ public static class Reraiter
 
     public static string Rerait(string message)
     {
+        return Send(message, "перескажи своими словами с сохранением структуры");
+    }
+
+    public static string Create(string message)
+    {
+        return Send(message, "ты копирайтер");
+    }
+
+    public static string Send(string message, string role)
+    {
+        if (Settings.ParseOnly.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
+        {
+            throw new Exception("Только парсинг");
+        }
+
         if (Settings.ReraitCurrent.Equals(bool.TrueString, StringComparison.CurrentCultureIgnoreCase))
         {
             return File.ReadAllText("/home/roman/rerait.txt");
         }
 
         var json = _jsonTemplate
+            .Replace("{role}", role)
             .Replace("{message}", FormatMessage(message))
             .Replace("{temperature}", Settings.YaTemperature);
         File.WriteAllText("/home/roman/request.txt", json);
@@ -101,7 +122,7 @@ public static class Reraiter
   ""modelUri"": ""gpt://b1gn410mgu2s1lqpq2va/yandexgpt"",
   ""messages"": [
     {
-      ""text"": ""перескажи своими словами с сохранением структуры"",
+      ""text"": ""{role}"",
       ""role"": ""system""
     },
     {
