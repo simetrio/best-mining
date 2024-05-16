@@ -10,9 +10,10 @@ public static class Publisher
         var sourceRootDirectory = "/home/roman/projects/best-mining/best-mining/pages";
         var destinationRootDirectory = "/home/roman/projects/best-mining/best-mining/docs";
         var webServerRootDirectory = "/var/www/best-mining";
-        var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
 
-        MergeScripts(destinationRootDirectory);
+        MergeScripts(sourceRootDirectory, destinationRootDirectory);
+
+        var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
         PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
 
         //  Дожно быть в самом конце
@@ -101,7 +102,7 @@ public static class Publisher
         }
     }
 
-    private static void MergeScripts(string destinationRootDirectory)
+    private static void MergeScripts(string sourceRootDirectory, string destinationRootDirectory)
     {
         var commonJs = @$"
     {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "catalog.js"))}
@@ -120,9 +121,9 @@ public static class Publisher
         var hash = commonJs.CalculateHash(8);
         var script = @$"""/js/common.js?hash={hash}""";
 
-        var master = File.ReadAllText("/home/roman/projects/best-mining/best-mining/pages/master.html");
+        var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
         master = new Regex(@"\""/js/common\.js\?hash=[\d\w]*\""").Replace(master, script);
-        File.WriteAllText("/home/roman/projects/best-mining/best-mining/pages/master.html", master);
+        File.WriteAllText(Path.Combine(sourceRootDirectory, "master.html"), master);
     }
 
     private static void CreateDefaultCoins()
