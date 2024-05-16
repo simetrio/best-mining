@@ -11,9 +11,11 @@ public static class Publisher
         var webServerRootDirectory = "/var/www/best-mining";
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
 
-        PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
-        CopyToWebServer(destinationRootDirectory, "", webServerRootDirectory);
         MergeScripts(destinationRootDirectory);
+        PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
+
+        //  Дожно быть в самом конце
+        CopyToWebServer(destinationRootDirectory, "", webServerRootDirectory);
     }
 
     private static void PublishInner(

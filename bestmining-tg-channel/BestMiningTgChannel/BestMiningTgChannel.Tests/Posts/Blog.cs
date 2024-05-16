@@ -43,11 +43,7 @@ public static class Blog
     {
         var translit = RussianTransliterator.GetTransliteration(title.ToLower());
 
-        var sha256 = SHA256.Create();
-        var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(translit));
-        var id = Convert.ToBase64String(hashBytes).Trim('/').ToLower().Substring(0, 5);
-
-        var chars = $"{id}-{translit}"
+        var chars = $"{translit.CalculateHash(5)}-{translit}"
             .Select(x =>
             {
                 if (char.IsDigit(x)

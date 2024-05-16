@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 
@@ -14,5 +16,12 @@ public static class Utils
         };
 
         return JsonSerializer.Serialize(obj, options);
+    }
+
+    public static string CalculateHash(this string str, int length)
+    {
+        var sha256 = SHA256.Create();
+        var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(str));
+        return Convert.ToBase64String(hashBytes).Trim('/').ToLower().Substring(0, length);
     }
 }
