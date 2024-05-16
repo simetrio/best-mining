@@ -22,6 +22,10 @@ public static class Utils
     {
         var sha256 = SHA256.Create();
         var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(str));
-        return Convert.ToBase64String(hashBytes).Trim('/').ToLower().Substring(0, length);
+        return Convert
+            .ToBase64String(hashBytes)
+            .Replace("/", "")
+            .ToLower()
+            .Substring(0, length);
     }
 }

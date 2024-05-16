@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace BestMiningTgChannel.Tests;
 
@@ -115,6 +116,13 @@ public static class Publisher
         ";
 
         File.WriteAllText(Path.Combine(destinationRootDirectory, "js", "common.js"), commonJs);
+
+        var hash = commonJs.CalculateHash(8);
+        var script = @$"""/js/common.js?hash={hash}""";
+
+        var master = File.ReadAllText("/home/roman/projects/best-mining/best-mining/pages/master.html");
+        master = new Regex(@"\""/js/common\.js\?hash=[\d\w]*\""").Replace(master, script);
+        File.WriteAllText("/home/roman/projects/best-mining/best-mining/pages/master.html", master);
     }
 
     private static void CreateDefaultCoins()
