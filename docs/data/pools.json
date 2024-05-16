@@ -28,10 +28,5 @@
     "Id": "binance",
     "Name": "Binance",
     "Img": "tg-channel-news-1.jpg"
-  },
-  {
-    "Id": "antpool",
-    "Name": "Antpool",
-    "Img": "tg-channel-news-4.jpg"
   }
 ]
