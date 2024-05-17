@@ -18,6 +18,11 @@ public static class Utils
         return JsonSerializer.Serialize(obj, options);
     }
 
+     public static T ToObject<T>(this string str)
+    {
+        return JsonSerializer.Deserialize<T>(str);
+    }
+
     public static string CalculateHash(this string str, int length)
     {
         var sha256 = SHA256.Create();

@@ -60,6 +60,22 @@ public class PostsTests
         Texts.Create();
     }
 
+    [Fact]
+    public void Product()
+    {
+        Setup("0.9");
+
+        Products.Create();
+    }
+
+    [Fact]
+    public void ProductCurrent()
+    {
+        Setup("0.9", reraitCurrent : true);
+
+        Products.Create();
+    }
+
     private void Setup(string temperature, bool reraitCurrent = false, bool parseOnly = false)
     {
         Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
