@@ -34,7 +34,7 @@ public static class Products
                 new ParserResultItem
                 {
                     Head = $"О бренде {product.Brand}",
-                    Text = $"О бренде {product.Brand}",
+                    Text = $"О бренде асиков {product.Brand}",
                 },
                 new ParserResultItem
                 {
