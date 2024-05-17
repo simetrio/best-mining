@@ -33,7 +33,7 @@ public static class HtmlFormatter
         return FormatParagraph(line);
     }
 
-    private static string FormatHeader(string line) => $@"<h3 class=""my-3"">{CleanHeader(Clean(line))}</h3>";
+    private static string FormatHeader(string line) => $@"{Environment.NewLine}<h3 class=""my-3"">{CleanHeader(Clean(line))}</h3>";
 
     private static string FormatList(string line) => $"<li>{CleanStartDigits(Clean(line))}</li>";
 
