@@ -485,6 +485,10 @@
         "Popular": false,
         "Prices": [
             {
+                "Value": 3500,
+                "Delivery": "Поставка 20-30 дней"
+            },
+            {
                 "Value": 4030,
                 "Delivery": "Склад Москва"
             }
