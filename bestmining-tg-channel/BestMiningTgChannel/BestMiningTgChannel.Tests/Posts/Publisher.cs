@@ -105,6 +105,8 @@ public static class Publisher
     private static void MergeScripts(string sourceRootDirectory, string destinationRootDirectory)
     {
         var commonJs = @$"
+    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "data.js"))}
+
     {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "catalog.js"))}
 
     {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "miningCalculator.js"))}

@@ -1,4 +1,8 @@
 
+    const Data = {
+    brands: ["Jasminer", "Antminer", "Whatsminer", "Iceriver"]
+}
+
     function showCatalog() {
     showCatalogPopularWide();
     showCatalogWide();
@@ -63,7 +67,7 @@ function showCatalogBrands() {
         return;
     }
 
-    const brands = Array.from(new Set(window.dataBase.products.map(x => x.Brand)))
+    const brands = window.dataBase.brands
         .map(brand => ({
             name: brand,
             img: window.dataBase.products.find(x => x.Brand === brand).Imgs[0]
@@ -1224,7 +1228,7 @@ async function loadData(onSuccess) {
         });
     });
 
-    window.dataBase = { products, coins, posts, pools };
+    window.dataBase = { products, coins, posts, pools, brands: Data.brands };
     console.log(window.dataBase);
 
     onSuccess();

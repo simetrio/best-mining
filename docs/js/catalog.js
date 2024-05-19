@@ -62,7 +62,7 @@ function showCatalogBrands() {
         return;
     }
 
-    const brands = Array.from(new Set(window.dataBase.products.map(x => x.Brand)))
+    const brands = window.dataBase.brands
         .map(brand => ({
             name: brand,
             img: window.dataBase.products.find(x => x.Brand === brand).Imgs[0]

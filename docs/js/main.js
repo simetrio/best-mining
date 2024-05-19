@@ -46,7 +46,7 @@ async function loadData(onSuccess) {
         });
     });
 
-    window.dataBase = { products, coins, posts, pools };
+    window.dataBase = { products, coins, posts, pools, brands: Data.brands };
     console.log(window.dataBase);
 
     onSuccess();
