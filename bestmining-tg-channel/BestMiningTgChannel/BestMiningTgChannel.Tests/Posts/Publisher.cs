@@ -133,23 +133,35 @@ public static class Publisher
         string sourceRootDirectory,
         string subDirectory,
         string destinationRootDirectory,
-        HashSet<Page>? pages = null
+        Dictionary<string, Page>? pagesByUrl = null
     )
     {
         var sourceDirectory = Path.Combine(sourceRootDirectory, subDirectory);
+        var pagesFileName = Path.Combine(destinationRootDirectory, "data", "sitemap.json");
 
-        if (pages == null)
+        if (pagesByUrl == null)
         {
-            pages = File
-                .ReadAllText(Path.Combine(destinationRootDirectory, "data", "sitemap.json"))
+            pagesByUrl = File
+                .ReadAllText(pagesFileName)
                 .ToObject<Page[]>()
-                .ToHashSet();
+                .ToDictionary(x => x.Url);
         }
 
         var fileName = Path.Combine(sourceDirectory, "index.html");
         if (File.Exists(fileName))
         {
-            // Обновляем страницу в pages
+            var page = new Page
+            {
+                Url = !string.IsNullOrEmpty(subDirectory) ? $"/{subDirectory}/" : "/",
+                LastModification = DateTime.Now,
+                Hash = File.ReadAllText(fileName).CalculateHash(),
+            };
+
+            if (!pagesByUrl.TryGetValue(page.Url, out var currentPage)
+                || currentPage.Hash != page.Hash)
+            {
+                pagesByUrl[page.Url] = page;
+            }
         }
 
         var directories = Directory
@@ -162,13 +174,19 @@ public static class Publisher
                 sourceRootDirectory,
                 Path.Combine(subDirectory, directory),
                 destinationRootDirectory,
-                pages
+                pagesByUrl
             );
         }
 
         if (string.IsNullOrEmpty(subDirectory))
         {
-            // Сохраняем json
+            var pages = pagesByUrl
+                .Values
+                .OrderBy(x => x.Url)
+                .ToArray();
+
+            File.WriteAllText(pagesFileName, pages.ToJson());
+
             // Генерируем sitemap
         }
     }

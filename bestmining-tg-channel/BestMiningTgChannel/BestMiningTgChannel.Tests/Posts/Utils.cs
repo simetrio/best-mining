@@ -23,7 +23,7 @@ public static class Utils
         return JsonSerializer.Deserialize<T>(str);
     }
 
-    public static string CalculateHash(this string str, int length)
+    public static string CalculateHash(this string str, int length = int.MaxValue)
     {
         var sha256 = SHA256.Create();
         var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(str));
@@ -31,6 +31,12 @@ public static class Utils
             .ToBase64String(hashBytes)
             .Replace("/", "")
             .ToLower()
-            .Substring(0, length);
+            .SubstringIfNeed(0, length);
+    }
+
+    public static string SubstringIfNeed(this string str, int start, int length)
+    {
+        str = str.Substring(0);
+        return str.Length > length ? str.Substring(0, length) : str;
     }
 }
