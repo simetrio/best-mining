@@ -1,3 +1,4 @@
+using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -138,6 +139,7 @@ public static class Publisher
     {
         var sourceDirectory = Path.Combine(sourceRootDirectory, subDirectory);
         var pagesFileName = Path.Combine(destinationRootDirectory, "data", "sitemap.json");
+        var sitemapFileName = Path.Combine(destinationRootDirectory, "sitemap.xml");
 
         if (pagesByUrl == null)
         {
@@ -185,9 +187,27 @@ public static class Publisher
                 .OrderBy(x => x.Url)
                 .ToArray();
 
-            File.WriteAllText(pagesFileName, pages.ToJson());
 
-            // Генерируем sitemap
+            var xml = new StringBuilder();
+            xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF-8""?>
+    <urlset xmlns=""http://www.sitemaps.org/schemas/sitemap/0.9"">");
+
+            foreach (var page in pages)
+            {
+                var url = string.IsNullOrEmpty(page.Url.Trim('/'))
+                    ? ""
+                    : page.Url;
+
+                xml.AppendLine($@"        <url>
+            <loc>https://the-best-mining.ru{url}</loc>
+            <lastmod>{page.LastModification:yyyy-MM-dd}</lastmod>
+        </url>");
+            }
+
+            xml.AppendLine("    </urlset>");
+       
+            File.WriteAllText(pagesFileName, pages.ToJson());
+            File.WriteAllText(sitemapFileName, xml.ToString());
         }
     }
 
