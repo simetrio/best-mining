@@ -12,6 +12,7 @@ public static class Publisher
         var webServerRootDirectory = "/var/www/best-mining";
 
         MergeScripts(sourceRootDirectory, destinationRootDirectory);
+        GenerateSitemap(sourceRootDirectory, "", destinationRootDirectory);
 
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
         PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
@@ -128,6 +129,50 @@ public static class Publisher
         File.WriteAllText(Path.Combine(sourceRootDirectory, "master.html"), master);
     }
 
+    private static void GenerateSitemap(
+        string sourceRootDirectory,
+        string subDirectory,
+        string destinationRootDirectory,
+        HashSet<Page>? pages = null
+    )
+    {
+        var sourceDirectory = Path.Combine(sourceRootDirectory, subDirectory);
+
+        if (pages == null)
+        {
+            pages = File
+                .ReadAllText(Path.Combine(destinationRootDirectory, "data", "sitemap.json"))
+                .ToObject<Page[]>()
+                .ToHashSet();
+        }
+
+        var fileName = Path.Combine(sourceDirectory, "index.html");
+        if (File.Exists(fileName))
+        {
+            // Обновляем страницу в pages
+        }
+
+        var directories = Directory
+            .GetDirectories(sourceDirectory)
+            .Select(x => new DirectoryInfo(x).Name);
+
+        foreach (var directory in directories)
+        {
+            GenerateSitemap(
+                sourceRootDirectory,
+                Path.Combine(subDirectory, directory),
+                destinationRootDirectory,
+                pages
+            );
+        }
+
+        if (string.IsNullOrEmpty(subDirectory))
+        {
+            // Сохраняем json
+            // Генерируем sitemap
+        }
+    }
+
     private static void CreateDefaultCoins()
     {
         var coinsDirectory = "/home/roman/projects/best-mining/best-mining/pages/calculators/mining/coins";
@@ -184,5 +229,22 @@ public static class Publisher
         public string Brand { get; set; }
         public string Model { get; set; }
         public string HashRate { get; set; }
+    }
+
+    public class Page
+    {
+        public string Url { get; set; }
+        public DateTime LastModification { get; set; }
+        public string Hash { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return Url.Equals(((Page)obj).Url);
+        }
+
+        public override int GetHashCode()
+        {
+            return Url.GetHashCode();
+        }
     }
 }
