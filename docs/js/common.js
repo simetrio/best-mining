@@ -5853,7 +5853,10 @@ function orderProduct(productId) {
 }
 
 function sendOrderProduct() {
-    console.log('Order success');
+    const productId = document.getElementById('order-product-id').value;
+    const product = window.dataBase.products.find(x => x.Id === productId);
+  
+    console.log('Order success', product.Name);
     document.getElementById('show-order-success-modal').click();
 }
 
