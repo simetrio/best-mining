@@ -5854,8 +5854,20 @@ function orderProduct(productId) {
 
 function sendOrderProduct() {
     const productId = document.getElementById('order-product-id').value;
+    const name = document.getElementById('order-name').value;
+    const phone = document.getElementById('order-phone').value;
+
     const product = window.dataBase.products.find(x => x.Id === productId);
   
+    fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'Accept': 'application/json'
+        },
+        body: `{"Action": "Order", "Command": "Имя: ${name}. Телефон: ${phone}. Товар: ${product.Name}"}`
+    });
+
     console.log('Order success', product.Name);
     document.getElementById('show-order-success-modal').click();
 }
