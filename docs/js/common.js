@@ -5815,7 +5815,7 @@ function closeTgModal() {
     localStorage.setItem(getTgModalName(), 'true');
 }
 
-async function loadData(onSuccess) {
+function loadData() {
     const brands = Data.brands;
     const products = Data.products;
     const coinsObject = Data.coins;
@@ -5846,8 +5846,6 @@ async function loadData(onSuccess) {
     });
 
     window.dataBase = { products, coins, posts, pools, brands };
-
-    onSuccess();
 }
 
 const dollar = 98;
@@ -5879,15 +5877,15 @@ function initMdb() {
 
 function main() {
     openTgModal();
-    loadData(() => {
-        showCatalog();
-        showMiningCalculator();
-        showBlog();
-        showPools();
+    loadData();
 
-        // Всегда в конце
-        initMdb();
-    });
+    showCatalog();
+    showMiningCalculator();
+    showBlog();
+    showPools();
+
+    // Всегда в конце
+    initMdb();
 }
 
 // *** Должно быть в самом конце
