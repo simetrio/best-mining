@@ -46,7 +46,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "JasminerX16Q2050.png"
+            "JasminerX16Q2050.webp"
         ]
     },
     {
@@ -107,7 +107,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "JasminerX16Q1950.png"
+            "JasminerX16Q1950.webp"
         ]
     },
     {
@@ -153,7 +153,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "JasminerX16P5800.png"
+            "JasminerX16P5800.webp"
         ]
     },
     {
@@ -199,7 +199,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerS21Pro.jpg"
+            "AntminerS21Pro.webp"
         ]
     },
     {
@@ -250,7 +250,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerS21.jpg"
+            "AntminerS21.webp"
         ]
     },
     {
@@ -301,7 +301,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerS21.jpg"
+            "AntminerS21.webp"
         ]
     },
     {
@@ -352,7 +352,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerS21.jpg"
+            "AntminerS21.webp"
         ]
     },
     {
@@ -403,7 +403,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerT21.jpg"
+            "AntminerT21.webp"
         ]
     },
     {
@@ -454,7 +454,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "AntminerS19kPro.jpg"
+            "AntminerS19kPro.webp"
         ]
     },
     {
@@ -500,7 +500,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "AntminerE9Pro.jpg"
+            "AntminerE9Pro.webp"
         ]
     },
     {
@@ -551,7 +551,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "AntminerE9Pro.jpg"
+            "AntminerE9Pro.webp"
         ]
     },
     {
@@ -602,7 +602,7 @@ const Data = {
             "Algorithm": "scrypt"
         },
         "Imgs": [
-            "AntminerL7.jpg"
+            "AntminerL7.webp"
         ]
     },
     {
@@ -653,7 +653,7 @@ const Data = {
             "Algorithm": "scrypt"
         },
         "Imgs": [
-            "AntminerL7.jpg"
+            "AntminerL7.webp"
         ]
     },
     {
@@ -704,7 +704,7 @@ const Data = {
             "Algorithm": "scrypt"
         },
         "Imgs": [
-            "AntminerL7.jpg"
+            "AntminerL7.webp"
         ]
     },
     {
@@ -750,7 +750,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "WhatsminerM60.png"
+            "WhatsminerM60.webp"
         ]
     },
     {
@@ -796,7 +796,7 @@ const Data = {
             "Algorithm": "sha-256"
         },
         "Imgs": [
-            "WhatsminerM50S.png"
+            "WhatsminerM50S.webp"
         ]
     },
     {
@@ -842,7 +842,7 @@ const Data = {
             "Algorithm": "kheavyhash"
         },
         "Imgs": [
-            "IceriverKASKS3M.jpg"
+            "IceriverKASKS3M.webp"
         ]
     },
     {
@@ -888,7 +888,7 @@ const Data = {
             "Algorithm": "kheavyhash"
         },
         "Imgs": [
-            "IceriverKASKS0Pro.jpg"
+            "IceriverKASKS0Pro.webp"
         ]
     },
     {
@@ -934,7 +934,7 @@ const Data = {
             "Algorithm": "etchash/ethash"
         },
         "Imgs": [
-            "BombaxEZ100C3200.png"
+            "BombaxEZ100C3200.webp"
         ]
     }
 ]`),
