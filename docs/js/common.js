@@ -1,9 +1,11 @@
 
-    const Data = {
-    brands: ["Jasminer", "Antminer", "Whatsminer", "Iceriver"]
-}
 
-    function showCatalog() {
+const Data = {
+    brands: JSON.parse(`["Jasminer", "Antminer", "Whatsminer", "Iceriver"]`),
+}
+        
+
+function showCatalog() {
     showCatalogPopularWide();
     showCatalogWide();
     showCatalogBrandWide();
@@ -415,7 +417,7 @@ const brandsTemplate = `
 </div>
 `;
 
-    function showMiningCalculator() {
+function showMiningCalculator() {
     showProductMiningCalculator();
     showCoinsMiningCalculator();
     showCoinMiningCalculator();
@@ -1012,7 +1014,7 @@ const asicItemMiningCalculatorTemplate = `
 </div>
 `;
 
-    function showBlog() {
+function showBlog() {
     showBlogPosts();
     showBlogTop();
 }
@@ -1096,7 +1098,7 @@ const blogPostsItemTemplate = `
 </div>
 `;
 
-    function showPools() {
+function showPools() {
     showPoolsList();
     showPoolsTop();
 }
@@ -1180,7 +1182,7 @@ const poolsItemTemplate = `
 </div>
 `;
 
-    function getTgModalName() {
+function getTgModalName() {
     return 'tg-banner-closed-3-' + new Date().getFullYear() + new Date().getMonth() + (new Date().getDate() % 5);
 }
 

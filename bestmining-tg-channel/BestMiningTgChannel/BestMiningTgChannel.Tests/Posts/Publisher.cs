@@ -106,18 +106,24 @@ public static class Publisher
 
     private static void MergeScripts(string sourceRootDirectory, string destinationRootDirectory)
     {
+        var data = @$"
+const Data = {{
+    brands: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "data.json"))}`),
+}}
+        ";
+
         var commonJs = @$"
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "data.js"))}
+{data}
 
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "catalog.js"))}
+{File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "catalog.js"))}
 
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "miningCalculator.js"))}
+{File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "miningCalculator.js"))}
 
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "blog.js"))}
+{File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "blog.js"))}
 
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "pools.js"))}
+{File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "pools.js"))}
 
-    {File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "main.js"))}
+{File.ReadAllText(Path.Combine(destinationRootDirectory, "js", "main.js"))}
         ";
 
         File.WriteAllText(Path.Combine(destinationRootDirectory, "js", "common.js"), commonJs);
@@ -126,7 +132,7 @@ public static class Publisher
         var script = @$"""/js/common.js?hash={hash}""";
 
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
-        master = new Regex(@"\""/js/common\.js\?hash=[\d\w]*\""").Replace(master, script);
+        master = new Regex(@"\""/js/common\.js\?hash=[\d\w\+]*\""").Replace(master, script);
         File.WriteAllText(Path.Combine(sourceRootDirectory, "master.html"), master);
     }
 
