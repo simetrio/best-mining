@@ -51,8 +51,9 @@ public static class Publisher
             var lines = File.ReadAllLines(Path.Combine(sourceDirectory, file));
             var title = lines[0];
             var content = string.Join(Environment.NewLine, lines.Skip(1));
+            var url = string.IsNullOrEmpty(subDirectory) ? "" : $"/{subDirectory}/";
 
-            var result = master.Replace("{title}", title).Replace("{content}", content);
+            var result = master.Replace("{title}", title).Replace("{content}", content).Replace("{canonical}", url);
             File.WriteAllText(Path.Combine(destinationDirectory, file), result);
         }
 
