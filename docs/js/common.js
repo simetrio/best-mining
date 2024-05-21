@@ -5865,7 +5865,10 @@ function sendOrderProduct() {
             'Content-Type': 'application/json;charset=utf-8',
             'Accept': 'application/json'
         },
-        body: `{"Action": "Order", "Command": "Имя: ${name}. Телефон: ${phone}. Товар: ${product.Name}"}`
+        body: JSON.stringify({
+            Action: "Order",
+            Command: `Имя: ${name}. Телефон: ${phone}. Товар: ${product.Name}`,
+        }),
     });
 
     console.log('Order success', product.Name);
