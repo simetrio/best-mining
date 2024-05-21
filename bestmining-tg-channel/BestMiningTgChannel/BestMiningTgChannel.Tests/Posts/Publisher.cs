@@ -109,6 +109,10 @@ public static class Publisher
         var data = @$"
 const Data = {{
     brands: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "data.json"))}`),
+    products: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "products.json"))}`),
+    coins: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "coins.json"))}`),
+    posts: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "posts.json"))}`),
+    pools: JSON.parse(`{File.ReadAllText(Path.Combine(destinationRootDirectory, "data", "pools.json"))}`),
 }}
         ";
 

@@ -18,10 +18,11 @@ function closeTgModal() {
 }
 
 async function loadData(onSuccess) {
-    const products = await (await fetch('/data/products.json')).json();
-    const coinsObject = await (await fetch('/data/coins.json')).json();
-    const posts = await (await fetch('/data/posts.json')).json();
-    const pools = await (await fetch('/data/pools.json')).json();
+    const brands = Data.brands;
+    const products = Data.products;
+    const coinsObject = Data.coins;
+    const posts = Data.posts;
+    const pools = Data.pools;
 
     products.forEach(product => {
         product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
@@ -46,8 +47,7 @@ async function loadData(onSuccess) {
         });
     });
 
-    window.dataBase = { products, coins, posts, pools, brands: Data.brands };
-    console.log(window.dataBase);
+    window.dataBase = { products, coins, posts, pools, brands };
 
     onSuccess();
 }
