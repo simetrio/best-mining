@@ -2,6 +2,7 @@ function showCatalog() {
     showCatalogPopularWide();
     showCatalogWide();
     showCatalogBrandWide();
+    showCatalogCoinWide();
     showCatalogBrands();
     showCatalogProduct();
     showCatalogAnalogs();
@@ -47,6 +48,23 @@ function showCatalogBrandWide() {
 
     const brand = element.getAttribute('data-brand');
     const products = window.dataBase.products.filter(x => x.Brand === brand);
+
+    let html = '';
+    products.forEach(product => {
+        html += renderProductWide(product);
+    });
+
+    element.innerHTML = html;
+}
+
+function showCatalogCoinWide() {
+    const element = document.getElementById('catalog-coin-wide');
+    if (!element) {
+        return;
+    }
+
+    const coin = element.getAttribute('data-coin');
+    const products = window.dataBase.products.filter(x => x.MiningCalculator.Coin === coin);
 
     let html = '';
     products.forEach(product => {
