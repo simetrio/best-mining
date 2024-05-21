@@ -40,7 +40,7 @@ function sendOrderProduct() {
         },
         body: JSON.stringify({
             Action: "Order",
-            Command: `Имя: ${name}. Телефон: ${phone}. Товар: ${product.Name}`,
+            Command: `Новая заявка с сайта. Имя: ${name}. Телефон: ${phone}. Заказ: ${product.Name}`,
         }),
     });
 

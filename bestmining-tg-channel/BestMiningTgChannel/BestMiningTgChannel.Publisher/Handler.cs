@@ -30,6 +30,14 @@ public class Handler : HandlerBase
             case Action.CalculateMining:
                 return MiningCalculator.Send(requestData.Command);
 
+            case Action.Order:
+                Utils.WithNotifyAboutError(() =>
+                {
+                    Order.Send(requestData.Command);
+                }, "Не удалось выполнить действие Order");
+
+                return "Ok";
+
             default:
                 return "Action not found";
         }
@@ -133,7 +141,7 @@ public static class ChartSender
                 .Where(x => x.Name.ToLower() == "td")
                 .Skip(6)
                 .First()
-                .GetAttributeValue("data-sort", "");;
+                .GetAttributeValue("data-sort", ""); ;
 
             yield return new Chart
             {
@@ -413,6 +421,18 @@ public static class MiningCalculator
 
 #endregion
 
+#region Order
+
+public static class Order
+{
+    public static void Send(string order)
+    {
+        Telegram.SendMessage(MessageTemplate.Escape(order));
+    }
+}
+
+#endregion
+
 #region Common
 
 public static class Utils
@@ -440,7 +460,7 @@ public static class MessageTemplate
 👉 [K1Pool](https://k1pool.com/invite/dd03779e65) \| [ByBit](https://www.bybit.com/invite?ref=ENN1VM8) \| [Прайс](https://t.me/BestMiningRu/8) \| [Заказ](https://t.me/BestMiningManager)";
     }
 
-    private static string Escape(string message)
+    public static string Escape(string message)
     {
         return message
         .Replace("=", "\\=")
@@ -616,6 +636,7 @@ public enum Action
 {
     Send,
     CalculateMining,
+    Order,
 }
 
 public class Request
