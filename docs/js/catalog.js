@@ -258,18 +258,22 @@ const productWideTemplate = `
                 <a href="/catalog/{id}/">
                     <h3 class="card-title">{name}</h3>
                 </a>
-                <p class="card-text">
-                <dl class="row mt-4">
-                    {characteristics}
-                </dl>
-                </p>
-                <div class="row mt-4">
-                    <div class="col-lg-6">
-                        <div class="h3">{priceRuble} ₽ ({price} $)</div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <dl class="row mt-4">
+                            {characteristics}
+                        </dl>
                     </div>
-                    <div class="col-lg-6">
-                        <a href="https://t.me/BestMiningManager" class="btn btn-primary px-5" data-mdb-ripple-init
-                            target="_blank">Заказать</a>
+                    <div class="mt-1 col-lg-5">
+                        <div class="my-3">
+                            <div class="h3">{priceRuble} ₽ ({price} $)</div>
+                        </div>
+                        <div class="my-3">
+                            <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block px-5" data-mdb-ripple-init
+                                target="_blank">Купить</a>
+                            <a href="/catalog/{id}/" class="btn btn-outline-secondary btn-block px-5" data-mdb-ripple-init data-mdb-ripple-color="dark">
+                                Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -295,18 +299,20 @@ const productTemplate = `
         <div class="col-md-8">
             <div class="card-body">
                 <h1 class="card-title">{name}</h1>
-                <p class="card-text">
-                <dl class="row mt-4">
-                    {characteristics}
-                </dl>
-                </p>
-                <div class="row mt-4">
-                    <div class="col-lg-6">
-                        <div class="h3">{priceRuble} ₽ ({price} $)</div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <dl class="row mt-4">
+                            {characteristics}
+                        </dl>
                     </div>
-                    <div class="col-lg-6">
-                        <a href="https://t.me/BestMiningManager" class="btn btn-primary px-5" data-mdb-ripple-init
-                            target="_blank">Заказать</a>
+                    <div class="mt-1 col-lg-5">
+                        <div class="my-3">
+                            <div class="h3">{priceRuble} ₽ ({price} $)</div>
+                        </div>
+                        <div class="my-3">
+                            <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block px-5" data-mdb-ripple-init
+                                target="_blank">Купить</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -331,7 +337,9 @@ const productSlimTallTemplate = `
         </dl>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
         <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
-            target="_blank">Заказать</a>
+            target="_blank">Купить</a>
+        <a href="/catalog/{id}/" class="btn btn-outline-secondary btn-block px-5" data-mdb-ripple-init data-mdb-ripple-color="dark">
+            Подробнее</a>
     </div>
 </div>
 `;
@@ -364,7 +372,9 @@ const productSlimTemplate = `
         </div>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
         <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
-            target="_blank">Заказать</a>
+            target="_blank">Купить</a>
+        <a href="/catalog/{id}/" class="btn btn-outline-secondary btn-block px-5" data-mdb-ripple-init data-mdb-ripple-color="dark">
+            Подробнее</a>
     </div>
 </div>
 `;
@@ -396,8 +406,8 @@ const productPriceTemplate = `
 `;
 
 const productCharacteristicTemplate = `
-<dt class="col-sm-3">{name}</dt>
-<dd class="col-sm-9">{value}</dd>
+<dt class="col-sm-5">{name}</dt>
+<dd class="col-sm-7">{value}</dd>
 `;
 
 
