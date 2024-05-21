@@ -5871,7 +5871,6 @@ function sendOrderProduct() {
         }),
     });
 
-    console.log('Order success', product.Name);
     document.getElementById('show-order-success-modal').click();
 }
 
