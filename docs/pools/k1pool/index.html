@@ -34,7 +34,9 @@
                             <li>
                                 <a class="dropdown-item" href="/catalog/">Асики</a>
                             </li>
-                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
                             <li>
                                 <a class="dropdown-item" href="/catalog/brands/jasminer/">Jasminer</a>
                             </li>
@@ -50,7 +52,9 @@
                             <li>
                                 <a class="dropdown-item" href="/catalog/brands/bombax/">Bombax</a>
                             </li>
-                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
                             <li>
                                 <a class="dropdown-item" href="/catalog/coins/bitcoin/">Bitcoin</a>
                             </li>
@@ -58,7 +62,8 @@
                                 <a class="dropdown-item" href="/catalog/coins/ethereum/">Ethereum</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/catalog/coins/litecoin-dogecoin/">Litecoin и Dogecoin</a>
+                                <a class="dropdown-item" href="/catalog/coins/litecoin-dogecoin/">Litecoin и
+                                    Dogecoin</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/catalog/coins/kaspa/">Kaspa</a>
@@ -223,10 +228,78 @@
             </div>
         </div>
     </div>
+
+    <!-- Button trigger modal -->
+    <button id="show-order-modal" type="button" class="btn btn-primary d-none" data-mdb-ripple-init data-mdb-modal-init
+        data-mdb-target="#orderModal">
+        Показать форму заказа
+    </button>
+    <input id="order-product-id" type="hidden" value="" />
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Заказать товар</h5>
+                    <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center mb-4">Оставьте ваши контактные данные и наш менеджер свяжется с вами</p>
+
+                    <div data-mdb-input-init class="form-outline my-3">
+                        <input type="text" id="order-name" class="form-control" />
+                        <label class="form-label" for="order-name">Имя</label>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline my-3 mb-2">
+                        <input type="tel" id="order-phone" class="form-control" />
+                        <label class="form-label" for="order-phone">Телефон</label>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline my-3 mb-2">
+                        <textarea id="order-product" class="form-control" rows="3"></textarea>
+                        <label id="order-product" class="form-label" for="order-product">Товар</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-block" onclick="sendOrderProduct();"
+                        data-mdb-ripple-init data-mdb-dismiss="modal">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button id="show-order-success-modal" type="button" class="btn btn-primary d-none" data-mdb-ripple-init data-mdb-modal-init
+        data-mdb-target="#orderSuccessModal">
+        Показать форму заказа
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderSuccessModalLabel">Подтверждение заказа</h5>
+                    <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Спасибо за ваш заказ! Наш менеджер свяжется с вами в ближайшее время.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-block"
+                        data-mdb-ripple-init data-mdb-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End your project here-->
 
     <!-- Site -->
-    <script type="text/javascript" src="/js/common.js?hash=wgrpdvbe"></script>
+    <script type="text/javascript" src="/js/common.js?hash=bry8yjob"></script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">

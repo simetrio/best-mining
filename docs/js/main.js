@@ -17,6 +17,19 @@ function closeTgModal() {
     localStorage.setItem(getTgModalName(), 'true');
 }
 
+function orderProduct(productId) {
+    const product = window.dataBase.products.find(x => x.Id === productId);
+
+    document.getElementById('order-product-id').setAttribute("value", productId);
+    document.getElementById('order-product').innerText = product.Name;
+    document.getElementById('show-order-modal').click();
+}
+
+function sendOrderProduct() {
+    console.log('Order success');
+    document.getElementById('show-order-success-modal').click();
+}
+
 function loadData() {
     const brands = Data.brands;
     const products = Data.products;

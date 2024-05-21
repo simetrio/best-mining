@@ -372,6 +372,7 @@ const productSlimTemplate = `
         </div>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
         <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
+            onclick="orderProduct('{id}'); return false;"
             target="_blank">Купить</a>
         <a href="/catalog/{id}/" class="btn btn-outline-secondary btn-block px-5" data-mdb-ripple-init data-mdb-ripple-color="dark">
             Подробнее</a>

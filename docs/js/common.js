@@ -4993,6 +4993,7 @@ const productSlimTemplate = `
         </div>
         <div class="h5 mt-4">{priceRuble} ₽ ({price} $)</div>
         <a href="https://t.me/BestMiningManager" class="btn btn-primary btn-block" data-mdb-ripple-init
+            onclick="orderProduct('{id}'); return false;"
             target="_blank">Купить</a>
         <a href="/catalog/{id}/" class="btn btn-outline-secondary btn-block px-5" data-mdb-ripple-init data-mdb-ripple-color="dark">
             Подробнее</a>
@@ -5841,6 +5842,19 @@ function openTgModal() {
 
 function closeTgModal() {
     localStorage.setItem(getTgModalName(), 'true');
+}
+
+function orderProduct(productId) {
+    const product = window.dataBase.products.find(x => x.Id === productId);
+
+    document.getElementById('order-product-id').setAttribute("value", productId);
+    document.getElementById('order-product').innerText = product.Name;
+    document.getElementById('show-order-modal').click();
+}
+
+function sendOrderProduct() {
+    console.log('Order success');
+    document.getElementById('show-order-success-modal').click();
 }
 
 function loadData() {
