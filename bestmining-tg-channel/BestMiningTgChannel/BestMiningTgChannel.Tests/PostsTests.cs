@@ -63,7 +63,7 @@ public class PostsTests
     [Fact]
     public void Product()
     {
-        Setup("0.9");
+        Setup("0");
 
         Products.Create();
     }
@@ -71,7 +71,7 @@ public class PostsTests
     [Fact]
     public void ProductCurrent()
     {
-        Setup("0.9", reraitCurrent : true);
+        Setup("0", reraitCurrent : true);
 
         Products.Create();
     }
