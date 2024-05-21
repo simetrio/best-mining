@@ -5826,7 +5826,7 @@ function openTgModal() {
         }
 
         document.getElementById('show-tg-modal').click();
-    }, 10000);
+    }, 30000);
 }
 
 function closeTgModal() {
