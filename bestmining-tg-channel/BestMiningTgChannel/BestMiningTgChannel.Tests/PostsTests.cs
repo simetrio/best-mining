@@ -76,6 +76,22 @@ public class PostsTests
         Products.Create();
     }
 
+    [Fact]
+    public void Coin()
+    {
+        Setup("0.8");
+
+        Coins.Create();
+    }
+
+    [Fact]
+    public void CoinCurrent()
+    {
+        Setup("0.8", reraitCurrent : true);
+
+        Coins.Create();
+    }
+
     private void Setup(string temperature, bool reraitCurrent = false, bool parseOnly = false)
     {
         Environment.SetEnvironmentVariable("YaIamToken", File.ReadAllText("/home/roman/YaIamToken.txt").Trim());
