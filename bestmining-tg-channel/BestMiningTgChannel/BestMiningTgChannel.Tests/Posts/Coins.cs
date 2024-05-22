@@ -4,14 +4,13 @@ public static class Coins
 {
     public static void Create()
     {
-        var coin = ReadCoins().Where(NeedCreate).FirstOrDefault();
-        if (coin == null)
+        var coins = ReadCoins().Where(NeedCreate);
+        
+        foreach (var coin in coins)
         {
-            return;
+            var text = CreateNew(coin);
+            Save(coin, text);
         }
-
-        var text = CreateNew(coin);
-        Save(coin, text);
     }
 
     private static IEnumerable<Coin> ReadCoins()
