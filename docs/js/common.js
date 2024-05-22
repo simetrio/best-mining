@@ -4731,7 +4731,7 @@ function showCatalogAnalogs() {
     const product = window.dataBase.products.find(x => x.Id === productId);
     const products = window.dataBase.products
         .filter(x => x.MiningCalculator.Algorithm === product.MiningCalculator.Algorithm
-                && x.Id !== productId)
+            && x.Id !== productId)
         .slice(0, 4);
 
     element.innerHTML = renderProductsAnalogsSlim(products);
@@ -4797,9 +4797,11 @@ function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
     const miningCalculatorHtml = getSingleMiningCalculator(product);
+    const poolHtml = fillPoolCharacteristicsTemplate(productCharacteristicTemplate, product);
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
+        .replace(new RegExp('{pool}', 'g'), poolHtml)
         .replace(new RegExp('{prices}', 'g'), pricesHtml)
         .replace(new RegExp('{miningCalculator}', 'g'), miningCalculatorHtml)
         ;
@@ -4834,6 +4836,18 @@ function fillCharacteristicsTemplate(template, product) {
     });
 
     return characteristicsHtml;
+}
+
+function fillPoolCharacteristicsTemplate(template, product) {
+    const pool = pools[product.MiningCalculator.Coin];
+    if (!pool) {
+        return "";
+    }
+
+    return template
+        .replace(new RegExp('{name}', 'g'), 'Рекомендуемый пул')
+        .replace(new RegExp('{value}', 'g'), `<a href="${pool.url}">${pool.name}</a>`)
+        ;
 }
 
 function fillPricesTemplate(template, templateItem, product) {
@@ -4925,6 +4939,7 @@ const productTemplate = `
                     <div class="col-lg-7">
                         <dl class="row mt-4">
                             {characteristics}
+                            {pool}
                         </dl>
                     </div>
                     <div class="mt-1 col-lg-5">
