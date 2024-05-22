@@ -4797,11 +4797,9 @@ function renderProduct(product) {
     const characteristicsHtml = fillCharacteristicsTemplate(productCharacteristicTemplate, product);
     const pricesHtml = fillPricesTemplate(productPricesTemplate, productPriceTemplate, product);
     const miningCalculatorHtml = getSingleMiningCalculator(product);
-    const poolHtml = fillPoolCharacteristicsTemplate(productCharacteristicTemplate, product);
 
     return fillProductTemplate(productTemplate, product)
         .replace(new RegExp('{characteristics}', 'g'), characteristicsHtml)
-        .replace(new RegExp('{pool}', 'g'), poolHtml)
         .replace(new RegExp('{prices}', 'g'), pricesHtml)
         .replace(new RegExp('{miningCalculator}', 'g'), miningCalculatorHtml)
         ;
@@ -4835,19 +4833,15 @@ function fillCharacteristicsTemplate(template, product) {
             ;
     });
 
-    return characteristicsHtml;
-}
-
-function fillPoolCharacteristicsTemplate(template, product) {
     const pool = pools[product.MiningCalculator.Coin];
-    if (!pool) {
-        return "";
+    if (!!pool) {
+        characteristicsHtml += template
+            .replace(new RegExp('{name}', 'g'), 'Рекомендуемый пул')
+            .replace(new RegExp('{value}', 'g'), `<a href="${pool.url}">${pool.name}</a>`)
+            ;
     }
 
-    return template
-        .replace(new RegExp('{name}', 'g'), 'Рекомендуемый пул')
-        .replace(new RegExp('{value}', 'g'), `<a href="${pool.url}">${pool.name}</a>`)
-        ;
+    return characteristicsHtml;
 }
 
 function fillPricesTemplate(template, templateItem, product) {
@@ -4939,7 +4933,6 @@ const productTemplate = `
                     <div class="col-lg-7">
                         <dl class="row mt-4">
                             {characteristics}
-                            {pool}
                         </dl>
                     </div>
                     <div class="mt-1 col-lg-5">
