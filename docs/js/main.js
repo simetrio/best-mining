@@ -1,3 +1,14 @@
+const viaBtc = { name: "ViaBTC", url: "/pools/viabtc/" };
+const k1Pool = { name: "K1Pool", url: "/pools/k1pool/" };
+const trustpool = { name: "Trustpool", url: "/pools/trustpool/" };
+
+const pools = {
+    "BTC": viaBtc,
+    "ETHW": k1Pool,
+    "KAS": k1Pool,
+    "DOGE": trustpool,
+}
+
 function getTgModalName() {
     return 'tg-banner-closed-3-' + new Date().getFullYear() + new Date().getMonth() + (new Date().getDate() % 5);
 }
@@ -31,7 +42,7 @@ function sendOrderProduct() {
     const phone = document.getElementById('order-phone').value;
 
     const product = window.dataBase.products.find(x => x.Id === productId);
-  
+
     fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
         headers: {

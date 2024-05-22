@@ -5266,18 +5266,7 @@ function fillMiningCalculatorResultTemplate(template, templateProduct, templateP
 function fillMiningCalculatorPoolTemplate(template, product) {
     if (!product) {
         return "";
-    }
-//
-    const viaBtc = { name: "ViaBTC", url: "https://www.viabtc.net/signup?refer=1652527" };
-    const k1Pool = { name: "K1Pool", url: "https://k1pool.com/invite/dd03779e65" };
-    const trustpool = { name: "Trustpool", url: "https://trustpool.cc/signup?refer=1687796" };
-
-    const pools = {
-        "BTC": viaBtc,
-        "ETHW": k1Pool,
-        "KAS": k1Pool,
-        "DOGE": trustpool,
-    }
+    }    
 
     const pool = pools[product.MiningCalculator.Coin];
     if (!pool) {
@@ -5615,10 +5604,7 @@ const singleMiningCalculatorProductResultTemplate = `
 
 const miningCalculatorPoolTemplate = `
 <p class="card-text text-center text-decoration-underline">
-    Рассчитано с использованием данных из пула 
-    <a href="{url}" rel="nofollow" target="_blank">
-        {name} <i class="fas fa-up-right-from-square"></i>
-    </a>
+    Рассчитано с использованием данных из пула <a href="{url}">{name}</a>
 </p>
 `;
 
@@ -5852,6 +5838,17 @@ const poolsItemTemplate = `
 </div>
 `;
 
+const viaBtc = { name: "ViaBTC", url: "/pools/viabtc/" };
+const k1Pool = { name: "K1Pool", url: "/pools/k1pool/" };
+const trustpool = { name: "Trustpool", url: "/pools/trustpool/" };
+
+const pools = {
+    "BTC": viaBtc,
+    "ETHW": k1Pool,
+    "KAS": k1Pool,
+    "DOGE": trustpool,
+}
+
 function getTgModalName() {
     return 'tg-banner-closed-3-' + new Date().getFullYear() + new Date().getMonth() + (new Date().getDate() % 5);
 }
@@ -5885,7 +5882,7 @@ function sendOrderProduct() {
     const phone = document.getElementById('order-phone').value;
 
     const product = window.dataBase.products.find(x => x.Id === productId);
-  
+
     fetch("https://functions.yandexcloud.net/d4eclftm7h05t8676t0e", {
         method: 'POST',
         headers: {
