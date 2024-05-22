@@ -415,10 +415,7 @@ const asicMiningCalculatorTemplate = `
 </nav>
 <h1>Расчет доходности асика {name}</h1>
 <div class="row">
-    <div class="col-lg-3">
-        {product}
-    </div>
-    <div class="card col-lg-9">
+    <div class="card col-lg-9 my-3">
         <div class="card-body">
             <input id="mc-coin" type="hidden" value="{coin}" />
             <input id="mc-product-id" type="hidden" value="{product-id}" />
@@ -458,6 +455,9 @@ const asicMiningCalculatorTemplate = `
 
             <div id="mc-result"></div>
         </div>
+    </div>
+    <div class="col-lg-3 my-3">
+        {product}
     </div>
 </div>
 `;
