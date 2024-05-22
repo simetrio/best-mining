@@ -1,5 +1,6 @@
 function showMiningCalculator() {
     showProductMiningCalculator();
+    showCommonMiningCalculator();
     showCoinsMiningCalculator();
     showCoinMiningCalculator();
     showCoinsTopMiningCalculatorTop();
@@ -19,6 +20,41 @@ function showProductMiningCalculator() {
     const product = window.dataBase.products.find(x => x.Id === productId);
 
     element.innerHTML = fillMiningCalculatorProductTemplate(productMiningCalculatorTemplate, product);
+}
+
+function showCommonMiningCalculator() {
+    const element = document.getElementById('mining-calculator');
+    if (!element) {
+        return;
+    }
+
+    const asics = window.dataBase.products;
+    const coins = window.dataBase.coins;
+
+    element.innerHTML = fillMiningCalculatorTemplate(
+        miningCalculatorTemplate,
+        asicItemMiningCalculatorTemplate,
+        coinItemMiningCalculatorTemplate,
+        asics,
+        coins
+    );
+}
+
+function updateMiningCalculator() {
+    const search = document.getElementById('mining-calculator-search').value;
+    const coins = window.dataBase.coins
+        .filter(x => !search
+            || x.Tag.toLowerCase().startsWith(search.toLowerCase())
+            || x.Title.toLowerCase().startsWith(search.toLowerCase())
+        );
+    const asics = window.dataBase.products
+        .filter(x => !search || x.Name.toLowerCase().indexOf(search.toLowerCase()) !== -1);
+
+    document.getElementById('mining-calculator-coins-items').innerHTML =
+        fillCoinsItemsMiningCalculatorTemplate(coinItemMiningCalculatorTemplate, coins);
+
+    document.getElementById('mining-calculator-asics-items').innerHTML =
+        fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
 }
 
 function showCoinsMiningCalculator() {
@@ -166,7 +202,7 @@ function fillMiningCalculatorResultTemplate(template, templateProduct, data, pro
     const prepareDollar = value => formatCurrency(roundToDigits(value, 2));
     const prepareRuble = value => formatCurrency(toRuble(value, 2));
 
-    const productHtml = fillMiningCalculatorProductResultTemplate(templateProduct, product, {revenue, cost, profit});
+    const productHtml = fillMiningCalculatorProductResultTemplate(templateProduct, product, { revenue, cost, profit });
 
     return template
         .replace(new RegExp('{product}', 'g'), productHtml)
@@ -221,6 +257,16 @@ function fillMiningCalculatorProductResultTemplate(template, product, data) {
         .replace(new RegExp('{hashrate-price}', 'g'), roundToDigits(hashratePrice, 2))
         .replace(new RegExp('{power-percent}', 'g'), roundToDigits(powerPercent, 0))
         .replace(new RegExp('{year-profit-percent}', 'g'), roundToDigits(yearProfitPercent, 0))
+        ;
+}
+
+function fillMiningCalculatorTemplate(template, templateAsicItem, templateCoinItem, asics, coins) {
+    let asicsHtml = fillAsicsItemsMiningCalculatorTemplate(templateAsicItem, asics);
+    let coinsHtml = fillCoinsItemsMiningCalculatorTemplate(templateCoinItem, coins);
+
+    return template
+        .replace(new RegExp('{asics}', 'g'), asicsHtml)
+        .replace(new RegExp('{coins}', 'g'), coinsHtml)
         ;
 }
 
@@ -363,7 +409,7 @@ const coinMiningCalculatorTemplate = `
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Главная</a></li>
-    <li class="breadcrumb-item"><a href="/calculators/mining/coins/">Доходность криптовалют</a></li>
+    <li class="breadcrumb-item"><a href="/calculators/mining/">Майнинг калькулятор</a></li>
     <li class="breadcrumb-item active" aria-current="page">{title}</li>
   </ol>
 </nav>
@@ -416,7 +462,7 @@ const asicMiningCalculatorTemplate = `
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Главная</a></li>
-    <li class="breadcrumb-item"><a href="/calculators/mining/asics/">Доходность асиков</a></li>
+    <li class="breadcrumb-item"><a href="/calculators/mining/">Майнинг калькулятор</a></li>
     <li class="breadcrumb-item active" aria-current="page">{name}</li>
   </ol>
 </nav>
@@ -528,6 +574,25 @@ const loader = `
 <div class="text-center">
     <div class="spinner-border text-primary" role="status">
         <span class="visually-hidden">Загрузка...</span>
+    </div>
+</div>
+`;
+
+const miningCalculatorTemplate = `
+<div class="card">
+    <div class="m-4">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateMiningCalculator()" />
+            <label class="form-label" for="search">Укажите асик или монету</label>
+        </div>
+        <h2 class="my-3">Асики</h2>
+        <div class="mt-4 row" id="mining-calculator-asics-items">
+            {asics}
+        </div>
+        <h2 class="my-3">Монеты</h2>
+        <div class="mt-4 row" id="mining-calculator-coins-items">
+            {coins}
+        </div>
     </div>
 </div>
 `;
