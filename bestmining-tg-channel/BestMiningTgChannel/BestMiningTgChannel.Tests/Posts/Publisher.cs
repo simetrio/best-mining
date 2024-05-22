@@ -14,6 +14,7 @@ public static class Publisher
 
         MergeScripts(sourceRootDirectory, destinationRootDirectory);
         GenerateSitemap(sourceRootDirectory, "", destinationRootDirectory);
+        GeneratePriceList(destinationRootDirectory);
 
         var master = File.ReadAllText(Path.Combine(sourceRootDirectory, "master.html"));
         PublishInner(sourceRootDirectory, "", destinationRootDirectory, master);
@@ -216,9 +217,69 @@ const Data = {{
             }
 
             xml.AppendLine("    </urlset>");
-       
+
             File.WriteAllText(pagesFileName, pages.ToJson());
             File.WriteAllText(sitemapFileName, xml.ToString());
+        }
+    }
+
+    public static void GeneratePriceList(string destinationRootDirectory)
+    {
+        var priceListFileName = Path.Combine(destinationRootDirectory, "data", "price-list.xml");
+        var productsFileName = Path.Combine(destinationRootDirectory, "data", "products.json");
+
+        var products = File.ReadAllText(productsFileName).ToObject<Product[]>();
+
+        var priceList = new StringBuilder();
+        priceList.AppendLine(@"<?xml version=""1.0"" encoding=""UTF-8""?>
+<yml_catalog>
+    <shop>
+        <categories>
+            <category id=""101"">Асики для майнинга</category>
+        </categories>
+        <offers>");
+
+        foreach (var product in products)
+        {
+            priceList.AppendLine(@$"            <offer id=""{product.Id}"">
+                <name>{product.GetName()}</name>
+                <vendor>{product.Brand}</vendor>
+                <price>{product.GetPriceRuble()}</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://the-best-mining.ru/img/{product.GetImg()}</picture>
+                <description>
+                    {GetDescription(product)}
+                </description>
+                <shortDescription>
+                    {GetDescription(product)}
+                </shortDescription>
+                <url>https://the-best-mining.ru/catalog/{product.Id}/</url>
+            </offer>");
+        }
+
+        priceList.AppendLine(@"        </offers>
+    </shop>
+</yml_catalog>");
+
+        File.WriteAllText(priceListFileName, priceList.ToString());
+
+        string GetDescription(Product product)
+        {
+            var characteristics = string.Join(
+                ", ",
+                product.Characteristics.Select(x => $"{x.Name.ToLower()} {x.Value}")
+            );
+
+            var decription = $"Предлагаем вашему вниманию высокопроизводительный асик {product.GetName()}," +
+                            $" обладающий следующими характеристиками: {characteristics}.";
+
+            if (decription.Length > 250)
+            {
+                throw new Exception("Длинна описания больше максимального в 250 символов.");
+            }
+
+            return decription;
         }
     }
 
@@ -260,7 +321,7 @@ const Data = {{
             Directory.CreateDirectory(Path.Combine(asicsDirectory, product.Id));
             File.WriteAllText(
                 Path.Combine(asicsDirectory, product.Id, "index.html"),
-                @$"Расчет доходности асик майнера {product.Brand} {product.Model} {product.HashRate} в рублях и долларах
+                @$"Расчет доходности асик майнера {product.GetName()} в рублях и долларах
 <div id=""mining-calculator-asic"" data-asic-id=""{product.Id}""></div>"
             );
         }
@@ -278,6 +339,29 @@ const Data = {{
         public string Brand { get; set; }
         public string Model { get; set; }
         public string HashRate { get; set; }
+        public ProductPrice[] Prices { get; set; }
+        public ProductCharacteristic[] Characteristics { get; set; }
+        public string[] Imgs { get; set; }
+
+        public string GetName() => $"{Brand} {Model} {HashRate}";
+        public int GetPriceRuble()
+        {
+            const int dollar = 98;
+            var price = Prices.First().Value * dollar;
+            return (int)(Math.Round((decimal)price / 1000) * 1000);
+        }
+        public string GetImg() => Imgs.First();
+    }
+
+    public class ProductPrice
+    {
+        public int Value { get; set; }
+    }
+
+    public class ProductCharacteristic
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
     }
 
     public class Page
