@@ -1,10 +1,8 @@
 function showMiningCalculator() {
     showProductMiningCalculator();
     showCommonMiningCalculator();
-    showCoinsMiningCalculator();
     showCoinMiningCalculator();
     showCoinsTopMiningCalculatorTop();
-    showAsicsMiningCalculator();
     showAsicMiningCalculator();
 }
 
@@ -57,29 +55,6 @@ function updateMiningCalculator() {
         fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
 }
 
-function showCoinsMiningCalculator() {
-    const element = document.getElementById('mining-calculator-coins');
-    if (!element) {
-        return;
-    }
-
-    const coins = window.dataBase.coins;
-
-    element.innerHTML = fillCoinsMiningCalculatorTemplate(coinsMiningCalculatorTemplate, coinItemMiningCalculatorTemplate, coins);
-}
-
-function updateCoinsMiningCalculator() {
-    const search = document.getElementById('mining-calculator-search').value;
-    const coins = window.dataBase.coins
-        .filter(x => !search
-            || x.Tag.toLowerCase().startsWith(search.toLowerCase())
-            || x.Title.toLowerCase().startsWith(search.toLowerCase())
-        );
-
-    document.getElementById('mining-calculator-coins-items').innerHTML =
-        fillCoinsItemsMiningCalculatorTemplate(coinItemMiningCalculatorTemplate, coins);
-}
-
 function showCoinMiningCalculator() {
     const element = document.getElementById('mining-calculator-coin');
     if (!element) {
@@ -104,26 +79,6 @@ function showCoinsTopMiningCalculatorTop() {
     const coins = window.dataBase.coins.filter(x => x.Popular).slice(0, 4);
 
     element.innerHTML = fillMiningCalculatorCoinsTopTemplate(coinsTopTemplate, coinsTopItemTemplate, coins);
-}
-
-function showAsicsMiningCalculator() {
-    const element = document.getElementById('mining-calculator-asics');
-    if (!element) {
-        return;
-    }
-
-    const asics = window.dataBase.products;
-
-    element.innerHTML = fillAsicsMiningCalculatorTemplate(asicsMiningCalculatorTemplate, asicItemMiningCalculatorTemplate, asics);
-}
-
-function updateAsicsMiningCalculator() {
-    const search = document.getElementById('mining-calculator-search').value;
-    const asics = window.dataBase.products
-        .filter(x => !search || x.Name.toLowerCase().indexOf(search.toLowerCase()) !== -1);
-
-    document.getElementById('mining-calculator-asics-items').innerHTML =
-        fillAsicsItemsMiningCalculatorTemplate(asicItemMiningCalculatorTemplate, asics);
 }
 
 function showAsicMiningCalculator() {
@@ -266,14 +221,6 @@ function fillMiningCalculatorTemplate(template, templateAsicItem, templateCoinIt
 
     return template
         .replace(new RegExp('{asics}', 'g'), asicsHtml)
-        .replace(new RegExp('{coins}', 'g'), coinsHtml)
-        ;
-}
-
-function fillCoinsMiningCalculatorTemplate(template, templateItem, coins) {
-    let coinsHtml = fillCoinsItemsMiningCalculatorTemplate(templateItem, coins);
-
-    return template
         .replace(new RegExp('{coins}', 'g'), coinsHtml)
         ;
 }
@@ -597,20 +544,6 @@ const miningCalculatorTemplate = `
 </div>
 `;
 
-const coinsMiningCalculatorTemplate = `
-<div class="card">
-    <div class="m-4">
-        <div class="form-outline" data-mdb-input-init>
-            <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateCoinsMiningCalculator()" />
-            <label class="form-label" for="search">Поиск</label>
-        </div>
-        <div class="mt-4 row" id="mining-calculator-coins-items">
-            {coins}
-        </div>
-    </div>
-</div>
-`;
-
 const coinItemMiningCalculatorTemplate = `
 <div class="col-lg-3 p-1">
     <a href="/calculators/mining/coins/{id}/" class="btn btn-secondary btn-block">{title} ({coin})</a>
@@ -636,20 +569,6 @@ const coinsTopItemTemplate = `
         <a href="/calculators/mining/coins/{id}/">
             <h5 class="card-title">{title} ({tag})</h5>
         </a>
-    </div>
-</div>
-`;
-
-const asicsMiningCalculatorTemplate = `
-<div class="card">
-    <div class="m-4">
-        <div class="form-outline" data-mdb-input-init>
-            <input type="text" id="mining-calculator-search" class="form-control" onkeyup="updateAsicsMiningCalculator()" />
-            <label class="form-label" for="search">Поиск</label>
-        </div>
-        <div class="mt-4 row" id="mining-calculator-asics-items">
-            {asics}
-        </div>
     </div>
 </div>
 `;
