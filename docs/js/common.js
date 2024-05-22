@@ -5212,7 +5212,7 @@ function fillMiningCalculatorCoinsTopItemsTemplate(template, coins) {
     return coinsHtml;
 }
 
-function fillMiningCalculatorResultTemplate(template, templateProduct, data, product) {
+function fillMiningCalculatorResultTemplate(template, templateProduct, templatePool, data, product) {
     const estimated_rewards = parseFloat(data.estimated_rewards);
     const revenue = parseFloat(data.revenue.replace('$', ''));
     const cost = parseFloat(data.cost.replace('$', ''));
@@ -5222,9 +5222,11 @@ function fillMiningCalculatorResultTemplate(template, templateProduct, data, pro
     const prepareDollar = value => formatCurrency(roundToDigits(value, 2));
     const prepareRuble = value => formatCurrency(toRuble(value, 2));
 
+    const poolHtml = fillMiningCalculatorPoolTemplate(templatePool, product)
     const productHtml = fillMiningCalculatorProductResultTemplate(templateProduct, product, { revenue, cost, profit });
 
     return template
+        .replace(new RegExp('{pool}', 'g'), poolHtml)
         .replace(new RegExp('{product}', 'g'), productHtml)
         // Hour
         .replace(new RegExp('{hour-estimated_rewards}', 'g'), prepareCoin(estimated_rewards / 24))
@@ -5258,6 +5260,33 @@ function fillMiningCalculatorResultTemplate(template, templateProduct, data, pro
         .replace(new RegExp('{month-cost-ruble}', 'g'), prepareRuble(cost * 30))
         .replace(new RegExp('{month-profit}', 'g'), prepareDollar(profit * 30))
         .replace(new RegExp('{month-profit-ruble}', 'g'), prepareRuble(profit * 30))
+        ;
+}
+
+function fillMiningCalculatorPoolTemplate(template, product) {
+    if (!product) {
+        return "";
+    }
+//
+    const viaBtc = { name: "ViaBTC", url: "https://www.viabtc.net/signup?refer=1652527" };
+    const k1Pool = { name: "K1Pool", url: "https://k1pool.com/invite/dd03779e65" };
+    const trustpool = { name: "Trustpool", url: "https://trustpool.cc/signup?refer=1687796" };
+
+    const pools = {
+        "BTC": viaBtc,
+        "ETHW": k1Pool,
+        "KAS": k1Pool,
+        "DOGE": trustpool,
+    }
+
+    const pool = pools[product.MiningCalculator.Coin];
+    if (!pool) {
+        return "";
+    }
+
+    return template
+        .replace(new RegExp('{name}', 'g'), pool.name)
+        .replace(new RegExp('{url}', 'g'), pool.url)
         ;
 }
 
@@ -5365,6 +5394,7 @@ async function calculateMining() {
     document.getElementById('mc-result').innerHTML = fillMiningCalculatorResultTemplate(
         singleMiningCalculatorResultTemplate,
         singleMiningCalculatorProductResultTemplate,
+        miningCalculatorPoolTemplate,
         result,
         product
     );
@@ -5528,6 +5558,7 @@ const asicMiningCalculatorTemplate = `
 `;
 
 const singleMiningCalculatorResultTemplate = `
+{pool}
 <table class="table table-sm my-3">
     <tr>
         <th scope="col">Период</th>
@@ -5580,6 +5611,15 @@ const singleMiningCalculatorProductResultTemplate = `
     <dt class="col-md-3">Доля затрат на ээ</dt>
     <dd class="col-md-3">{power-percent}%</dd>
 </div>
+`;
+
+const miningCalculatorPoolTemplate = `
+<p class="card-text text-center text-decoration-underline">
+    Рассчитано с использованием данных из пула 
+    <a href="{url}" rel="nofollow" target="_blank">
+        {name} <i class="fas fa-up-right-from-square"></i>
+    </a>
+</p>
 `;
 
 const loader = `
