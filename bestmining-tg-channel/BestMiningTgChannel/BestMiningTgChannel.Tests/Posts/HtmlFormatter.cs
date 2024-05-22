@@ -15,7 +15,9 @@ public static class HtmlFormatter
 
     private static string FormatLine(string line)
     {
-        if (line.StartsWith("**") && line.EndsWith("**"))
+        if (line.StartsWith("**") && line.EndsWith("**")
+            || line.StartsWith("##")
+        )
         {
             return FormatHeader(line);
         }
@@ -42,6 +44,7 @@ public static class HtmlFormatter
     private static string Clean(string line) =>
         line
             .Replace("*", "")
+            .Replace("#", "")
             .Replace("•", "")
             .Trim('-', '—')
             .Trim();
