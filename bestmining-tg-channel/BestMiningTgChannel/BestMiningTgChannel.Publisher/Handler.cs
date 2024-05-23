@@ -427,7 +427,7 @@ public static class Order
 {
     public static void Send(string order)
     {
-        Telegram.SendMessage(MessageTemplate.Escape(order));
+        Telegram.SendMessageToManager(MessageTemplate.Escape(order));
     }
 }
 
@@ -510,6 +510,17 @@ public static class Telegram
         .GetResult();
     }
 
+    public static void SendMessageToManager(string message)
+    {
+        _botClient.Value.SendTextMessageAsync(
+            chatId: Settings.TgManagerChatId,
+            text: message,
+            parseMode: ParseMode.MarkdownV2
+        )
+        .GetAwaiter()
+        .GetResult();
+    }
+
     public static string? GetLastMessage()
     {
         var start = DateTime.UtcNow.AddHours(-1);
@@ -521,6 +532,15 @@ public static class Telegram
             .OrderByDescending(x => x.Date)
             .FirstOrDefault()?
             .Caption;
+    }
+
+    public static string? GetLastMessageChatId()
+    {
+        return (_botClient.Value.GetUpdatesAsync().GetAwaiter().GetResult())
+            .Select(x => x.Message!)
+            .OrderByDescending(x => x.Date)
+            .FirstOrDefault()?
+            .Chat.Id.ToString();
     }
 }
 
@@ -534,6 +554,7 @@ public static class Settings
     public static string TgBotToken => Get("TgBotToken");
     public static string TgChannelId => Get("TgChannelId");
     public static string TgChatId => Get("TgChatId");
+    public static string TgManagerChatId => Get("TgManagerChatId");
     public static string TgUserName => Get("TgUserName");
     public static string YaIamToken => Get("YaIamToken");
     public static string YaFolderId => Get("YaFolderId");
