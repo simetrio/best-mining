@@ -2,10 +2,36 @@ namespace BestMiningTgChannel.Tests;
 
 public static class Coins
 {
+    public static void Clean()
+    {
+        var availableAlghoritms = new[] { "ETCHASH", "ETHASH", "SHA-256", "Scrypt", "kHeavyHash", "X11" }
+            .Select(x => x.ToLower())
+            .ToHashSet();
+
+        var coins = ReadCoins();
+        string[] rootDirectories = [
+            "/home/roman/projects/best-mining/best-mining/docs/calculators/mining/coins",
+            "/home/roman/projects/best-mining/best-mining/pages/calculators/mining/coins",
+        ];
+
+        foreach (string rootDir in rootDirectories)
+        {
+            foreach (var coin in coins.Where(x => !availableAlghoritms.Contains(x.Algorithm)))
+            {
+                var directory = Path.Combine(rootDir, coin.Id);
+                if (Directory.Exists(directory))
+                {
+                    Directory.Delete(directory, true);
+                }
+            }
+        }
+    }
+
     public static void Create()
     {
+        Clean(); return;
         var coins = ReadCoins().Where(NeedCreate);
-        
+
         foreach (var coin in coins)
         {
             var text = CreateNew(coin);
@@ -31,6 +57,7 @@ public static class Coins
             {
                 Id = lines[i].Substring(lines[i].IndexOf(" ") + 1).ToLower(),
                 Name = lines[i - 2].Substring(0, lines[i - 2].IndexOf(":")),
+                Algorithm = lines[i + 1].Substring(lines[i + 1].IndexOf(" ") + 1).ToLower(),
             };
         }
     }
@@ -79,5 +106,6 @@ public static class Coins
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        public string Algorithm { get; set; }
     }
 }

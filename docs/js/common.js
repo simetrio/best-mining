@@ -5918,10 +5918,11 @@ function loadData() {
         product.Prices.forEach(price => price.ValueRuble = toRuble(price.Value));
     });
 
+    var availableAlghoritms = ["etchash", "ethash", "sha-256", "scrypt", "kheavyhash", "x11"];
     const coins = [];
     Object.keys(coinsObject.coins).forEach(x => {
         const coin = coinsObject.coins[x];
-        if (coin.status !== "Active") {
+        if (coin.status !== "Active" || !availableAlghoritms.includes(coin.algorithm.toLowerCase())) {
             return;
         }
 
