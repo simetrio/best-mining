@@ -196,6 +196,7 @@ const Data = {{
         {
             var pages = pagesByUrl
                 .Values
+                .Where(IsPageExists)
                 .OrderBy(x => x.Url)
                 .ToArray();
 
@@ -220,6 +221,12 @@ const Data = {{
 
             File.WriteAllText(pagesFileName, pages.ToJson());
             File.WriteAllText(sitemapFileName, xml.ToString());
+        }
+
+        bool IsPageExists(Page page)
+        {
+            var fileName = Path.Combine(sourceRootDirectory, page.Url.Trim('/'), "index.html");
+            return File.Exists(fileName);
         }
     }
 

@@ -50,11 +50,6 @@
     "Hash": "36rpvxb3enw2vjg39kqeeseute2cgnuzwih9o6g6d0="
   },
   {
-    "Url": "/calculators/mining/asics/",
-    "LastModification": "2024-05-10T21:44:13.5487269+05:00",
-    "Hash": "k0sfslicn5hpk4c1f3npmymmcycby14b1eso4fl7bvc="
-  },
-  {
     "Url": "/calculators/mining/asics/antminer-e9-pro-3680/",
     "LastModification": "2024-05-10T21:44:13.5501024+05:00",
     "Hash": "nfgxz9k5hn8wljvz2valzrdk6oeooudlqqthw1ipcyu="
@@ -150,59 +145,9 @@
     "Hash": "jd3zk29dyru71szolrkft9sbm99srym9ofjsecx6u7k="
   },
   {
-    "Url": "/calculators/mining/coins/",
-    "LastModification": "2024-05-10T21:44:13.5232389+05:00",
-    "Hash": "efoudfo9epl1exzsczxcxiqaxxfmm5sjps1fhxgthiq="
-  },
-  {
-    "Url": "/calculators/mining/coins/abel/",
-    "LastModification": "2024-05-22T23:46:32.8783944+05:00",
-    "Hash": "fehbjsovkwcgxengx2kjlm5vg2n7f7c86cvgbs9wr3m="
-  },
-  {
-    "Url": "/calculators/mining/coins/ae/",
-    "LastModification": "2024-05-22T23:46:07.5501781+05:00",
-    "Hash": "svu+5uubqhuruaeothuw4ff+fi+kltevxxdt4wxrjvo="
-  },
-  {
-    "Url": "/calculators/mining/coins/aeon/",
-    "LastModification": "2024-05-22T23:48:32.2052633+05:00",
-    "Hash": "plnvn3gzk7cpkem4tfu4x9djs+axqyynhnno63firg="
-  },
-  {
-    "Url": "/calculators/mining/coins/aion/",
-    "LastModification": "2024-05-22T23:50:33.427622+05:00",
-    "Hash": "u7lqh1i6lyxw9vyflc6f+gmw0et65k3s0gdaqzartjq="
-  },
-  {
-    "Url": "/calculators/mining/coins/aipg/",
-    "LastModification": "2024-05-23T00:09:39.9908496+05:00",
-    "Hash": "jljcvbczrdj6wysbgq8jhy5mu5bw7iwaqnzinuqgt8="
-  },
-  {
-    "Url": "/calculators/mining/coins/aitt/",
-    "LastModification": "2024-05-23T00:09:39.9971982+05:00",
-    "Hash": "cchzy7k51u3cbzlrmwj+wvavuzfoajrlhbi7pj+hhq8="
-  },
-  {
-    "Url": "/calculators/mining/coins/alph/",
-    "LastModification": "2024-05-22T23:50:53.5664897+05:00",
-    "Hash": "4f0kjl1vsrx72ssbw+vgkae32r6nb9scqy1xk49t7pe="
-  },
-  {
     "Url": "/calculators/mining/coins/alt/",
     "LastModification": "2024-05-22T23:51:13.2315916+05:00",
     "Hash": "1rwphhq1e5zrljonmlsk1ohlqgku0vuucluotgnfjm="
-  },
-  {
-    "Url": "/calculators/mining/coins/anok/",
-    "LastModification": "2024-05-22T23:51:22.664918+05:00",
-    "Hash": "yjri+cdgn5esvu4yenk6jazt6ycez6pat9qsfj0fye0="
-  },
-  {
-    "Url": "/calculators/mining/coins/arrr/",
-    "LastModification": "2024-05-22T23:51:29.096546+05:00",
-    "Hash": "snheizglqy7eq+lcz2neadsxnkqa5yzya7cvk+rm6lw="
   },
   {
     "Url": "/calculators/mining/coins/aur/",
@@ -210,19 +155,9 @@
     "Hash": "8davbwb+ckd7xuqfaktemesiku1i4jpccm+i0zs45as="
   },
   {
-    "Url": "/calculators/mining/coins/avn/",
-    "LastModification": "2024-05-22T23:51:49.0846103+05:00",
-    "Hash": "1jdpv6p8edy0pid1+6pflvolc6eryvk1q+tainmji="
-  },
-  {
     "Url": "/calculators/mining/coins/avs/",
     "LastModification": "2024-05-22T23:52:01.7649739+05:00",
     "Hash": "vbzu9woou5ysivhexn7x7i6kpc6t673kphhkfjniq0u="
-  },
-  {
-    "Url": "/calculators/mining/coins/bcd/",
-    "LastModification": "2024-05-23T00:09:40.0984196+05:00",
-    "Hash": "2gmozqafilstvahhjlbk4ysc2wjqjg664ewkkgihvu="
   },
   {
     "Url": "/calculators/mining/coins/bch/",
@@ -230,29 +165,9 @@
     "Hash": "ccg9cx2mxm7g1kx24h7zxrfgtyf9elxthg8zqtjl7m="
   },
   {
-    "Url": "/calculators/mining/coins/bcn/",
-    "LastModification": "2024-05-22T23:52:28.2092688+05:00",
-    "Hash": "zrwwg5cqipq8rzpcjgzs9mdvhuyyazynzctgm7try="
-  },
-  {
-    "Url": "/calculators/mining/coins/beam/",
-    "LastModification": "2024-05-22T23:52:39.4519999+05:00",
-    "Hash": "m1m2tu9zl5cj7zdweoflmgnxwrtdbwax7digkl0vd98="
-  },
-  {
     "Url": "/calculators/mining/coins/bga/",
     "LastModification": "2024-05-23T00:09:40.1045812+05:00",
     "Hash": "vws6egu37iq9cqxf6gutqcpjz2unfggwteu9xr2pg1i="
-  },
-  {
-    "Url": "/calculators/mining/coins/bit/",
-    "LastModification": "2024-05-22T23:52:52.5419093+05:00",
-    "Hash": "ab632fdjkbzrht+36airvfobu7wlhm4vlfb+x2lipke="
-  },
-  {
-    "Url": "/calculators/mining/coins/bloc/",
-    "LastModification": "2024-05-22T23:53:03.1989359+05:00",
-    "Hash": "7vhtyh+sjkwylocdfqcuu3zr8alpdsislgyh02vrpw8="
   },
   {
     "Url": "/calculators/mining/coins/blocx/",
@@ -265,29 +180,9 @@
     "Hash": "wvbnmmhr1rcaqvablubtpmkckmdc8bl5n7ybqrjzwew="
   },
   {
-    "Url": "/calculators/mining/coins/btcz/",
-    "LastModification": "2024-05-22T23:53:17.6896151+05:00",
-    "Hash": "8pbsf7sqi4d1gr30qp2a3lsfxwubx4zwpqivr5vyu="
-  },
-  {
-    "Url": "/calculators/mining/coins/btg/",
-    "LastModification": "2024-05-22T23:53:23.9037134+05:00",
-    "Hash": "j9x9pxqmq5hdhjbtn8xszsfvtdxwwe1txe6sswezw="
-  },
-  {
     "Url": "/calculators/mining/coins/btn/",
     "LastModification": "2024-05-22T23:53:32.2809218+05:00",
     "Hash": "ebktienf3rtts3k3bcevixh6rrzvrunzgfspzrpnc8="
-  },
-  {
-    "Url": "/calculators/mining/coins/btx/",
-    "LastModification": "2024-05-22T23:53:37.8922255+05:00",
-    "Hash": "vtxa2f76+mfkr4inrslyfjprer5flbpjlzoq4eouviq="
-  },
-  {
-    "Url": "/calculators/mining/coins/cas/",
-    "LastModification": "2024-05-22T23:53:42.7467048+05:00",
-    "Hash": "kxawlp157tieintfndk+08xq2h00qxwvbgetk6fb24="
   },
   {
     "Url": "/calculators/mining/coins/cau/",
@@ -295,39 +190,9 @@
     "Hash": "jtowiehaoyclzavbg4mhihvg0qjoyn83jx+z4qxmt6g="
   },
   {
-    "Url": "/calculators/mining/coins/ccx/",
-    "LastModification": "2024-05-22T23:54:07.0082482+05:00",
-    "Hash": "p1gnltkrtm23ws6dfxhznjnmuh24k4ja0xuzu8v8grq="
-  },
-  {
-    "Url": "/calculators/mining/coins/cfx/",
-    "LastModification": "2024-05-22T23:54:13.9781542+05:00",
-    "Hash": "xqom7q16ukbtmmgmj5tmyxfjlg3d1tjfs3ivmuddzpc="
-  },
-  {
-    "Url": "/calculators/mining/coins/ckb/",
-    "LastModification": "2024-05-22T23:54:24.8276811+05:00",
-    "Hash": "y9xwqhu+gjplqupr9i2+vsfppyjgn7c92nitr1+2e="
-  },
-  {
     "Url": "/calculators/mining/coins/clo/",
     "LastModification": "2024-05-22T23:54:32.5904559+05:00",
     "Hash": "gyn4qre33luvr5dk4vp9tyfifecm2ejig2vpiysydfg="
-  },
-  {
-    "Url": "/calculators/mining/coins/clore/",
-    "LastModification": "2024-05-22T23:54:38.427131+05:00",
-    "Hash": "o3irx+0yijr40zgvihwesgih18ylrfklfz2htcpzmpe="
-  },
-  {
-    "Url": "/calculators/mining/coins/ctxc/",
-    "LastModification": "2024-05-23T00:09:40.088481+05:00",
-    "Hash": "lycm1o7disffmvmkucsvyxgwlewurrk4awjhqqubda="
-  },
-  {
-    "Url": "/calculators/mining/coins/cure/",
-    "LastModification": "2024-05-22T23:54:57.4902309+05:00",
-    "Hash": "ehm2ioqyfwhx5exk2vr88yhjyry044+cgsst4zfok48="
   },
   {
     "Url": "/calculators/mining/coins/dash/",
@@ -350,16 +215,6 @@
     "Hash": "djwor9wmgg5prjywenq3ysh62ws435s6dcrfh1q+5s8="
   },
   {
-    "Url": "/calculators/mining/coins/dint/",
-    "LastModification": "2024-05-22T23:55:39.9819508+05:00",
-    "Hash": "99slrsjijoozjr4u03oilbgxrshfvrjcpazvptuzlm0="
-  },
-  {
-    "Url": "/calculators/mining/coins/dnx/",
-    "LastModification": "2024-05-22T23:55:48.3732753+05:00",
-    "Hash": "g7g5zljpahwjatl0nogg8rsuglwnzijs5uhk1gcds="
-  },
-  {
     "Url": "/calculators/mining/coins/doge/",
     "LastModification": "2024-05-22T23:55:57.9213454+05:00",
     "Hash": "ywjvxe5+yqlw5zif2fyshr81ki0bklyhvp5yhkclv3c="
@@ -380,11 +235,6 @@
     "Hash": "llrtyclztkkrdptegq0rde2f4+hyynniru0fgituljm="
   },
   {
-    "Url": "/calculators/mining/coins/erg/",
-    "LastModification": "2024-05-23T00:09:40.0679617+05:00",
-    "Hash": "otf06uzhfsey7ajrdrep615yfqqsswv7t95hhirvj3g="
-  },
-  {
     "Url": "/calculators/mining/coins/etc/",
     "LastModification": "2024-05-22T23:56:49.9270431+05:00",
     "Hash": "yn6g3txzxy94nkiwzoefinwwcsfflnizamtwydectu="
@@ -400,154 +250,9 @@
     "Hash": "gdli2fl5dpfszco2uxc3obysrcsgacvqyaxxorxrqzy="
   },
   {
-    "Url": "/calculators/mining/coins/eti/",
-    "LastModification": "2024-05-22T23:56:14.4441821+05:00",
-    "Hash": "bwbukrtdwu95jgilmcs8xz7lyvjwagzf8nh4epstme="
-  },
-  {
-    "Url": "/calculators/mining/coins/evr/",
-    "LastModification": "2024-05-22T23:57:11.3470347+05:00",
-    "Hash": "9ahwph0ltp0wprzzzw3p+fz6j2m5a3ecmkb8uan4pi4="
-  },
-  {
-    "Url": "/calculators/mining/coins/exp/",
-    "LastModification": "2024-05-22T23:57:17.2844569+05:00",
-    "Hash": "zri9v2moyjk8ti7vfmdmknjnockdyqghetoqrhcnfsy="
-  },
-  {
-    "Url": "/calculators/mining/coins/firo/",
-    "LastModification": "2024-05-22T23:57:31.2994011+05:00",
-    "Hash": "z8gzv1vccdwi72ecohd6cpt93vll6jwvb4plfyio2y="
-  },
-  {
-    "Url": "/calculators/mining/coins/flux/",
-    "LastModification": "2024-05-23T00:09:40.1015441+05:00",
-    "Hash": "c6ivtuar5dlrzuoc3r1rlfl9ec1hfdsu0fljwzxncxu="
-  },
-  {
-    "Url": "/calculators/mining/coins/fren/",
-    "LastModification": "2024-05-23T00:09:40.0000002+05:00",
-    "Hash": "hgyqndjtswcdjuthuasbxacdvzpiboahlekyvjxsqe="
-  },
-  {
-    "Url": "/calculators/mining/coins/fsc/",
-    "LastModification": "2024-05-23T00:09:40.0460473+05:00",
-    "Hash": "lmsetvbzccovsowxmpl2wsheh5cjvqsgijmggtyhvi="
-  },
-  {
-    "Url": "/calculators/mining/coins/ftc/",
-    "LastModification": "2024-05-23T00:09:40.0819187+05:00",
-    "Hash": "uyb0o+axnl48ijpy2mijauxyfpz5adwu2gk4jm5ouve="
-  },
-  {
-    "Url": "/calculators/mining/coins/gbx/",
-    "LastModification": "2024-05-23T00:16:28.0962034+05:00",
-    "Hash": "hbcdlrqrkbgr3c6hijkssmggsl3gz86dcdfaexmlm="
-  },
-  {
-    "Url": "/calculators/mining/coins/glink/",
-    "LastModification": "2024-05-23T00:16:34.4903677+05:00",
-    "Hash": "sqebameibbhtd3gvblnuvchpozh2mvgom9b92e2pfi="
-  },
-  {
-    "Url": "/calculators/mining/coins/gpn/",
-    "LastModification": "2024-05-23T00:16:42.5167128+05:00",
-    "Hash": "i5vla+ew2tntzprtswhq+6czvecoedkmpqdq+cw9y="
-  },
-  {
-    "Url": "/calculators/mining/coins/gprx/",
-    "LastModification": "2024-05-23T00:16:54.9377113+05:00",
-    "Hash": "e5vwy6np08p+bqzk8si58zmsddtipnsvrsiu7a03anu="
-  },
-  {
-    "Url": "/calculators/mining/coins/grft/",
-    "LastModification": "2024-05-23T00:17:04.127396+05:00",
-    "Hash": "wnsbw6l9isuz3x1a0lmxtbnjzgbqs0tfvieajztlbmg="
-  },
-  {
-    "Url": "/calculators/mining/coins/grin/",
-    "LastModification": "2024-05-23T00:17:10.59452+05:00",
-    "Hash": "1okijm11niuysc9fdwslosfobg9ehn77rltol7ag80="
-  },
-  {
-    "Url": "/calculators/mining/coins/grlc/",
-    "LastModification": "2024-05-23T00:17:18.1775941+05:00",
-    "Hash": "pcjhwbvkt2ydqey6jgb7xsrdigmoti7xbwhg507skvy="
-  },
-  {
-    "Url": "/calculators/mining/coins/grs/",
-    "LastModification": "2024-05-23T00:17:23.9837741+05:00",
-    "Hash": "fnaxsauqcimk7znjqfi70eb3jyc5okndq+wlaw1n4s="
-  },
-  {
-    "Url": "/calculators/mining/coins/hal/",
-    "LastModification": "2024-05-23T00:17:31.2288932+05:00",
-    "Hash": "peot5xx6+i9uy+5lfi32pdug2p3g6prpfexsuyo+zxi="
-  },
-  {
-    "Url": "/calculators/mining/coins/hns/",
-    "LastModification": "2024-05-23T00:17:39.393732+05:00",
-    "Hash": "wf5w7r7pjejir7aeuj1j0qkvdeuivvz1wkhtpgwxypq="
-  },
-  {
-    "Url": "/calculators/mining/coins/hth/",
-    "LastModification": "2024-05-23T00:17:45.6359227+05:00",
-    "Hash": "r6v8htdxr8zdxvzhevwkhgk3cl9quda4meafkjimha8="
-  },
-  {
-    "Url": "/calculators/mining/coins/htn/",
-    "LastModification": "2024-05-23T00:17:54.371992+05:00",
-    "Hash": "tly9j359fsbvtfflbluenpvi5hirtqk9tqsg9k8pcu8="
-  },
-  {
-    "Url": "/calculators/mining/coins/hush/",
-    "LastModification": "2024-05-23T00:18:05.4975347+05:00",
-    "Hash": "y6xmjfspqszxp6ktcc2cxzg1xiiskrqoqobmvvv1bw="
-  },
-  {
-    "Url": "/calculators/mining/coins/hyp/",
-    "LastModification": "2024-05-23T00:18:13.2653142+05:00",
-    "Hash": "eb9bzp8ojxelx2gbe877vyh8lcewewxam9futyu3bnk="
-  },
-  {
-    "Url": "/calculators/mining/coins/iron/",
-    "LastModification": "2024-05-23T00:18:16.7093408+05:00",
-    "Hash": "2k9q2nwmsuckx+sz91pd5lc64djodvivtv2ssaobdm="
-  },
-  {
     "Url": "/calculators/mining/coins/kas/",
     "LastModification": "2024-05-23T00:18:23.7766847+05:00",
     "Hash": "q+epqc+4nxtufod5az6xvbgv2oiswzi5sc6amo1ic="
-  },
-  {
-    "Url": "/calculators/mining/coins/kcn/",
-    "LastModification": "2024-05-23T00:18:43.971354+05:00",
-    "Hash": "3ofmujpwntomfgnntmsqj6sdf9hsdmzbvx9u7nrsj0="
-  },
-  {
-    "Url": "/calculators/mining/coins/kda/",
-    "LastModification": "2024-05-23T00:18:50.8133909+05:00",
-    "Hash": "3u7ofnthv68iyaievwhzqjovq01jjkblprhypuyoec8="
-  },
-  {
-    "Url": "/calculators/mining/coins/kiiro/",
-    "LastModification": "2024-05-23T00:18:56.2364571+05:00",
-    "Hash": "bzxkoxdzyhjvg4habf2vqliujch9jnnkrmstdgk9hye="
-  },
-  {
-    "Url": "/calculators/mining/coins/kls/",
-    "LastModification": "2024-05-23T00:19:10.3737121+05:00",
-    "Hash": "zo921go0al7jpdyse4sv4ismqjzikknme3ipb1wwq0="
-  },
-  {
-    "Url": "/calculators/mining/coins/kmd/",
-    "LastModification": "2024-05-23T00:19:15.4884377+05:00",
-    "Hash": "quykmeb4gpgcae8giujyuzhwcrvsdjrayur8fmhrzqe="
-  },
-  {
-    "Url": "/calculators/mining/coins/lbc/",
-    "LastModification": "2024-05-23T00:19:22.9599104+05:00",
-    "Hash": "nzqnwvsnhhn3qqyrncyn1ftdaus8oknnmnec6k+hnu="
   },
   {
     "Url": "/calculators/mining/coins/lrs/",
@@ -560,79 +265,14 @@
     "Hash": "p1apuaqzfc8lc9jrdqpvpost1b+cpzldf1fnkes5zg0="
   },
   {
-    "Url": "/calculators/mining/coins/lthn/",
-    "LastModification": "2024-05-23T00:19:46.5941885+05:00",
-    "Hash": "apqi8ikhkskqwxqkinghsiwszhtdavs1qlmetoja1gc="
-  },
-  {
-    "Url": "/calculators/mining/coins/mewc/",
-    "LastModification": "2024-05-23T00:19:55.8444973+05:00",
-    "Hash": "fdhyjbjhscazpvx7txvvlpuhsk7fvseo0+yyitkbbvc="
-  },
-  {
-    "Url": "/calculators/mining/coins/mona/",
-    "LastModification": "2024-05-23T00:20:02.5081717+05:00",
-    "Hash": "qsutrzahyqf0hxize5nsv9gikaahaooajx+nwkwfk="
-  },
-  {
     "Url": "/calculators/mining/coins/moon/",
     "LastModification": "2024-05-23T00:20:09.3614138+05:00",
     "Hash": "acvpsxxyyhyyl4csgwoytl+bqq8xs+rrvurgampsces="
   },
   {
-    "Url": "/calculators/mining/coins/msr/",
-    "LastModification": "2024-05-23T00:20:15.5145722+05:00",
-    "Hash": "7i0pux6gokshy8mrvjsxzbug8kxtkiib2yl0wipcfe="
-  },
-  {
-    "Url": "/calculators/mining/coins/mwc/",
-    "LastModification": "2024-05-23T00:20:21.1373978+05:00",
-    "Hash": "xt8q794yvxkmgnm3fyb8kfvw3e+n914g6049iw0qku="
-  },
-  {
-    "Url": "/calculators/mining/coins/neox/",
-    "LastModification": "2024-05-23T00:20:27.8922071+05:00",
-    "Hash": "naiti1rwpw8v24ltaz2shj2ycfkubwvygk1nftaxmm="
-  },
-  {
     "Url": "/calculators/mining/coins/net/",
     "LastModification": "2024-05-23T00:20:36.8306025+05:00",
     "Hash": "30js3+2mrr0jch1ffdlwkm3hzoqwgnrw6x9hxpxpa="
-  },
-  {
-    "Url": "/calculators/mining/coins/nexa/",
-    "LastModification": "2024-05-23T00:20:43.4541988+05:00",
-    "Hash": "augmk+ssoxtyeidnqowweicnmfixmeol3i5mf0m6ey="
-  },
-  {
-    "Url": "/calculators/mining/coins/nim/",
-    "LastModification": "2024-05-23T00:20:49.391523+05:00",
-    "Hash": "mtscaj5qyyajedvrwqklrcftledn3cnhl4mjdluy5rc="
-  },
-  {
-    "Url": "/calculators/mining/coins/nir/",
-    "LastModification": "2024-05-23T00:20:57.8019671+05:00",
-    "Hash": "hb2nozn8vx15ehzxyibxweybq6dr8xnkkklobxzun8s="
-  },
-  {
-    "Url": "/calculators/mining/coins/novo/",
-    "LastModification": "2024-05-23T00:21:04.7649294+05:00",
-    "Hash": "vfjjc2ixl6tjdtkvj8zuav8jznfaaj49euf70+tc="
-  },
-  {
-    "Url": "/calculators/mining/coins/ntl/",
-    "LastModification": "2024-05-23T00:21:12.0278009+05:00",
-    "Hash": "g1ydxooabwwrzwkbogclycfiwzjkpfqm6uuyn+an5m="
-  },
-  {
-    "Url": "/calculators/mining/coins/nxl/",
-    "LastModification": "2024-05-23T00:21:21.2714678+05:00",
-    "Hash": "o1qp7vp8idn6hox4uddewxcazkimdbbhz9fth206f4="
-  },
-  {
-    "Url": "/calculators/mining/coins/nxs/",
-    "LastModification": "2024-05-23T00:21:26.6655288+05:00",
-    "Hash": "fpx6md0vkigqtszs+qhv9cmkppzn04ynotsl2fxfbua="
   },
   {
     "Url": "/calculators/mining/coins/obn/",
@@ -645,34 +285,9 @@
     "Hash": "quzkxumy2ggnf0ezluwjhayxpot2xrq6dklmqnvtizi="
   },
   {
-    "Url": "/calculators/mining/coins/onion/",
-    "LastModification": "2024-05-23T00:21:58.3284176+05:00",
-    "Hash": "ph6ci6kizvjc2w5bk5lgn+290g89c3ipp4rdd9ct6de="
-  },
-  {
-    "Url": "/calculators/mining/coins/orb/",
-    "LastModification": "2024-05-23T00:22:04.7444872+05:00",
-    "Hash": "9du9ujrq756zzkrjrf66ibtv6tdcjvr8pib8ptc7o4o="
-  },
-  {
     "Url": "/calculators/mining/coins/osmi/",
     "LastModification": "2024-05-23T00:22:11.1859129+05:00",
     "Hash": "ngoo2r6ektzk1crdwjjakdscgtb+buta+n1igohpwi4="
-  },
-  {
-    "Url": "/calculators/mining/coins/papry/",
-    "LastModification": "2024-05-23T00:22:17.0701515+05:00",
-    "Hash": "gfr+um3w12jow1og16azxac3vhhz3gmrb8pw6kw4roo="
-  },
-  {
-    "Url": "/calculators/mining/coins/pepew/",
-    "LastModification": "2024-05-23T00:22:24.1002124+05:00",
-    "Hash": "nd+xiz3aiz7ygaykyckeb2uzvonspcfyei28t0oxuj8="
-  },
-  {
-    "Url": "/calculators/mining/coins/pgn/",
-    "LastModification": "2024-05-23T00:22:44.3331763+05:00",
-    "Hash": "xhwwjdrmsav6jzt9y8bj+pti0k6lfidgzjz5l4zulq4="
   },
   {
     "Url": "/calculators/mining/coins/ppc/",
@@ -680,74 +295,9 @@
     "Hash": "ygff6nfxyxlw+magaxayvpx9h7wej6jp9wpfyfy4g5k="
   },
   {
-    "Url": "/calculators/mining/coins/prco/",
-    "LastModification": "2024-05-23T00:23:02.2048622+05:00",
-    "Hash": "b7mrdh4x8ntqsfndv2foic+66skylutr4f2owyy4g9y="
-  },
-  {
-    "Url": "/calculators/mining/coins/pxc/",
-    "LastModification": "2024-05-23T00:23:07.0163908+05:00",
-    "Hash": "mjw5ru0ljw487yqfhug2hasew27mmge95oiydazys0="
-  },
-  {
-    "Url": "/calculators/mining/coins/pyi/",
-    "LastModification": "2024-05-23T00:23:14.288967+05:00",
-    "Hash": "sesyglnpne876z7xj4siipaqihww+kdqwrfm7a6fxsi="
-  },
-  {
     "Url": "/calculators/mining/coins/qkc/",
     "LastModification": "2024-05-23T00:23:19.4014405+05:00",
     "Hash": "tgj68r96s7xvv3qdw4jg+z0qy0uy8tjejyidpf0fwvu="
-  },
-  {
-    "Url": "/calculators/mining/coins/qrl/",
-    "LastModification": "2024-05-23T00:23:24.6452118+05:00",
-    "Hash": "t3zpwzzmjvo7wsnyepjkiechg9lrkjtwbh0jfw6iies="
-  },
-  {
-    "Url": "/calculators/mining/coins/rito/",
-    "LastModification": "2024-05-23T00:23:49.2247774+05:00",
-    "Hash": "wlzvwif1rfjjlngwwgq85s1yi8bkxnbnq8hnco09x+u="
-  },
-  {
-    "Url": "/calculators/mining/coins/rtc/",
-    "LastModification": "2024-05-23T00:23:54.220495+05:00",
-    "Hash": "qw+b9s1g8xm9ehrrn0ycfqhaoa7hoowtri78yseutmk="
-  },
-  {
-    "Url": "/calculators/mining/coins/rtm/",
-    "LastModification": "2024-05-23T00:24:08.2176221+05:00",
-    "Hash": "mvvutejhv7cmbsbhpyrjn5w80eymv23uikx7pas8mwm="
-  },
-  {
-    "Url": "/calculators/mining/coins/rvn/",
-    "LastModification": "2024-05-23T00:24:20.1332602+05:00",
-    "Hash": "6uyb0pe5bt58bt6cv4zv086gkxywtklsmipiqus1q="
-  },
-  {
-    "Url": "/calculators/mining/coins/rxd/",
-    "LastModification": "2024-05-23T00:24:27.7202477+05:00",
-    "Hash": "jce3w89xmsnyx3kfx+zhe9g0oc1pfkcdhm99ukmgqxc="
-  },
-  {
-    "Url": "/calculators/mining/coins/ryo/",
-    "LastModification": "2024-05-23T00:24:36.0081283+05:00",
-    "Hash": "keizgjhsc+l6drpjgqacae3hh+ypuskgm6laasmv0="
-  },
-  {
-    "Url": "/calculators/mining/coins/satox/",
-    "LastModification": "2024-05-23T00:24:41.3802882+05:00",
-    "Hash": "ue2w8xbfpqbfhdm5r0affjbmyjsl9s6buycootcyvf0="
-  },
-  {
-    "Url": "/calculators/mining/coins/sc/",
-    "LastModification": "2024-05-23T00:24:48.4637276+05:00",
-    "Hash": "yirjvnoqelbpruqw+w02lk6izrfejx1skd3w24guqo="
-  },
-  {
-    "Url": "/calculators/mining/coins/scp/",
-    "LastModification": "2024-05-23T00:24:54.6481894+05:00",
-    "Hash": "ogdluy1f7tsvua3nddblfokdku2xfv7gqh5ffmw+168="
   },
   {
     "Url": "/calculators/mining/coins/sdr/",
@@ -755,64 +305,9 @@
     "Hash": "mvppp3hhxld9ukkzeyojs0+dzbikn1fenakvaogp4w="
   },
   {
-    "Url": "/calculators/mining/coins/sero/",
-    "LastModification": "2024-05-23T00:25:09.7984965+05:00",
-    "Hash": "gqdnci0mqt9cf68t98woegetsj5+7etvhbchatougs="
-  },
-  {
-    "Url": "/calculators/mining/coins/sky/",
-    "LastModification": "2024-05-23T00:25:15.2232494+05:00",
-    "Hash": "ap24+x4rwtub0bjhsl0lkkq1uli+sbiinsxwwnpsfui="
-  },
-  {
-    "Url": "/calculators/mining/coins/smart/",
-    "LastModification": "2024-05-23T00:25:26.5688657+05:00",
-    "Hash": "a0oadfe6vzlvftgsbcj2npeze5u1z93nu0kuotue="
-  },
-  {
-    "Url": "/calculators/mining/coins/stc/",
-    "LastModification": "2024-05-23T00:25:34.2733544+05:00",
-    "Hash": "ystznqbb+fhjz9hshnzxltfpe7vu7vilgb8myi4ig8="
-  },
-  {
-    "Url": "/calculators/mining/coins/sumo/",
-    "LastModification": "2024-05-23T00:25:42.9580779+05:00",
-    "Hash": "rigjtiazeacri2q+fwv3geoshuad71fwbdb0isfle9m="
-  },
-  {
-    "Url": "/calculators/mining/coins/ubq/",
-    "LastModification": "2024-05-23T00:25:49.5247049+05:00",
-    "Hash": "sqkugchwljnonxq4y2cv8ki88mofq29je9gctxyhf4y="
-  },
-  {
     "Url": "/calculators/mining/coins/uno/",
     "LastModification": "2024-05-23T00:26:01.9341138+05:00",
     "Hash": "ebjfkxmvhtgjgsbivmjh8pfs6ilqrfvo3e5l8d262nk="
-  },
-  {
-    "Url": "/calculators/mining/coins/upx/",
-    "LastModification": "2024-05-23T00:26:10.2239477+05:00",
-    "Hash": "ptj1ig5blxp0q0p7e2uidbcvnemseasftdcrniyygi="
-  },
-  {
-    "Url": "/calculators/mining/coins/vlc/",
-    "LastModification": "2024-05-23T00:26:15.3334328+05:00",
-    "Hash": "6kvbgj03zfwpqyula8t4br3m8ircuw0uofsd6isl1f0="
-  },
-  {
-    "Url": "/calculators/mining/coins/vrsc/",
-    "LastModification": "2024-05-23T00:26:30.1194193+05:00",
-    "Hash": "lmv1wtuunbvufddpn+5avbibty6pm72m090ct1iczq="
-  },
-  {
-    "Url": "/calculators/mining/coins/vtc/",
-    "LastModification": "2024-05-23T00:26:37.6674514+05:00",
-    "Hash": "solsikn6busajr3xfxj2llspbyxsrecef77+mrq6fg="
-  },
-  {
-    "Url": "/calculators/mining/coins/xdag/",
-    "LastModification": "2024-05-23T00:26:48.0194387+05:00",
-    "Hash": "ynd1t0pjwvyjhnwo1eqjvpypjqgbxqoj7xv2s9q6too="
   },
   {
     "Url": "/calculators/mining/coins/xec/",
@@ -820,29 +315,9 @@
     "Hash": "4tfqhye4r9ujvzs3qtnhxmwv1e5aqiktkvrfqwtkmbw="
   },
   {
-    "Url": "/calculators/mining/coins/xeq/",
-    "LastModification": "2024-05-23T00:27:09.9205381+05:00",
-    "Hash": "eofsin6wyic5ujyv9ennbtcintd6khjwnm2awgom78w="
-  },
-  {
-    "Url": "/calculators/mining/coins/xhv/",
-    "LastModification": "2024-05-23T00:27:18.2023407+05:00",
-    "Hash": "xhcihlzgf8yiw+xqn6nxqnwtwdtwz6ugg69npqkyqf0="
-  },
-  {
-    "Url": "/calculators/mining/coins/xmr/",
-    "LastModification": "2024-05-23T00:27:24.8526649+05:00",
-    "Hash": "zu9lt7cqzlbrtgtu7jum36m8zyt5grmbipym2ifpli="
-  },
-  {
     "Url": "/calculators/mining/coins/xmy/",
     "LastModification": "2024-05-23T18:05:16.7606125+05:00",
     "Hash": "n2xoeuwgj687zht8o3x3ohzfx1gf6ph+pt7mmxvleku="
-  },
-  {
-    "Url": "/calculators/mining/coins/xna/",
-    "LastModification": "2024-05-23T00:27:44.84613+05:00",
-    "Hash": "woduarorewahx7aef9gaxtn32hfnzvhzkt13rdoxr+o="
   },
   {
     "Url": "/calculators/mining/coins/xpb/",
@@ -853,56 +328,6 @@
     "Url": "/calculators/mining/coins/xvg/",
     "LastModification": "2024-05-23T18:05:16.7612053+05:00",
     "Hash": "zfqfwsto6d36dedhpvwdh3u8hazh2hfqqlxk0nhuq="
-  },
-  {
-    "Url": "/calculators/mining/coins/xwp/",
-    "LastModification": "2024-05-23T00:28:08.40311+05:00",
-    "Hash": "zijyonwfy5mp6heli2une8jarc0asdikfw966kxxgr0="
-  },
-  {
-    "Url": "/calculators/mining/coins/yec/",
-    "LastModification": "2024-05-23T00:28:14.9652987+05:00",
-    "Hash": "vo3iab2fplfjn9je511tmerzjrkkgkpsudgwc3epmyw="
-  },
-  {
-    "Url": "/calculators/mining/coins/zano/",
-    "LastModification": "2024-05-23T00:28:23.8511771+05:00",
-    "Hash": "hbehlgjqfsbvhnfnc3xlr5zulkk3s1lt7crxobr2e0="
-  },
-  {
-    "Url": "/calculators/mining/coins/zcl/",
-    "LastModification": "2024-05-23T00:28:36.2362789+05:00",
-    "Hash": "wljxpclkhbbjtdy0ih9zs+oz47gxl2mo1ghstaezto="
-  },
-  {
-    "Url": "/calculators/mining/coins/zdeex/",
-    "LastModification": "2024-05-23T00:28:42.7939798+05:00",
-    "Hash": "9qt23tql2re34jhsoh6651qwr7+clm3+w5fpwufwqtu="
-  },
-  {
-    "Url": "/calculators/mining/coins/zec/",
-    "LastModification": "2024-05-23T00:28:52.5355046+05:00",
-    "Hash": "rdtzk0gx7rmjsacrjkbrm+roui7afhrv0jz198jt78="
-  },
-  {
-    "Url": "/calculators/mining/coins/zen/",
-    "LastModification": "2024-05-23T00:29:02.7773218+05:00",
-    "Hash": "dpasv5sjkwjguw6yiungf5ycbqpnc7dmjf7f6zkkpby="
-  },
-  {
-    "Url": "/calculators/mining/coins/zeph/",
-    "LastModification": "2024-05-23T00:29:07.9890545+05:00",
-    "Hash": "3wcvrbtp0xl+ryxslf45vcnagfooln5joaftv1a18="
-  },
-  {
-    "Url": "/calculators/mining/coins/zer/",
-    "LastModification": "2024-05-23T00:29:22.8363793+05:00",
-    "Hash": "x4t5r97vleovamhchspbodrctuczdx9k4yg+9px1qfu="
-  },
-  {
-    "Url": "/calculators/mining/coins/zoc/",
-    "LastModification": "2024-05-23T00:29:30.3787667+05:00",
-    "Hash": "5ahhpwoochnnkua3embuo74hkgnme7sv8u3qmqxbzk="
   },
   {
     "Url": "/catalog/",
