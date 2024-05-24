@@ -328,7 +328,7 @@ const Data = {{
             Directory.CreateDirectory(Path.Combine(asicsDirectory, product.Id));
             File.WriteAllText(
                 Path.Combine(asicsDirectory, product.Id, "index.html"),
-                @$"Расчет доходности асик майнера {product.GetName()} в рублях и долларах
+                @$"Калькулятор доходности майнинга асика {product.GetName()} в рублях и долларах
 <div id=""mining-calculator-asic"" data-asic-id=""{product.Id}""></div>"
             );
         }

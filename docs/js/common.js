@@ -1921,7 +1921,7 @@ async function calculateMining() {
 const productMiningCalculatorTemplate = `
 <div class="card my-3">
     <div class="card-body">
-        <h3 class="card-title mb-4">Расчет доходности</h3>
+        <h3 class="card-title mb-4">Майнинг калькулятор</h3>
         <input id="mc-coin" type="hidden" value="{coin}" />
         <input id="mc-product-id" type="hidden" value="{product-id}" />
         <div class="row">
@@ -1971,7 +1971,7 @@ const coinMiningCalculatorTemplate = `
     <li class="breadcrumb-item active" aria-current="page">{title}</li>
   </ol>
 </nav>
-<h1>Расчет доходности {title}</h1>
+<h1>Майнинг калькулятор {title}</h1>
 <div class="card">
     <div class="card-body">
         <input id="mc-coin" type="hidden" value="{coin}" />
@@ -2024,7 +2024,7 @@ const asicMiningCalculatorTemplate = `
     <li class="breadcrumb-item active" aria-current="page">{name}</li>
   </ol>
 </nav>
-<h1>Расчет доходности асика {name}</h1>
+<h1>Майнинг калькулятор {name}</h1>
 <div class="row">
     <div class="card col-lg-9 my-3">
         <div class="card-body">
