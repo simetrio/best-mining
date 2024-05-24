@@ -1971,7 +1971,7 @@ const coinMiningCalculatorTemplate = `
     <li class="breadcrumb-item active" aria-current="page">{title}</li>
   </ol>
 </nav>
-<h1>Майнинг калькулятор {title}</h1>
+<h1>Майнинг калькулятор {title} ({coin})</h1>
 <div class="card">
     <div class="card-body">
         <input id="mc-coin" type="hidden" value="{coin}" />
