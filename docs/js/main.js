@@ -61,32 +61,13 @@ function sendOrderProduct() {
 function loadData() {
     const brands = Data.brands;
     const products = Data.products;
-    const coinsObject = Data.coins;
+    const coins = Data.coins;
     const posts = Data.posts;
     const pools = Data.pools;
 
     products.forEach(product => {
         product.Name = `${product.Brand} ${product.Model} ${product.HashRate}`;
         product.Prices.forEach(price => price.ValueRuble = toRuble(price.Value));
-    });
-
-    var availableAlghoritms = ["etchash", "ethash", "sha-256", "scrypt", "kheavyhash", "x11"];
-    const coins = [];
-    Object.keys(coinsObject.coins).forEach(x => {
-        const coin = coinsObject.coins[x];
-        if (coin.status !== "Active" || !availableAlghoritms.includes(coin.algorithm.toLowerCase())) {
-            return;
-        }
-
-        coins.push({
-            Id: coin.id,
-            Tag: coin.tag,
-            Title: x,
-            Algorithm: coin.algorithm,
-            HashRate: coin.hashRate,
-            Popular: coin.popular || false,
-            Img: coin.img || "",
-        });
     });
 
     window.dataBase = { products, coins, posts, pools, brands };
