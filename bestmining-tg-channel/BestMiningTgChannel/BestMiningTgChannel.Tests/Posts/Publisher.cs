@@ -306,7 +306,7 @@ const Data = {{
             Directory.CreateDirectory(Path.Combine(coinsDirectory, coin.Tag.ToLower()));
             File.WriteAllText(
                 Path.Combine(coinsDirectory, coin.Tag.ToLower(), "index.html"),
-                @$"Расчет доходности криптовалюты {coin.Title} в рублях и долларах
+                @$"Калькулятор доходности майнинга криптовалюты {coin.Title} в рублях и долларах
 <div id=""mining-calculator-coin"" data-coin=""{coin.Tag}""></div>"
             );
         }
