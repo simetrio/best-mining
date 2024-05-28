@@ -77,6 +77,22 @@ public class PostsTests
     }
 
     [Fact]
+    public void ProductProfit()
+    {
+        Setup("0.8");
+
+        ProductsProfits.Create();
+    }
+
+    [Fact]
+    public void ProductProfitCurrent()
+    {
+        Setup("0.8", reraitCurrent : true);
+
+        ProductsProfits.Create();
+    }
+
+    [Fact]
     public void Coin()
     {
         Setup("0.8");
