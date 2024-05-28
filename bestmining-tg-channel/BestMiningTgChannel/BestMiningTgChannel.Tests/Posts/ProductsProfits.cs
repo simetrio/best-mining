@@ -49,7 +49,7 @@ public static class ProductsProfits
                 new ParserResultItem
                 {
                     Head = "Расчет доходности",
-                    Text = $"Майнинг калькулятор {product.GetName()}",
+                    Text = $"Расчет доходности {product.GetName()}",
                 },
             ],
         };
